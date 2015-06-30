@@ -1,0 +1,20 @@
+<% fields.each do |field| %>
+  <% if field['type'] == 'Text' %>
+    <p>
+      <input type="text" name="<%= field['attribute_name'] %>" id="<%= field['attribute_name'] %>" />
+      <label for="<%= field['attribute_name'] %>"><%= field['name'] %></label>
+    </p>
+  <% end %>
+  
+  <% if field['type'] == 'Button' %>
+    <fieldset>
+      <legend><%= field['name'] %></legend>
+      <% field['options'].each_with_index do |option, index| %>
+        <p>
+          <input type="radio" name="<%= field['attribute_name'] %>" id="<%= field['attribute_name'] %>_<%= index %>" value="<%= option %>" />
+          <label for="<%= field['attribute_name'] %>_<%= index %>"><%= option %></label>
+        </p>
+      <% end %>
+    </fieldset>
+  <% end %>
+<% end %>
