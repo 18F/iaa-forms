@@ -1,0 +1,642 @@
+/* @override http://localhost:4000/stylesheets/screen.css */
+
+
+
+/* @group bootstrap */
+
+
+
+body{
+	font-family: helvetica neue, helvetica, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+
+a{ color: #0064be; }
+a:hover{ color: #003c72; }
+
+a.a-return{ 
+	color: #666; 
+	font-size: 14px;
+	display: block;
+	padding-top: 8px;
+}
+
+a.a-return::before{
+	content: "\2190";
+	color: #888;
+	margin-left: 4px;
+	margin-right: 10px;
+	display: inline-block;
+	background: #f3f3f3;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	border-radius: 100%;
+	text-align: center;
+	
+}
+a.a-return:hover{ color: #333; }
+a.a-return:hover::before{ color: #444; background: #eee;}
+
+
+
+
+
+@media screen and (min-width: 768.88px) {
+}
+
+p, li, dd, dt {
+	line-height: 1.4em;
+	max-width: 36em;
+	margin-bottom: 0.7em;
+}
+
+@media screen and (min-width: 533.33px) {
+	dl {
+		padding-top: 16px;
+		margin-top: 32px;
+		border-top: 1px solid #eee;
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		-column-count: 2;
+	}	
+}
+
+dt{
+	margin-bottom: 0;
+	color: #444;
+	font-size: 0.8em;
+	font-weight: 600;
+}
+
+span.preposition{
+	font-style: italic;
+	font-family: Georgia;
+	text-transform: lowercase;
+}
+
+div.wrap{
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
+
+div.wrap::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+h1.primary-header {
+	font-size: 32px;
+	font-family: 'franklin-gothic-urw-cond', Helvetica Neue, Helvetica, sans-serif;
+	line-height: 1;
+	margin-top: 24px;
+	margin-bottom: 0.6em;
+	margin-left: -0.03em;
+}
+
+@media screen and (min-width: 711.11px) { 
+	h1.primary-header{ 
+		font-size: 40px; 
+		margin-bottom: 0.4em;
+	} 
+}
+
+main ol{ 
+	margin-bottom: 2em;
+	padding-top: 1em; 
+}
+
+div.notice{
+	font-size: 14px;
+	padding: 12px;
+	border: 1px solid goldenrod;
+	border-radius: 3px;
+	margin: 1em 0;
+	background: #fff2df;
+	color: #4f0e00;
+	
+}
+div.notice a{
+	color: #af3b00;
+}
+div.notice p:last-child{ margin-bottom: 0;}
+
+
+/* @end */
+
+/* @group forms */
+
+/* @group summary.error-message */
+
+summary.error-message{
+	background: #990017;
+	color: white;
+	padding: 8px;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 24px;
+	margin-top: -8px;
+}
+
+summary.error-message details{ margin-top: 8px; }
+summary.error-message details p:first-of-type{ margin-top: 8px; }
+summary.error-message details ol{
+	list-style-type: decimal;
+	margin: 0 0 0 1.4em;
+	padding-top: 0;
+}
+
+summary.error-message details ol li{
+	margin-bottom: 6px;
+}
+
+/* @end */
+
+legend {
+  padding: 0;
+  display: table;
+}
+
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+
+input[type=text],
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+select,
+textarea{
+	-webkit-appearance: none;
+	padding: 4px 8px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	line-height: 36px;
+	min-height: 36px;
+	min-width: 4em;
+	width: 100%;
+	margin: 0;
+	font: inherit;
+}
+
+.field-select select{
+	min-width: 0; 
+	background: none;
+	padding-right: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.field-select span.label-select{ 
+	position: relative; 
+	width: 15%;
+	display: block;
+}
+
+.field-select{ position: relative; }
+
+.field-select::after{
+	content: "";
+	border: 6px solid black;
+	position: absolute;
+	right: 20px;
+	bottom: 50%;
+	margin-bottom: 2px;
+	border-color: #aaa transparent transparent transparent;
+	z-index: -1;
+}
+
+.field-select:hover select{ border-color: #aaa; }
+.field-select:hover::after{ border-top-color: #888; }
+
+textarea{
+	display: block;
+	width: 100%;
+	max-width: 40em;
+	min-height: 12em;
+}
+
+button,
+.button {
+	background: none;
+	border: 1px solid;
+	color: #008c52;
+	font: inherit;
+	padding: 10px 12px;
+	margin: 0;
+	line-height: 16px;	
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 3px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+button:hover {
+	background: #00834d;
+	border-color: #00834d;
+	color: white;
+	box-shadow: 0 1px 0 #f3f3f3;
+}
+
+button:active {
+	color: #7aa79d;
+	background: #006e52;
+	border-color: #006e52;
+	box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+}
+
+form a.a-return + h1{
+	margin-top: 1em !important;	
+}
+
+div.field,
+fieldset{ margin-bottom: 24px; }
+
+fieldset.fieldset-program-official,
+fieldset.fieldset-corporate-official{
+	border: 1px solid #cfcfcf;
+	padding: 16px;
+	position: relative;
+	margin-top: 48px;
+	margin-bottom: 32px;
+	border-radius: 4px;
+}
+
+fieldset.fieldset-corporate-official{ margin-bottom: 24px; }
+
+fieldset.fieldset-program-official > legend,
+fieldset.fieldset-corporate-official > legend,
+fieldset > header > h1{
+	position: absolute;
+	background: white;
+	margin: 0 0 -3px;
+	bottom: 100%;
+	left: 8px;
+	padding: 0 1px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 600;
+	color: #777;
+}
+
+fieldset div.field:last-of-type+fieldset{
+	margin-top: 24px;
+	margin-bottom: 4px;
+}
+
+.fieldset.fieldset-labor-related-costs,
+.fieldset.fieldset-direct-material-costs,
+.fieldset.fieldset-discretionary-technical-assistance,
+.fieldset.fieldset-equivalent-work,
+.fieldset.fieldset-equivalent-work .fieldset,
+.fieldset.fieldset-radio{
+	padding: 0;
+	border: none;
+}
+
+.fieldset-discretionary-technical-assistance > legend,
+.fieldset.fieldset-equivalent-work-detail > h1,
+.fieldset.fieldset-phase-2 > h1{ display: none; }
+
+fieldset > legend,
+div.field span.label-text{
+	display: block;	
+	max-width: 40em;
+	margin: 0 0 8px;
+	padding: 0;
+	position: static;
+	font: inherit;
+	line-height: 20px;
+	color: inherit;
+}
+
+div.field.field-radio{ 
+	display: inline-block; 
+	vertical-align: middle;
+	margin-bottom: 6px;
+}
+div.field.field-radio label{
+	display: inline-block;
+	padding: 0 12px 4px 12px;
+	border: 1px solid #ccc;
+	min-height: 32px;
+	line-height: 32px;
+	vertical-align: middle;
+}
+
+main div.field input:focus,
+main div.field textarea:focus,
+main div.field.field-checkbox.is-focused label,
+main div.field.field-radio.is-focused label{
+	background: #fff2df;
+	border-color: goldenrod;
+	outline: none;
+}
+
+div.field.field-checkbox span.label-text,
+div.field.field-radio span.label-text,
+div.field.field-radio input{ 
+	display: inline; 
+	vertical-align: middle;
+}
+
+div.field.field-checkbox{
+	position: relative;
+	padding-left: 24px;
+	margin-bottom: 8px;
+}
+
+div.field.field-checkbox input{ 
+	font-size: 1em;	
+	line-height: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+div.field.field-checkbox+div.field.field-checkbox{ margin-top: 4px; }
+
+div.field.field-checkbox+.is-branch{
+	margin-top: -4px !important;
+	margin-left: 3px;
+	margin-bottom: 16px;
+}
+
+div.field.is-error input,
+div.field.is-error textarea{
+	background: #fff7f4;
+	background: repeating-linear-gradient(
+    45deg,
+    #fff4f2,
+    #fff4f2 10px,
+    #fff7f4 10px,
+    #fff7f4 20px
+  );
+	border-color: #ce6246;
+}
+
+div.field.is-error span.error-message,
+fieldset.fieldset-radio.is-error span.error-message{
+	color: #990017;	
+	display: block;
+}
+
+div.field.is-error span.error-message,
+fieldset.fieldset-radio.is-error span.error-message{
+	color: #af1830;	
+	font-size: 14px;
+	padding-top: 6px;
+	display: block;
+	font-style: italic;	
+}
+
+fieldset.fieldset-mailing-address div.field{
+	padding-bottom: 1.4em;
+	position: relative;
+}
+
+fieldset.fieldset-mailing-address div.field span.label-text{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	font-size: 12px;
+}
+
+fieldset.fieldset-mailing-address div.field-city-state-zip::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+fieldset.fieldset-mailing-address div.field-city-state-zip{
+	margin-right: -0.7em;
+	margin-bottom: 0;
+}
+
+fieldset.fieldset-mailing-address div.field.field-city,
+fieldset.fieldset-mailing-address div.field.field-state,
+fieldset.fieldset-mailing-address div.field.field-zip{
+	float: left;
+	width: 25%;
+	padding-right: 0.67em; 
+	margin-bottom: 0;
+}
+
+fieldset.fieldset-mailing-address div.field.field-city{ 
+	width: 50%; 
+}
+
+
+fieldset.fieldset-mailing-address div.field.field-city input,
+fieldset.fieldset-mailing-address div.field.field-state input,
+fieldset.fieldset-mailing-address div.field.field-zip input{
+	min-width: 0;
+}
+
+
+
+/* @group widths */
+
+@media screen and (min-width: 568.88px){
+	.field-name input,
+	.field-title input,
+	.field-telephone-number input,
+	.field-email-address input{
+	  width: 50%;
+	  min-width: 10em;
+	}
+	
+	.field-phone input{
+		width: 33%;
+	}
+	
+	.field-phone-number input,
+	.field-fax-number input,
+	.field-expiry-date input{
+		width: 10em;
+	}
+
+}
+
+/* @end */
+
+
+.is-branch{
+	padding: 8px 0 0 12px !important;
+	margin-top: -12px !important;
+	position: relative;
+	border: none !important;
+}
+
+.is-branch::after{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: -1px;
+	width: 3px;
+	border-radius: 99em;
+	content: "";
+	background: #e3e3e3;
+}
+
+main div.wrap > form { max-width: 576px; }
+
+@media screen and (min-width: 640px) {
+	main div.wrap > form {
+		padding-right: 16px;
+		border-right: 1px solid #eee;
+	}	
+	
+}
+
+
+main form footer{ 
+	margin-top: 32px; 
+	padding-bottom: 64px;
+	position: relative;
+}
+
+main form footer a{
+	position: absolute;
+	right: 0;
+	top: 12px;
+}
+
+main form footer a:hover{ color: #333; }
+main form footer p{
+	clear: both;
+	font-family: Georgia;
+	font-style: italic;
+	color: #888;
+	background: #f3f3f3;
+	padding: 12px;
+	max-width: none;
+	margin-top: 24px;
+	font-size: 14px;
+}
+main form footer p button{
+	display: inline;
+	float: none;
+	padding: 4px 8px;
+	color: #555;
+	background: white;
+	border: 2px solid #ccc;
+	font-family: Helvetica;
+	font-style: normal;
+	margin-left: 0.2em;
+ }
+
+
+/* @end */
+
+/* @group header.banner */
+
+header.banner{
+	background: #f3f3f3;
+	line-height: 64px;
+	height: 48px;
+	font-size: 16px;
+	color: #888;
+}
+
+header.banner span.logo{
+	float: left;
+	width: 48px;
+	height: 48px;
+	background: #18F;
+	color: white;
+	text-align: right;
+	padding-right: 6px;
+	font-size: 16px;
+	margin-right: 12px;
+}
+
+@media screen and (min-width: 568.88px){
+	header.banner{
+		line-height: 112px;
+		height: 96px;
+		font-size: 24px;
+		color: #888;
+	}
+	
+	header.banner span.logo{
+		width: 96px;
+		height: 96px;
+		padding-right: 8px;
+		font-size: 32px;
+		margin-right: 24px;
+	}
+
+}
+
+/* @end */
+
+main form{ 
+	padding-bottom: 64px; 
+	padding-top: 32px;
+}
+
+main form > header h1{
+	font-size: 32px;
+	margin-bottom: 16px;
+}
+
+main form > header p{ margin-bottom: 48px; }
+
+div.field-iaa-number span.label-text,
+div.field-iaa-number input[type=text]{
+	display: inline-block;
+	width: 7em;
+	min-width: 0;
+	vertical-align: middle;
+	margin-bottom: 0;
+	font-size: 12px;
+	min-height: 18px;
+}
+
+div.field-iaa-number input[type=text]{
+	background: #f3f3f3;
+	color: #666;
+}
+
+
+/* @group section */
+section{
+	border-top: 2px solid #e3e3e3;
+	margin-bottom: 64px;
+	padding-top: 16px;
+}
+section h1 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 28px;
+	color: #555;
+}
+
+/* @end */
+
+@media screen and (min-width: 853.33px) {	
+	div.field-iaa-number{
+		position: absolute;
+		right: 0;
+		top: 32px;
+	}
+}
