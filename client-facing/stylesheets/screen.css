@@ -111,21 +111,11 @@ main ol{
 	padding-top: 1em; 
 }
 
-div.notice{
-	font-size: 14px;
-	padding: 12px;
-	border: 1px solid goldenrod;
-	border-radius: 3px;
-	margin: 1em 0;
-	background: #fff2df;
-	color: #4f0e00;
+ul li{
+	list-style-type: disc;
+	margin-left: 1.4em;
 	
 }
-div.notice a{
-	color: #af3b00;
-}
-div.notice p:last-child{ margin-bottom: 0;}
-
 
 /* @end */
 
@@ -174,6 +164,7 @@ body:not(:-moz-handler-blocked) fieldset {
   display: table-cell;
 }
 
+input[type=tel],
 input[type=text],
 input[type=date],
 input[type=email],
@@ -266,11 +257,32 @@ form a.a-return + h1{
 	margin-top: 1em !important;	
 }
 
+.field .description-text{
+	margin-top: 8px;
+	font-size: 12px;
+	line-height: 1.3;
+	max-width: 28em;
+	display: block;
+	color: #333;
+}
+
+fieldset > p{
+	font-size: 14px;
+	line-height: 1.4;
+	color: #444;
+	margin-bottom: 1em;
+}
+
+.field .description-text a{ color: inherit; }
+.field .description-text a:hover{ text-decoration: none; }
+
 div.field,
 fieldset{ margin-bottom: 24px; }
 
 fieldset.fieldset-program-official,
-fieldset.fieldset-corporate-official{
+fieldset.fieldset-additional-point-of-contact,
+fieldset.fieldset-corporate-official,
+fieldset.fieldset-funding-official{
 	border: 1px solid #cfcfcf;
 	padding: 16px;
 	position: relative;
@@ -279,10 +291,18 @@ fieldset.fieldset-corporate-official{
 	border-radius: 4px;
 }
 
+fieldset.fieldset-program-official div.field:last-of-type,
+fieldset.fieldset-additional-point-of-contact div.field:last-of-type,
+fieldset.fieldset-corporate-official div.field:last-of-type{
+	margin-bottom: 4px;
+}
+
 fieldset.fieldset-corporate-official{ margin-bottom: 24px; }
 
 fieldset.fieldset-program-official > legend,
 fieldset.fieldset-corporate-official > legend,
+fieldset.fieldset-additional-point-of-contact > legend,
+fieldset.fieldset-funding-official > legend,
 fieldset > header > h1{
 	position: absolute;
 	background: white;
@@ -451,26 +471,29 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 	min-width: 0;
 }
 
-
-
 /* @group widths */
 
 @media screen and (min-width: 568.88px){
 	.field-name input,
 	.field-title input,
 	.field-telephone-number input,
-	.field-email-address input{
+	.field-email-address input,
+	.field-additional-classification input{
 	  width: 50%;
 	  min-width: 10em;
 	}
 	
-	.field-phone input{
-		width: 33%;
-	}
-	
+	.field-project-number input,
 	.field-phone-number input,
 	.field-fax-number input,
-	.field-expiry-date input{
+	.field-expiry-date input,
+	.field-cancellation-date input,
+	.field-alc input,
+	.field-component-tas input,
+	.field-betc input,
+	.field-object-class-code input,
+	.field-bpn input,
+	.field-bpn-4 input{
 		width: 10em;
 	}
 
@@ -599,7 +622,7 @@ main form > header h1{
 	margin-bottom: 16px;
 }
 
-main form > header p{ margin-bottom: 48px; }
+main form > header p:last-of-type{ margin-bottom: 48px; }
 
 div.field-iaa-number span.label-text,
 div.field-iaa-number input[type=text]{
