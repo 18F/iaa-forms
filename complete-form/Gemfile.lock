@@ -3,10 +3,13 @@ GEM
   specs:
     cliver (0.3.2)
     coderay (1.1.0)
-    iaa (0.2.1)
+    daemons (1.1.9)
+    eventmachine (1.0.4)
+    iaa (0.2.2)
       cliver
       pdf-forms
       pry
+      sinatra
     method_source (0.8.2)
     pdf-forms (0.6.0)
     pry (0.10.1)
@@ -21,15 +24,21 @@ GEM
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
     slop (3.6.0)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
     tilt (2.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  iaa (~> 0.2.1)
+  iaa (~> 0.2.2)
   pry
+  rack
   sinatra
+  thin
 
 BUNDLED WITH
    1.10.4

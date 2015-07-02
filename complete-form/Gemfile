@@ -2,4 +2,7 @@ source 'https://rubygems.org'
 
 gem 'pry'
 gem 'sinatra'
-gem 'iaa', '~> 0.2.1'
+gem 'iaa', '~> 0.2.2'
+#gem 'iaa', path: '../../iaa'
+gem 'thin'
+gem 'rack'
