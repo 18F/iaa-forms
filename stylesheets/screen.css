@@ -1,5 +1,7 @@
 /* @override http://localhost:4000/stylesheets/screen.css */
 
+/* @override http://localhost:4000/stylesheets/screen.css */
+
 
 
 /* @group bootstrap */
@@ -220,7 +222,9 @@ textarea{
 	display: block;
 	width: 100%;
 	max-width: 40em;
-	min-height: 12em;
+	min-height: 6em;
+	line-height: 1.25;
+	color: #333;
 }
 
 button,
@@ -279,6 +283,36 @@ fieldset > p{
 div.field,
 fieldset{ margin-bottom: 24px; }
 
+section.section-form:first-of-type{ counter-reset: section; }
+section.section-form fieldset:last-of-type{
+	margin-bottom: 0;
+}
+
+section.section-form{
+	padding-left: 48px;
+	padding-bottom: 32px;
+	counter-increment: section;
+	position: relative;
+	margin-bottom: 0;
+}
+section.section-form::before{
+	content: counter(section);
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: #fafafa;
+	width: 32px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 54px;
+	color: #aaa;
+}
+
+fieldset.fieldset-parties-requesting-agency,
+fieldset.fieldset-parties-servicing-agency,
+fieldset.fieldset-agency-official-requesting-agency,
+fieldset.fieldset-agency-official-servicing-agency,
 fieldset.fieldset-program-official,
 fieldset.fieldset-additional-point-of-contact,
 fieldset.fieldset-corporate-official,
@@ -299,6 +333,10 @@ fieldset.fieldset-corporate-official div.field:last-of-type{
 
 fieldset.fieldset-corporate-official{ margin-bottom: 24px; }
 
+fieldset.fieldset-parties-requesting-agency > legend,
+fieldset.fieldset-parties-servicing-agency > legend,
+fieldset.fieldset-agency-official-requesting-agency > legend,
+fieldset.fieldset-agency-official-servicing-agency > legend,
 fieldset.fieldset-program-official > legend,
 fieldset.fieldset-corporate-official > legend,
 fieldset.fieldset-additional-point-of-contact > legend,
@@ -331,9 +369,23 @@ fieldset div.field:last-of-type+fieldset{
 	border: none;
 }
 
-.fieldset-discretionary-technical-assistance > legend,
-.fieldset.fieldset-equivalent-work-detail > h1,
-.fieldset.fieldset-phase-2 > h1{ display: none; }
+.field-servicing-agency-tracking-number span.label-text,
+.field-requesting-agencys-scope span.label-text,
+.field-roles-and-responsibilities span.label-text,
+.field-assisted-acquisition-small-business-credit-clause span.label-text,
+.field-requesting-agencys-clauses span.label-text,
+.field-servicing-agencys-clauses span.label-text,
+.field-additional-agency-attachments span.label-text,
+.field-disputes span.label-text,
+.field-additional-agency-attachments span.label-text,
+.fieldset-assisted-acquisition-agreement > legend,
+.fieldset-gtc-action > legend,
+.fieldset-recurring-agreement > legend,
+.fieldset-agreement-type > legend,
+.fieldset-advanced-payments > legend{ 
+	position: absolute !important;
+	left: -9999em;
+}
 
 fieldset > legend,
 div.field span.label-text{
