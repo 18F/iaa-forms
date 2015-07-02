@@ -1,409 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>IAA</title>
+    <title>Interagency Agreement Manager</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div id="main">
-      <form method='post' action='http://localhost:4567/form'>
+    <main>
+      <div class="wrap">
+        <form method='post' action='http://localhost:4567/form'>
+          <header>
+            <h1>IAA Preparation form</h1>
+            <p>Your answers to the following questions gives us everything we need to draft an interagency agreement. For more information, see <a href="https://docs.google.com/document/d/12Rk3BF5_nmCUB96MWPaZvaJg3I7KgEcyROJ0yTJphmk/edit">18F&rsquo;s primer on the Interagency Agreement process.</a></p>
 
-        <p>
-          <input type="text" name="servicing_agency_tracking_number" id="servicing_agency_tracking_number" />
-          <label for="servicing_agency_tracking_number">Servicing Agency Agreement Tracking Number (Optional)</label>
-        </p>
+            <div class="field field-iaa-number">
+              <label for="iaa-number">
+                <span class="label-text">IAA number</span>
+                <input name="iaa-number" id="iaa-number" value="18F-4A" type="text">
+              </label>
+            </div>
+          </header>
+          <p>
+            <input type="text" name="servicing_agency_tracking_number" id="servicing_agency_tracking_number" />
+            <label for="servicing_agency_tracking_number">Servicing Agency Agreement Tracking Number (Optional)</label>
+          </p>
 
-        <p>
-          <input type="text" name="start_date" id="start_date" />
-          <label for="start_date">Start Date</label>
-        </p>
-  
-        <p>
-          <input type="text" name="end_date" id="end_date" />
-          <label for="end_date">End Date</label>
-        </p>
+          <p>
+            <input type="text" name="start_date" id="start_date" />
+            <label for="start_date">Start Date</label>
+          </p>
 
-        <p>
-          <input type="text" name="requesting_agency_name_of_products_services" id="requesting_agency_name_of_products_services" />
-          <label for="requesting_agency_name_of_products_services">Name Requesting Agency of Products/Services</label>
-        </p>
-  
-        <p>
-          <input type="text" name="requesting_agency_address" id="requesting_agency_address" />
-          <label for="requesting_agency_address">Address Requesting Agency of Products/Services</label>
-        </p>
+          <p>
+            <input type="text" name="end_date" id="end_date" />
+            <label for="end_date">End Date</label>
+          </p>
 
-        <p>
-          <input type="text" name="servicing_agency_name_products_services" id="servicing_agency_name_products_services" />
-          <label for="servicing_agency_name_products_services">Name Servicing Agency Providing Products/Services</label>
-        </p>
+          <p>
+            <input type="text" name="requesting_agency_name_of_products_services" id="requesting_agency_name_of_products_services" />
+            <label for="requesting_agency_name_of_products_services">Name Requesting Agency of Products/Services</label>
+          </p>
 
-        <p>
-          <input type="text" name="servicing_agency_address" id="servicing_agency_address" />
-          <label for="servicing_agency_address">Address Servicing Agency Providing Products/Services</label>
-        </p>
-  
-        <fieldset>
-          <legend>Radio Button1</legend>
-      
-            <p>
-              <input type="radio" name="radio1" id="radio1_0" value="No" />
-              <label for="radio1_0">No</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio1" id="radio1_1" value="Off" />
-              <label for="radio1_1">Off</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio1" id="radio1_2" value="Yes" />
-              <label for="radio1_2">Yes</label>
-            </p>
-      
-        </fieldset>
+          <p>
+            <input type="text" name="requesting_agency_address" id="requesting_agency_address" />
+            <label for="requesting_agency_address">Address Requesting Agency of Products/Services</label>
+          </p>
 
-        <fieldset>
-          <legend>Radio Button2</legend>
-      
-            <p>
-              <input type="radio" name="radio2" id="radio2_0" value="AMENDMENT" />
-              <label for="radio2_0">AMENDMENT</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio2" id="radio2_1" value="CANCELLATION" />
-              <label for="radio2_1">CANCELLATION</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio2" id="radio2_2" value="NEW" />
-              <label for="radio2_2">NEW</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio2" id="radio2_3" value="Off" />
-              <label for="radio2_3">Off</label>
-            </p>
-      
-        </fieldset>
+          <p>
+            <input type="text" name="servicing_agency_name_products_services" id="servicing_agency_name_products_services" />
+            <label for="servicing_agency_name_products_services">Name Servicing Agency Providing Products/Services</label>
+          </p>
 
-        <fieldset>
-          <legend>Radio Button3</legend>
-      
-            <p>
-              <input type="radio" name="radio3" id="radio3_0" value="NO" />
-              <label for="radio3_0">NO</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio3" id="radio3_1" value="Off" />
-              <label for="radio3_1">Off</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio3" id="radio3_2" value="Yes" />
-              <label for="radio3_2">Yes</label>
-            </p>
-      
-        </fieldset>
+          <p>
+            <input type="text" name="servicing_agency_address" id="servicing_agency_address" />
+            <label for="servicing_agency_address">Address Servicing Agency Providing Products/Services</label>
+          </p>
 
-        <fieldset>
-          <legend>Radio Button4</legend>
-      
-            <p>
-              <input type="radio" name="radio4" id="radio4_0" value="2" />
-              <label for="radio4_0">2</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio4" id="radio4_1" value="Off" />
-              <label for="radio4_1">Off</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio4" id="radio4_2" value="Yes" />
-              <label for="radio4_2">Yes</label>
-            </p>
-      
-        </fieldset>
+          <fieldset>
+            <legend>Radio Button1</legend>
 
-        <fieldset>
-          <legend>Radio Button5</legend>
-      
-            <p>
-              <input type="radio" name="radio5" id="radio5_0" value="2" />
-              <label for="radio5_0">2</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio5" id="radio5_1" value="Off" />
-              <label for="radio5_1">Off</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio5" id="radio5_2" value="SINGLE ORDER IAA" />
-              <label for="radio5_2">SINGLE ORDER IAA</label>
-            </p>
-      
-        </fieldset>
+              <p>
+                <input type="radio" name="radio1" id="radio1_0" value="No" />
+                <label for="radio1_0">No</label>
+              </p>
 
-        <fieldset>
-          <legend>Radio Button6</legend>
-      
-            <p>
-              <input type="radio" name="radio6" id="radio6_0" value="2" />
-              <label for="radio6_0">2</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio6" id="radio6_1" value="Off" />
-              <label for="radio6_1">Off</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio6" id="radio6_2" value="Yes" />
-              <label for="radio6_2">Yes</label>
-            </p>
-      
-        </fieldset>
+              <p>
+                <input type="radio" name="radio1" id="radio1_1" value="Off" />
+                <label for="radio1_1">Off</label>
+              </p>
 
-        <p>
-          <input type="text" name="amendment" id="amendment" />
-          <label for="amendment">Amendment</label>
-        </p>
-  
-        <p>
-          <input type="text" name="cancellation_explanation" id="cancellation_explanation" />
-          <label for="cancellation_explanation">IAA Cancellation Explanation</label>
-        </p>
+              <p>
+                <input type="radio" name="radio1" id="radio1_2" value="Yes" />
+                <label for="radio1_2">Yes</label>
+              </p>
 
-        <p>
-          <input type="text" name="other_renewal_period" id="other_renewal_period" />
-          <label for="other_renewal_period">Other Renewal Period</label>
-        </p>
+          </fieldset>
 
-        <p>
-          <input type="text" name="requesting_agency_statutory_authority_title_and_citation" id="requesting_agency_statutory_authority_title_and_citation" />
-          <label for="requesting_agency_statutory_authority_title_and_citation">Requesting Agency's Statutory Authority Title and Citation</label>
-        </p>
-  
-        <p>
-          <input type="text" name="gt_and_c_number" id="gt_and_c_number" />
-          <label for="gt_and_c_number">gt_and_c_number</label>
-        </p>
+          <fieldset>
+            <legend>Radio Button2</legend>
 
-        <p>
-          <input type="text" name="mod_number" id="mod_number" />
-          <label for="mod_number">mod_number</label>
-        </p>
+              <p>
+                <input type="radio" name="radio2" id="radio2_0" value="AMENDMENT" />
+                <label for="radio2_0">AMENDMENT</label>
+              </p>
 
-        <p>
-          <input type="text" name="direct_cost" id="direct_cost" />
-          <label for="direct_cost">Direct  Cost</label>
-        </p>
-  
-        <p>
-          <input type="text" name="overhead_fees_and_charges" id="overhead_fees_and_charges" />
-          <label for="overhead_fees_and_charges">Overhead Fees  Charges</label>
-        </p>
+              <p>
+                <input type="radio" name="radio2" id="radio2_1" value="CANCELLATION" />
+                <label for="radio2_1">CANCELLATION</label>
+              </p>
 
-        <p>
-          <input type="text" name="total_estimated_amount" id="total_estimated_amount" />
-          <label for="total_estimated_amount">Total Estimated Amount</label>
-        </p>
+              <p>
+                <input type="radio" name="radio2" id="radio2_2" value="NEW" />
+                <label for="radio2_2">NEW</label>
+              </p>
 
-        <p>
-          <input type="text" name="requesting_agency_scope" id="requesting_agency_scope" />
-          <label for="requesting_agency_scope">11 Requesting Agencys Scope State andor list attachments that support Requesting Agencys Scope</label>
-        </p>
-  
-        <p>
-          <input type="text" name="requesting_agency_roles_and_responsibilities" id="requesting_agency_roles_and_responsibilities" />
-          <label for="requesting_agency_roles_and_responsibilities">12 Roles  Responsibilities for the Requesting Agency and Servicing Agency State andor list attachments for the roles and responsibilities for the Requesting Agency and the Servicing Agency</label>
-        </p>
-  
-        <fieldset>
-          <legend>Radio Button7</legend>
-      
-            <p>
-              <input type="radio" name="radio7" id="radio7_0" value="2" />
-              <label for="radio7_0">2</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio7" id="radio7_1" value="Off" />
-              <label for="radio7_1">Off</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio7" id="radio7_2" value="Requesting FF" />
-              <label for="radio7_2">Requesting FF</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio7" id="radio7_3" value="Requesting OA" />
-              <label for="radio7_3">Requesting OA</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio7" id="radio7_4" value="Requesting RF" />
-              <label for="radio7_4">Requesting RF</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio7" id="radio7_5" value="Requesting WCF" />
-              <label for="radio7_5">Requesting WCF</label>
-            </p>
-      
-        </fieldset>
-  
-        <fieldset>
-          <legend>Radio Button8</legend>
-      
-            <p>
-              <input type="radio" name="radio8" id="radio8_0" value="0" />
-              <label for="radio8_0">0</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio8" id="radio8_1" value="1" />
-              <label for="radio8_1">1</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio8" id="radio8_2" value="2" />
-              <label for="radio8_2">2</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio8" id="radio8_3" value="3" />
-              <label for="radio8_3">3</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio8" id="radio8_4" value="4" />
-              <label for="radio8_4">4</label>
-            </p>
-      
-            <p>
-              <input type="radio" name="radio8" id="radio8_5" value="Off" />
-              <label for="radio8_5">Off</label>
-            </p>
-      
-        </fieldset>
-  
-        <p>
-          <input type="text" name="general_explanation_overhead_fees_and_charges" id="general_explanation_overhead_fees_and_charges" />
-          <label for="general_explanation_overhead_fees_and_charges">general_explanation_overhead_fees_and_charges</label>
-        </p>
+              <p>
+                <input type="radio" name="radio2" id="radio2_3" value="Off" />
+                <label for="radio2_3">Off</label>
+              </p>
 
-        <p>
-          <input type="text" name="statory_authority" id="statory_authority" />
-          <label for="statory_authority">Statutory authority</label>
-        </p>
-  
-        <p>
-          <input type="text" name="statutory_authority_1" id="statutory_authority_1" />
-          <label for="statutory_authority_1">Statutory Authority1</label>
-        </p>
-  
-        <p>
-          <input type="text" name="restrictions" id="restrictions" />
-          <label for="restrictions">13 Restrictions Optional State andor attach unique requirements andor mission specific restrictions specific to this IAA</label>
-        </p>
-  
-        <p>
-          <input type="text" name="requesting_agency_organiations_authorized" id="requesting_agency_organiations_authorized" />
-          <label for="requesting_agency_organiations_authorized">17  Assisted Acquisition Agreements  Requesting Agencys Organizations Authorized To Request Acquisition Assistance for this IAA State or attach a list of Requesting Agencys organizations authorized to request acquisition assistance for this IAA</label>
-        </p>
-  
-        <p>
-          <input type="text" name="servicing_agency_organiations" id="servicing_agency_organiations" />
-          <label for="servicing_agency_organiations">18  Assisted Acquisition Agreements  Servicing Agencys Organizations authorized to Provide Acquisition Assistance for this IAA State or attach a list of Servicing Agencys organizations authorized to provide acquisition for this IAA</label>
-        </p>
-  
-        <p>
-          <input type="text" name="requesting_agency_clauses" id="requesting_agency_clauses" />
-          <label for="requesting_agency_clauses">19 Requesting Agency Clauses Optional State andor attach any additional Requesting Agency clauses</label>
-        </p>
+          </fieldset>
 
-        <p>
-          <input type="text" name="number_of_days_this_iaa_may_be_terminated" id="number_of_days_this_iaa_may_be_terminated" />
-          <label for="number_of_days_this_iaa_may_be_terminated">No. of days this IAA may be terminated</label>
-        </p>
-  
-        <p>
-          <input type="text" name="servicing_agency_clauses" id="servicing_agency_clauses" />
-          <label for="servicing_agency_clauses">20 Servicing Agency Clauses Optional State andor attach any additional Servicing Agency clauses</label>
-        </p>
-  
-        <p>
-          <input type="text" name="additional_attachments" id="additional_attachments" />
-          <label for="additional_attachments">21 Additional Requesting Agency andor Servicing Agency Attachments Optional State andor attach any additional Requesting Agency andor Servicing Agency attachments</label>
-        </p>
+          <fieldset>
+            <legend>Radio Button3</legend>
 
-        <p>
-          <input type="text" name="requesting_agency_name" id="requesting_agency_name" />
-          <label for="requesting_agency_name">Requesting Agency Name</label>
-        </p>
+              <p>
+                <input type="radio" name="radio3" id="radio3_0" value="NO" />
+                <label for="radio3_0">NO</label>
+              </p>
 
-        <p>
-          <input type="text" name="servicing_agency_name" id="servicing_agency_name" />
-          <label for="servicing_agency_name">Servicing Agency Name</label>
-        </p>
-  
-        <p>
-          <input type="text" name="requesting_agency_title" id="requesting_agency_title" />
-          <label for="requesting_agency_title">Requesting Agency Title</label>
-        </p>
-  
-        <p>
-          <input type="text" name="servicing_agency_title" id="servicing_agency_title" />
-          <label for="servicing_agency_title">Servicing Agency Title</label>
-        </p>
-    
-        <p>
-          <input type="text" name="requesting_agency_telephone_number" id="requesting_agency_telephone_number" />
-          <label for="requesting_agency_telephone_number">Requesting Agency Telephone Number</label>
-        </p>
-  
-        <p>
-          <input type="text" name="servicing_agency_telephone_number" id="servicing_agency_telephone_number" />
-          <label for="servicing_agency_telephone_number">Servicing Agency Telephone Number</label>
-        </p>
-    
-        <p>
-          <input type="text" name="requesting_agency_fax_number" id="requesting_agency_fax_number" />
-          <label for="requesting_agency_fax_number">Requesting Agency Fax Number</label>
-        </p>
+              <p>
+                <input type="radio" name="radio3" id="radio3_1" value="Off" />
+                <label for="radio3_1">Off</label>
+              </p>
 
-        <p>
-          <input type="text" name="servicing_agency_fax_number" id="servicing_agency_fax_number" />
-          <label for="servicing_agency_fax_number">Servicing Agency Fax Number</label>
-        </p>
-  
-        <p>
-          <input type="text" name="requesting_agency_email_address" id="requesting_agency_email_address" />
-          <label for="requesting_agency_email_address">Requesting Agency Email Address</label>
-        </p>
+              <p>
+                <input type="radio" name="radio3" id="radio3_2" value="Yes" />
+                <label for="radio3_2">Yes</label>
+              </p>
 
-        <p>
-          <input type="text" name="servicing_agency_email_address" id="servicing_agency_email_address" />
-          <label for="servicing_agency_email_address">Servicing Agency Email Address</label>
-        </p>
-  
-        <p>
-          <input type="text" name="requesting_agency_approval_date" id="requesting_agency_approval_date" />
-          <label for="requesting_agency_approval_date">Requesting Agency Approval Date</label>
-        </p>
-  
-        <p>
-          <input type="text" name="servicing_agency_approval_date" id="servicing_agency_approval_date" />
-          <label for="servicing_agency_approval_date">Servicing Agency Approval Date</label>
-        </p>
-    
-        <input type="submit" value="submit" />
-      </form>
-    </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Radio Button4</legend>
+
+              <p>
+                <input type="radio" name="radio4" id="radio4_0" value="2" />
+                <label for="radio4_0">2</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio4" id="radio4_1" value="Off" />
+                <label for="radio4_1">Off</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio4" id="radio4_2" value="Yes" />
+                <label for="radio4_2">Yes</label>
+              </p>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Radio Button5</legend>
+
+              <p>
+                <input type="radio" name="radio5" id="radio5_0" value="2" />
+                <label for="radio5_0">2</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio5" id="radio5_1" value="Off" />
+                <label for="radio5_1">Off</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio5" id="radio5_2" value="SINGLE ORDER IAA" />
+                <label for="radio5_2">SINGLE ORDER IAA</label>
+              </p>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Radio Button6</legend>
+
+              <p>
+                <input type="radio" name="radio6" id="radio6_0" value="2" />
+                <label for="radio6_0">2</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio6" id="radio6_1" value="Off" />
+                <label for="radio6_1">Off</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio6" id="radio6_2" value="Yes" />
+                <label for="radio6_2">Yes</label>
+              </p>
+
+          </fieldset>
+
+          <p>
+            <input type="text" name="amendment" id="amendment" />
+            <label for="amendment">Amendment</label>
+          </p>
+
+          <p>
+            <input type="text" name="cancellation_explanation" id="cancellation_explanation" />
+            <label for="cancellation_explanation">IAA Cancellation Explanation</label>
+          </p>
+
+          <p>
+            <input type="text" name="other_renewal_period" id="other_renewal_period" />
+            <label for="other_renewal_period">Other Renewal Period</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_statutory_authority_title_and_citation" id="requesting_agency_statutory_authority_title_and_citation" />
+            <label for="requesting_agency_statutory_authority_title_and_citation">Requesting Agency's Statutory Authority Title and Citation</label>
+          </p>
+
+          <p>
+            <input type="text" name="gt_and_c_number" id="gt_and_c_number" />
+            <label for="gt_and_c_number">gt_and_c_number</label>
+          </p>
+
+          <p>
+            <input type="text" name="mod_number" id="mod_number" />
+            <label for="mod_number">mod_number</label>
+          </p>
+
+          <p>
+            <input type="text" name="direct_cost" id="direct_cost" />
+            <label for="direct_cost">Direct  Cost</label>
+          </p>
+
+          <p>
+            <input type="text" name="overhead_fees_and_charges" id="overhead_fees_and_charges" />
+            <label for="overhead_fees_and_charges">Overhead Fees  Charges</label>
+          </p>
+
+          <p>
+            <input type="text" name="total_estimated_amount" id="total_estimated_amount" />
+            <label for="total_estimated_amount">Total Estimated Amount</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_scope" id="requesting_agency_scope" />
+            <label for="requesting_agency_scope">11 Requesting Agencys Scope State andor list attachments that support Requesting Agencys Scope</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_roles_and_responsibilities" id="requesting_agency_roles_and_responsibilities" />
+            <label for="requesting_agency_roles_and_responsibilities">12 Roles  Responsibilities for the Requesting Agency and Servicing Agency State andor list attachments for the roles and responsibilities for the Requesting Agency and the Servicing Agency</label>
+          </p>
+
+          <fieldset>
+            <legend>Radio Button7</legend>
+
+              <p>
+                <input type="radio" name="radio7" id="radio7_0" value="2" />
+                <label for="radio7_0">2</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio7" id="radio7_1" value="Off" />
+                <label for="radio7_1">Off</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio7" id="radio7_2" value="Requesting FF" />
+                <label for="radio7_2">Requesting FF</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio7" id="radio7_3" value="Requesting OA" />
+                <label for="radio7_3">Requesting OA</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio7" id="radio7_4" value="Requesting RF" />
+                <label for="radio7_4">Requesting RF</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio7" id="radio7_5" value="Requesting WCF" />
+                <label for="radio7_5">Requesting WCF</label>
+              </p>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Radio Button8</legend>
+
+              <p>
+                <input type="radio" name="radio8" id="radio8_0" value="0" />
+                <label for="radio8_0">0</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio8" id="radio8_1" value="1" />
+                <label for="radio8_1">1</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio8" id="radio8_2" value="2" />
+                <label for="radio8_2">2</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio8" id="radio8_3" value="3" />
+                <label for="radio8_3">3</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio8" id="radio8_4" value="4" />
+                <label for="radio8_4">4</label>
+              </p>
+
+              <p>
+                <input type="radio" name="radio8" id="radio8_5" value="Off" />
+                <label for="radio8_5">Off</label>
+              </p>
+
+          </fieldset>
+
+          <p>
+            <input type="text" name="general_explanation_overhead_fees_and_charges" id="general_explanation_overhead_fees_and_charges" />
+            <label for="general_explanation_overhead_fees_and_charges">general_explanation_overhead_fees_and_charges</label>
+          </p>
+
+          <p>
+            <input type="text" name="statory_authority" id="statory_authority" />
+            <label for="statory_authority">Statutory authority</label>
+          </p>
+
+          <p>
+            <input type="text" name="statutory_authority_1" id="statutory_authority_1" />
+            <label for="statutory_authority_1">Statutory Authority1</label>
+          </p>
+
+          <p>
+            <input type="text" name="restrictions" id="restrictions" />
+            <label for="restrictions">13 Restrictions Optional State andor attach unique requirements andor mission specific restrictions specific to this IAA</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_organiations_authorized" id="requesting_agency_organiations_authorized" />
+            <label for="requesting_agency_organiations_authorized">17  Assisted Acquisition Agreements  Requesting Agencys Organizations Authorized To Request Acquisition Assistance for this IAA State or attach a list of Requesting Agencys organizations authorized to request acquisition assistance for this IAA</label>
+          </p>
+
+          <p>
+            <input type="text" name="servicing_agency_organiations" id="servicing_agency_organiations" />
+            <label for="servicing_agency_organiations">18  Assisted Acquisition Agreements  Servicing Agencys Organizations authorized to Provide Acquisition Assistance for this IAA State or attach a list of Servicing Agencys organizations authorized to provide acquisition for this IAA</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_clauses" id="requesting_agency_clauses" />
+            <label for="requesting_agency_clauses">19 Requesting Agency Clauses Optional State andor attach any additional Requesting Agency clauses</label>
+          </p>
+
+          <p>
+            <input type="text" name="number_of_days_this_iaa_may_be_terminated" id="number_of_days_this_iaa_may_be_terminated" />
+            <label for="number_of_days_this_iaa_may_be_terminated">No. of days this IAA may be terminated</label>
+          </p>
+
+          <p>
+            <input type="text" name="servicing_agency_clauses" id="servicing_agency_clauses" />
+            <label for="servicing_agency_clauses">20 Servicing Agency Clauses Optional State andor attach any additional Servicing Agency clauses</label>
+          </p>
+
+          <p>
+            <input type="text" name="additional_attachments" id="additional_attachments" />
+            <label for="additional_attachments">21 Additional Requesting Agency andor Servicing Agency Attachments Optional State andor attach any additional Requesting Agency andor Servicing Agency attachments</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_name" id="requesting_agency_name" />
+            <label for="requesting_agency_name">Requesting Agency Name</label>
+          </p>
+
+          <p>
+            <input type="text" name="servicing_agency_name" id="servicing_agency_name" />
+            <label for="servicing_agency_name">Servicing Agency Name</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_title" id="requesting_agency_title" />
+            <label for="requesting_agency_title">Requesting Agency Title</label>
+          </p>
+
+          <p>
+            <input type="text" name="servicing_agency_title" id="servicing_agency_title" />
+            <label for="servicing_agency_title">Servicing Agency Title</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_telephone_number" id="requesting_agency_telephone_number" />
+            <label for="requesting_agency_telephone_number">Requesting Agency Telephone Number</label>
+          </p>
+
+          <p>
+            <input type="text" name="servicing_agency_telephone_number" id="servicing_agency_telephone_number" />
+            <label for="servicing_agency_telephone_number">Servicing Agency Telephone Number</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_fax_number" id="requesting_agency_fax_number" />
+            <label for="requesting_agency_fax_number">Requesting Agency Fax Number</label>
+          </p>
+
+          <p>
+            <input type="text" name="servicing_agency_fax_number" id="servicing_agency_fax_number" />
+            <label for="servicing_agency_fax_number">Servicing Agency Fax Number</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_email_address" id="requesting_agency_email_address" />
+            <label for="requesting_agency_email_address">Requesting Agency Email Address</label>
+          </p>
+
+          <p>
+            <input type="text" name="servicing_agency_email_address" id="servicing_agency_email_address" />
+            <label for="servicing_agency_email_address">Servicing Agency Email Address</label>
+          </p>
+
+          <p>
+            <input type="text" name="requesting_agency_approval_date" id="requesting_agency_approval_date" />
+            <label for="requesting_agency_approval_date">Requesting Agency Approval Date</label>
+          </p>
+
+          <p>
+            <input type="text" name="servicing_agency_approval_date" id="servicing_agency_approval_date" />
+            <label for="servicing_agency_approval_date">Servicing Agency Approval Date</label>
+          </p>
+
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </main>
   </body>
 </html>
