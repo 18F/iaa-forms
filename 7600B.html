@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7600B | Interagency Agreement Manager | 18F</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bigfoot/dist/bigfoot-default.css">
+    <script type="text/javascript" src="bower_components/bigfoot/dist/bigfoot.min.js"></script>
+
+    <script type="text/javascript" src="javascripts/application.js"></script>
+  </head>
+  <body>
+    <header class="banner" role="banner">
+      <div class="wrap">
+        <h1><span class="logo">18F</span><span class="interagency-agreement-manager">Interagency Agreement Manager</span></h1>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <form class="form-7600b">
+          <header>
+            <h1>7600B</h1>
+            <div class="field field-iaa-number">
+              <label for="iaa-number">
+                <span class="label-text"><abbr title="interagency agreement">IAA</abbr> number</span>
+                <input required name="iaa-number" id="iaa-number" value="18F-4A" type="text">
+              </label>
+            </div>
+          </header>
+          <section class="section-form section-parties">
+            <header><h1>Parties</h1></header>
+            <fieldset class="fieldset-parties-requesting-agency">
+              <legend>Requesting agency</legend>
+              <div class="field field-name">
+                <label for="parties-requesting-agency-name">
+                  <span class="label-text">Name</span>
+                  <input required name="parties-requesting-agency-name" id="parties-requesting-agency-name" type="text">
+                </label>
+              </div>
+              <fieldset class="fieldset-mailing-address">
+                <legend>Mailing address</legend>
+                <div class="field field-street-address">
+                  <label for="parties-requesting-agency-mailing-address-street-address">
+                    <span class="label-text">Street address</span>
+                    <input required name="parties-requesting-agency-mailing-address-street-address" id="parties-requesting-agency-mailing-address-street-address" type="text">
+                  </label>
+                </div>
+                <div class="field-city-state-zip">
+                  <div class="field field-city">
+                    <label for="parties-requesting-agency-mailing-address-city">
+                      <span class="label-text">City</span>
+                      <input required name="parties-requesting-agency-mailing-address-city" id="parties-requesting-agency-mailing-address-city" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-state field-select">
+                    <label for="parties-requesting-agency-mailing-address-state">
+                      <span class="label-text">State</span>
+                      <select name="parties-requesting-agency-mailing-address-state" id="parties-requesting-agency-mailing-address-state" type="text">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="field field-zip">
+                    <label for="parties-requesting-agency-mailing-address-zip">
+                      <span class="label-text">Zip</span>
+                      <input required name="parties-requesting-agency-mailing-address-zip" id="parties-requesting-agency-mailing-address-zip" type="text">
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </fieldset>
+            <fieldset class="fieldset-parties-servicing-agency">
+              <legend>Servicing agency</legend>
+              <div class="field field-name">
+                <label for="parties-servicing-agency-name">
+                  <span class="label-text">Name</span>
+                  <input required name="parties-servicing-agency-name" id="parties-servicing-agency-name" type="text">
+                </label>
+              </div>
+              <fieldset class="fieldset-mailing-address">
+                <legend>Mailing address</legend>
+                <div class="field field-street-address">
+                  <label for="parties-servicing-agency-mailing-address-street-address">
+                    <span class="label-text">Street address</span>
+                    <input required name="parties-servicing-agency-mailing-address-street-address" id="parties-servicing-agency-mailing-address-street-address" type="text">
+                  </label>
+                </div>
+                <div class="field-city-state-zip">
+                  <div class="field field-city">
+                    <label for="parties-servicing-agency-mailing-address-city">
+                      <span class="label-text">City</span>
+                      <input required name="parties-servicing-agency-mailing-address-city" id="parties-servicing-agency-mailing-address-city" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-state field-select">
+                    <label for="parties-servicing-agency-mailing-address-state">
+                      <span class="label-text">State</span>
+                      <select name="parties-servicing-agency-mailing-address-state" id="parties-servicing-agency-mailing-address-state" type="text">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="field field-zip">
+                    <label for="parties-servicing-agency-mailing-address-zip">
+                      <span class="label-text">Zip</span>
+                      <input required name="parties-servicing-agency-mailing-address-zip" id="parties-servicing-agency-mailing-address-zip" type="text">
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </fieldset>
+          </section>
+          <section class="section-form section-order-action">
+            <header>
+              <h1>Order action</h1>
+            </header>
+            <fieldset class="fieldset-order-action fieldset-radio">
+              <legend>What action will you execute by filing this document?</legend>
+              <div class="field field-radio">
+                <label for="order-action-new">
+                  <input required 
+                         id="order-action-new" 
+                         name="order-action" 
+                         type="radio"
+                         value="new">
+                  <span class="label-text">New</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="order-action-modification">
+                  <input required name="order-action" id="order-action-modification" type="radio" value="modification" selected>
+                  <span class="label-text">Modification</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="order-action-cancellation">
+                  <input required name="order-action" id="order-action-cancellation" type="radio" value="cancellation">
+                  <span class="label-text">Cancellation</span>
+                </label>
+              </div>
+            </fieldset>          
+            <aside class="branch">
+              <section class="branch-modification">
+                <h1>If modification</h1>              
+                <p>List affected order blocks and explain the changes being made. For example: for a performance period mod, state new perforamance periods for this order in block 27. Fill out the funding modification summary by line (block 26) if the mod involves adding, deleting, or changing funding for an order line.</p>
+                <div class="field field-explanation">
+                  <label for="modification-explanation">
+                    <span class="label-text">Explanation</span>
+                    <textarea name="modification-explanation" id="modification-explanation" type="radio" value="explanation"></textarea>
+                  </label>
+                </div>
+              </section>
+              <section class="branch-cancellation">
+                <h1>If cancellation</h1>
+                <p>Provide a brief explanation for order cancellation and fill in the performance period end date for the effective cancellation date.</p>
+                <div class="field field-explanation">
+                  <label for="cancellation-explanation">
+                    <span class="label-text">Explanation</span>
+                    <textarea name="cancellation-explanation" id="cancellation-explanation" type="radio" value="explanation"></textarea>
+                  </label>
+                </div>
+              </section>
+            </aside>
+          </section>
+          <section class="section-form section-funding-modification-summary-by-line">
+            <header>
+              <h1>Funding modification summary by line</h1>
+            </header>
+            <table class="table-funding-modification-summary-by-line">
+              <thead>
+                <th id="th-line-number" scope="col" class="">Line #</th>
+                <th id="th-original-line-funding" scope="col" class="">Original line funding</th>
+                <th id="th-cumulative-prior-funding-changes" scope="col" class="">Cumulative funding changes from prior modifications (addition + or reduction -)</th>
+                <th id="th-funding-changes" scope="col" class="">Funding change for this modification</th>
+                <th id="th-total-modified-obligation" scope="col" class=" is-calculated">Total modified obligation</th>
+                <th id="th-total-advance-amount" scope="col" class="">Total advance amount (-)</th>
+                <th id="th-net-modified-amount-due" scope="col" class="is-calculated">Net modified amount due</th>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Total</th>
+                  <td class="is-calculated">$0.00</td>
+                  <td class="is-calculated">$0.00</td>
+                  <td class="is-calculated">$0.00</td>
+                  <td class="is-calculated">$0.00</td>
+                  <td class="is-calculated">$0.00</td>
+                  <td class="is-calculated">$0.00</td>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td class="field td-line-number">
+                    <input name="funding-modification-summary-by-line-1-line-number" id="funding-modification-summary-by-line-1-line-number" type="text" value="" aria-labelledby="th-line-number">
+                  </td>
+                  <td class="field td-original-line-funding">
+                    <input name="funding-modification-summary-by-line-1-original-line-funding" id="funding-modification-summary-by-line-1-original-line-funding" type="text" value="" aria-labelledby="funding-modification-summary-by-line-1-line-number th-original-line-funding">
+                  </td>
+                  <td class="field td-cumulative-prior-funding-changes">
+                    <input name="funding-modification-summary-by-line-1-cumulative-prior-funding-changes" id="funding-modification-summary-by-line-1-cumulative-prior-funding-changes" type="text" value="" aria-labelledby="funding-modification-summary-by-line-1-line-number th-cumulative-prior-funding-changes">
+                  </td>
+                  <td class="field td-funding-changes">                    
+                    <input name="funding-modification-summary-by-line-1-funding-changes" id="funding-modification-summary-by-line-1-funding-changes" type="text" value="" aria-labelledby="funding-modification-summary-by-line-1-line-number th-funding-changes">
+                  </td>
+                  <td class="field td-total-modified-obligation is-calculated">
+                    <input name="funding-modification-summary-by-line-1-total-modified-obligation" id="funding-modification-summary-by-line-1-total-modified-obligation" type="text" value="" aria-labelledby="funding-modification-summary-by-line-1-line-number th-total-modified-obligation">
+                  </td>
+                  <td class="field td-total-advance-amount">
+                    <input name="funding-modification-summary-by-line-1-total-advance-amount" id="funding-modification-summary-by-line-1-total-advance-amount" type="text" value="" aria-labelledby="funding-modification-summary-by-line-1-line-number th-total-advance-amount">
+                  </td>
+                  <td class="field td-net-modified-amount-due is-calculated">
+                    <input name="funding-modification-summary-by-line-1-net-modified-amount-due" id="funding-modification-summary-by-line-1-net-modified-amount-due" type="text" value="" aria-labelledby="funding-modification-summary-by-line-1-line-number th-total-modified-obligation">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Moar rows.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="section-form section-performance-period">
+            <header>
+              <h1>Performance period</h1>
+              <p>For a performance period mod, insert the start and end dates that reflect the new performance period.</p>
+            </header>
+            <fieldset class="fieldset-performance-period">
+              <legend>Performance period</legend>
+              <div class="field field-date field-performance-period-start-date">
+                <label for="performance-period-start-date">
+                  <span class="label-text">Start date</span>
+                  <input type="date" id="performance-period-start-date" name="performance-period-start-date"> 
+                </label>
+              </div>
+              <div class="field field-date field-performance-period-end-date">
+                <label for="performance-period-end-date">
+                  <span class="label-text">End date</span>
+                  <input type="date" id="performance-period-end-date" name="performance-period-end-date">
+                </label>
+              </div>
+            </fieldset>
+
+          </section>
+          <section class="section-form section-funding-information">
+            <header>
+              <h1>Funding information</h1>
+            </header>
+            <div class="field field-line-number">
+              <label for="line-number">
+                <span class="label-text">Line number</span>
+                <input name="line-number" id="line-number" type="text">
+              </label>
+            </div>
+            <fieldset class="fieldset-requesting-agency">
+              <legend>Requesting agency</legend>
+              <div class="field field-alc">
+                <label for="funding-information-requesting-agency-alc">
+                  <span class="label-text">ALC</span>
+                  <input name="funding-information-requesting-agency-alc" id="funding-information-requesting-agency-alc" type="text">
+                </label>
+              </div>
+              <fieldset class="fieldset-radio fieldset-tas-type">
+                <legend>TAS type</legend>
+                <div class="field field-radio">
+                  <label for="funding-information-requesting-agency-tas-type-component">
+                    <input required 
+                           name="funding-information-requesting-agency-tas-type" 
+                           id="funding-information-requesting-agency-tas-type-component" 
+                           type="radio"
+                           value="component">
+                    <span class="label-text">Component</span>
+                  </label>
+                </div>
+                <div class="field field-radio">
+                  <label for="funding-information-requesting-agency-tas-type-current">
+                    <input required 
+                           name="funding-information-requesting-agency-tas-type" 
+                           id="funding-information-requesting-agency-tas-type-current" 
+                           type="radio"
+                           value="current">
+                    <span class="label-text">Current</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="fieldset-radio fieldset-component-tas">
+                <legend>Component TAS</legend>
+                <div class="field field-sp">
+                  <label for="funding-information-requesting-agency-component-tas-sp">
+                    <span class="label-text">SP</span>
+                    <input name="funding-information-requesting-agency-component-tas-sp" id="funding-information-requesting-agency-component-tas-sp" type="text">
+                  </label>
+                </div>
+                <div class="field field-ata">
+                  <label for="funding-information-requesting-agency-component-tas-ata">
+                    <span class="label-text">ATA</span>
+                    <input name="funding-information-requesting-agency-component-tas-ata" id="funding-information-requesting-agency-component-tas-ata" type="text">
+                  </label>
+                </div>
+                <div class="field field-aid">
+                  <label for="funding-information-requesting-agency-component-tas-aid">
+                    <span class="label-text">AID</span>
+                    <input name="funding-information-requesting-agency-component-tas-aid" id="funding-information-requesting-agency-component-tas-aid" type="text">
+                  </label>
+                </div>
+                <div class="field field-bpoa">
+                  <label for="funding-information-requesting-agency-component-tas-bpoa">
+                    <span class="label-text">BPOA</span>
+                    <input name="funding-information-requesting-agency-component-tas-bpoa" id="funding-information-requesting-agency-component-tas-bpoa" type="text">
+                  </label>
+                </div>
+                <div class="field field-sp">
+                  <label for="funding-information-requesting-agency-component-tas-sp">
+                    <span class="label-text">EPOA</span>
+                    <input name="funding-information-requesting-agency-component-tas-sp" id="funding-information-requesting-agency-component-tas-sp" type="text">
+                  </label>
+                </div>
+                <div class="field field-a">
+                  <label for="funding-information-requesting-agency-component-tas-a">
+                    <span class="label-text">A</span>
+                    <input name="funding-information-requesting-agency-component-tas-a" id="funding-information-requesting-agency-component-tas-a" type="text">
+                  </label>
+                </div>
+                <div class="field field-main">
+                  <label for="funding-information-requesting-agency-component-tas-main">
+                    <span class="label-text">MAIN</span>
+                    <input name="funding-information-requesting-agency-component-tas-main" id="funding-information-requesting-agency-component-tas-main" type="text">
+                  </label>
+                </div>
+                <div class="field field-sub">
+                  <label for="funding-information-requesting-agency-component-tas-sub">
+                    <span class="label-text">SUB</span>
+                    <input name="funding-information-requesting-agency-component-tas-sub" id="funding-information-requesting-agency-component-tas-sub" type="text">
+                  </label>
+                </div>
+              </fieldset>
+              <div class="field field-sub">
+                <label for="funding-information-requesting-agency-betc">
+                  <span class="label-text">BETC</span>
+                  <input name="funding-information-requesting-agency-betc" id="funding-information-requesting-agency-betc" type="text">
+                </label>
+              </div>
+              <div class="field field-sub">
+                <label for="funding-information-requesting-agency-object-class-code">
+                  <span class="label-text">Object class code</span>
+                  <input name="funding-information-requesting-agency-object-class-code" id="funding-information-requesting-agency-object-class-code" type="text">
+                </label>
+              </div>
+              <div class="field field-sub">
+                <label for="funding-information-requesting-agency-bpn">
+                  <span class="label-text">BPN (or BPN+4)</span>
+                  <input name="funding-information-requesting-agency-bpn" id="funding-information-requesting-agency-bpn" type="text">
+                </label>
+              </div>
+              <div class="field field-sub">
+                <label for="funding-information-requesting-agency-additional-accounting-classification">
+                  <span class="label-text">Additional accounting classification</span>
+                  <input name="funding-information-requesting-agency-additional-accounting-classification" id="funding-information-requesting-agency-additional-accounting-classification" type="text">
+                </label>
+              </div>
+              <div class="field field-sub">
+                <label for="funding-information-requesting-agency-expiration-date">
+                  <span class="label-text">Expiration date</span>
+                  <input name="funding-information-requesting-agency-expiration-date" id="funding-information-requesting-agency-expiration-date" type="date">
+                </label>
+              </div>
+              <div class="field field-sub">
+                <label for="funding-information-requesting-agency-cancellation-date">
+                  <span class="label-text">Cancellation date</span>
+                  <input name="funding-information-requesting-agency-component-tas-betc" id="funding-information-requesting-agency-component-tas-betc" type="date">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="fieldset-servicing-agency">
+              <legend>Servicing agency</legend>
+              <div class="field field-alc">
+                <label for="funding-information-servicing-agency-alc">
+                  <span class="label-text">ALC</span>
+                  <input name="funding-information-servicing-agency-alc" id="funding-information-servicing-agency-alc" type="text">
+                </label>
+              </div>
+              <fieldset class="fieldset-radio fieldset-tas-type">
+                <legend>TAS type</legend>
+                <div class="field field-radio">
+                  <label for="funding-information-servicing-agency-tas-type-component">
+                    <input required 
+                           name="funding-information-servicing-agency-tas-type" 
+                           id="funding-information-servicing-agency-tas-type-component" 
+                           type="radio"
+                           value="component">
+                    <span class="label-text">Component</span>
+                  </label>
+                </div>
+                <div class="field field-radio">
+                  <label for="funding-information-servicing-agency-tas-type-current">
+                    <input required 
+                           name="funding-information-servicing-agency-tas-type" 
+                           id="funding-information-servicing-agency-tas-type-current" 
+                           type="radio"
+                           value="current">
+                    <span class="label-text">Current</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="fieldset-radio fieldset-component-tas">
+                <legend>Component TAS</legend>
+                <div class="field field-sp">
+                  <label for="funding-information-servicing-agency-component-tas-sp">
+                    <span class="label-text">SP</span>
+                    <input name="funding-information-servicing-agency-component-tas-sp" id="funding-information-servicing-agency-component-tas-sp" type="text">
+                  </label>
+                </div>
+                <div class="field field-ata">
+                  <label for="funding-information-servicing-agency-component-tas-ata">
+                    <span class="label-text">ATA</span>
+                    <input name="funding-information-servicing-agency-component-tas-ata" id="funding-information-servicing-agency-component-tas-ata" type="text">
+                  </label>
+                </div>
+                <div class="field field-aid">
+                  <label for="funding-information-servicing-agency-component-tas-aid">
+                    <span class="label-text">AID</span>
+                    <input name="funding-information-servicing-agency-component-tas-aid" id="funding-information-servicing-agency-component-tas-aid" type="text">
+                  </label>
+                </div>
+                <div class="field field-bpoa">
+                  <label for="funding-information-servicing-agency-component-tas-bpoa">
+                    <span class="label-text">BPOA</span>
+                    <input name="funding-information-servicing-agency-component-tas-bpoa" id="funding-information-servicing-agency-component-tas-bpoa" type="text">
+                  </label>
+                </div>
+                <div class="field field-sp">
+                  <label for="funding-information-servicing-agency-component-tas-sp">
+                    <span class="label-text">EPOA</span>
+                    <input name="funding-information-servicing-agency-component-tas-sp" id="funding-information-servicing-agency-component-tas-sp" type="text">
+                  </label>
+                </div>
+                <div class="field field-a">
+                  <label for="funding-information-servicing-agency-component-tas-a">
+                    <span class="label-text">A</span>
+                    <input name="funding-information-servicing-agency-component-tas-a" id="funding-information-servicing-agency-component-tas-a" type="text">
+                  </label>
+                </div>
+                <div class="field field-main">
+                  <label for="funding-information-servicing-agency-component-tas-main">
+                    <span class="label-text">MAIN</span>
+                    <input name="funding-information-servicing-agency-component-tas-main" id="funding-information-servicing-agency-component-tas-main" type="text">
+                  </label>
+                </div>
+                <div class="field field-sub">
+                  <label for="funding-information-servicing-agency-component-tas-sub">
+                    <span class="label-text">SUB</span>
+                    <input name="funding-information-servicing-agency-component-tas-sub" id="funding-information-servicing-agency-component-tas-sub" type="text">
+                  </label>
+                </div>
+              </fieldset>
+              <div class="field field-sub">
+                <label for="funding-information-servicing-agency-betc">
+                  <span class="label-text">BETC</span>
+                  <input name="funding-information-servicing-agency-betc" id="funding-information-servicing-agency-betc" type="text">
+                </label>
+              </div>
+              <div class="field field-sub">
+                <label for="funding-information-servicing-agency-object-class-code">
+                  <span class="label-text">Object class code</span>
+                  <input name="funding-information-servicing-agency-object-class-code" id="funding-information-servicing-agency-object-class-code" type="text">
+                </label>
+              </div>
+              <div class="field field-sub">
+                <label for="funding-information-servicing-agency-bpn">
+                  <span class="label-text">BPN (or BPN+4)</span>
+                  <input name="funding-information-servicing-agency-bpn" id="funding-information-servicing-agency-bpn" type="text">
+                </label>
+              </div>
+              <div class="field field-sub">
+                <label for="funding-information-servicing-agency-additional-accounting-classification">
+                  <span class="label-text">Additional accounting classification</span>
+                  <input name="funding-information-servicing-agency-additional-accounting-classification" id="funding-information-servicing-agency-additional-accounting-classification" type="text">
+                </label>
+              </div>
+            </fieldset>
+            <div class="field field-description">
+              <label for="funding-information-description">
+                <span class="label-text">Description of products and/or services, including the bona fide need for this order.</span>
+                <textarea id="funding-information-description" name="funding-information-description"></textarea>
+              </label>
+            </div>       
+            <div class="field field-naics">
+              <label for="funding-information-naics-number">
+                <span class="label-text">North American Industry Classifications System (NAICS) Number (Optional)</span>
+                <input id="funding-information-naics-number" name="funding-information-naics-number" type="text" />
+              </label>
+            </div>
+            <fieldset class="fieldset-radio fieldset-funding-breakdown">
+              <legend>Funding breakdown</legend>
+              <div class="field field-radio">
+                <label for="funding-information-funding-breakdown-reimbursable-line-costs">
+                  <input required 
+                         name="funding-information-funding-breakdown" 
+                         id="funding-information-funding-breakdown-reimbursable-line-costs" 
+                         type="radio"
+                         value="reimbursable-line-costs">
+                  <span class="label-text">Reimbursable line costs</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="funding-information-funding-breakdown-assisted-acquisition-line-costs">
+                  <input required 
+                         name="funding-information-funding-breakdown" 
+                         id="funding-information-funding-breakdown-assisted-acquisition-line-costs" 
+                         type="radio"
+                         value="assisted-acquisition-line-costs">
+                  <span class="label-text">Assisted acquisition line costs</span>
+                </label>
+              </div>
+            </fieldset>
+            <aside class="branch">
+              <section>
+                <h1>If reimbursable line costs</h1>
+                <fieldset class="fieldset-reimbursable-line-costs">
+                  <legend>Reimbursable line costs</legend>
+                  <div class="field field-unit-of-measure">
+                    <label for="funding-information-reimbursable-line-costs-unit-of-measure">
+                      <span class="label-text">Unit of measure</span>
+                      <input id="funding-information-reimbursable-line-costs-unit-of-measure" name="funding-information-reimbursable-line-costs-unit-of-measure" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-quantity">
+                    <label for="funding-information-reimbursable-line-costs-quantity">
+                      <span class="label-text">Quantity</span>
+                      <input id="funding-information-reimbursable-line-costs-quantity" name="funding-information-reimbursable-line-costs-quantity" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-unit-price">
+                    <label for="funding-information-reimbursable-line-costs-unit-price">
+                      <span class="label-text">Unit price</span>
+                      <input id="funding-information-reimbursable-line-costs-unit-price" name="funding-information-reimbursable-line-costs-unit-price" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-total is-calculated">
+                    <label for="funding-information-reimbursable-line-costs-total">
+                      <span class="label-text">Total</span>
+                      <input id="funding-information-reimbursable-line-costs-total" name="funding-information-reimbursable-line-costs-total" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-overhead-fees-and-charges">
+                    <label for="funding-information-reimbursable-line-costs-overhead-fees-and-charges">
+                      <span class="label-text">Overhead fees &amp; charges</span>
+                      <input id="funding-information-reimbursable-line-costs-overhead-fees-and-charges" name="funding-information-reimbursable-line-costs-overhead-fees-and-charges" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-total-line-amount-obligated is-calculated">
+                    <label for="funding-information-reimbursable-line-costs-total-line-amount-obligated">
+                      <span class="label-text">Total line amount obligated</span>
+                      <input id="funding-information-reimbursable-line-costs-total-line-amount-obligated" name="funding-information-reimbursable-line-costs-total-line-amount-obligated" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-advance-line-amount">
+                    <label for="funding-information-reimbursable-line-costs-advance-line-amount">
+                      <span class="label-text">Advance line amount (-)</span>
+                      <input id="funding-information-reimbursable-line-costs-advance-line-amount" name="funding-information-reimbursable-line-costs-advance-line-amount" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-new-line-amount-due is-calculated">
+                    <label for="funding-information-reimbursable-line-costs-new-line-amount-due">
+                      <span class="label-text">New line amount due</span>
+                      <input id="funding-information-reimbursable-line-costs-new-line-amount-due" name="funding-information-reimbursable-line-costs-new-line-amount-due" type="text" />
+                    </label>
+                  </div>
+                </fieldset>
+              </section>
+              <section>
+                <h1>If Assisted acquisition line costs</h1>
+                <fieldset class="fieldset-assisted-acquisition-line-costs">
+                  <legend>Assisted acquisition line costs</legend>
+                  <div class="field field-contracting-cost">
+                    <label for="funding-information-assisted-acquisition-line-costs-contracting-cost">
+                      <span class="label-text">Contracting cost</span>
+                      <input id="funding-information-assisted-acquisition-line-costs-contracting-cost" name="funding-information-assisted-acquisition-line-costs-contracting-cost" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-servicing-fees">
+                    <label for="funding-information-assisted-acquisition-line-costs-servicing-fees">
+                      <span class="label-text">Servicing fees</span>
+                      <input id="funding-information-assisted-acquisition-line-costs-servicing-fees" name="funding-information-assisted-acquisition-line-costs-servicing-fees" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-total-obligated-cost is-calculated">
+                    <label for="funding-information-assisted-acquisition-line-costs-total-obligated-cost">
+                      <span class="label-text">Total obligated cost</span>
+                      <input id="funding-information-assisted-acquisition-line-costs-total-obligated-cost" name="funding-information-assisted-acquisition-line-costs-total-obligated-cost" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-advance-for-line is-calculated">
+                    <label for="funding-information-assisted-acquisition-line-costs-advance-for-line">
+                      <span class="label-text">Advance for line (-)</span>
+                      <input id="funding-information-assisted-acquisition-line-costs-advance-for-line" name="funding-information-assisted-acquisition-line-costs-advance-for-line" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-net-total-cost is-calculated">
+                    <label for="funding-information-assisted-acquisition-line-costs-net-total-cost">
+                      <span class="label-text">Net total cost</span>
+                      <input id="funding-information-assisted-acquisition-line-costs-net-total-cost" name="funding-information-assisted-acquisition-line-costs-net-total-cost" type="text" />
+                    </label>
+                  </div>
+                  <div class="field field-servicing-fees-explanation">
+                    <label for="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation">
+                      <span class="label-text">Assisted acquisition servicing fees explanation</span>
+                      <textarea id="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation" name="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation" type="text"></textarea>
+                    </label>
+                  </div>
+                </fieldset>     
+              </section>
+            </aside>
+            <fieldset class="fieldset-radio fieldset-type-of-service-requirements">
+              <legend>Type of service requirements</legend>
+              <div class="field field-radio">
+                <label for="funding-information-type-of-service-requirements-serverable-service">
+                  <input required 
+                         name="funding-information-type-of-service-requirements" 
+                         id="funding-information-type-of-service-requirements-serverable-service" 
+                         type="radio"
+                         value="serverable-service">
+                  <span class="label-text">Serverable service</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="funding-information-type-of-service-requirements-non-serverable-service">
+                  <input required 
+                         name="funding-information-type-of-service-requirements" 
+                         id="funding-information-type-of-service-requirements-non-serverable-service" 
+                         type="radio"
+                         value="non-serverable-service">
+                  <span class="label-text">Non-serverable service</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="funding-information-type-of-service-requirements-not-applicable">
+                  <input required 
+                         name="funding-information-type-of-service-requirements" 
+                         id="funding-information-type-of-service-requirements-not-applicable" 
+                         type="radio"
+                         value="not-applicable">
+                  <span class="label-text">Not applicable</span>
+                </label>
+              </div>
+            </fieldset>
+          </section>
+          <section class="section-form section-advance-information">
+            <header>
+              <h1>Advance information</h1>
+              <p>Complete block 29 if the advance payment for products/services was checked &ldquo;yes&rdquo; on the GT&amp;C.</p>
+            </header>
+            <div class="field field-total">
+              <label for="advance-information-total">
+                <span class="label-text">Total advance amount for the order</span>
+                <input type="text" name="advance-information-total" id="advance-information-total" aria-describedby="advance-information-total-description" />
+                <p class="p-description-text" id="advance-information-total-description">All order line advance amounts from block 28 must sum to this total.</p>
+              </label>
+            </div>
+            <fieldset class="fieldset-radio fieldset-revenue-recognition-methodology">
+              <legend>Revenue recognition methodology</legend>
+              <p class="p-description-text">According to SFFAS 7. Identify the revenue recognition methodology that will be used to account for the requesting agency&rsquo;s expense and the servicing agency&rsquo;s revenue.</p>
+              <div class="field field-radio">
+                <label for="advance-information-revenue-recognition-methodology-straight-line">
+                  <input type="radio" 
+                         name="advance-information-revenue-recognition-methodology" 
+                           id="advance-information-revenue-recognition-methodology-straight-line" 
+                        value="straight-line" />
+                  <span class="label-text">Straight-line</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="advance-information-revenue-recognition-methodology-accrual-per-work-completed">
+                  <input type="radio" 
+                         name="advance-information-revenue-recognition-methodology" 
+                           id="advance-information-revenue-recognition-methodology-accrual-per-work-completed"
+                        value="accrual-per-work-completed" />
+                  <span class="label-text">Accrual per work completed</span>
+                </label>
+              </div>
+              <aside class="branch">
+                <h1>If accrual per work completed</h1>
+                <fieldset class="fieldset-accrual-per-work-completed-period fieldset-radio">
+                  <legend>Period</legend>
+                  <div class="field field-radio">
+                    <label for="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-monthly-per-work-completed-and-invoiced">
+                      <input type="radio" 
+                               id="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-monthly-per-work-completed-and-invoiced"
+                             name="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period" 
+                            value="monthly-per-work-completed-and-invoiced" />
+                      <span class="label-text">Monthly per work completed &amp; invoiced</span>
+                    </label>
+                  </div>
+                  <div class="field field-radio">
+                    <label for="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-other">
+                      <input type="radio" 
+                               id="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-other"
+                             name="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period" 
+                      value="other" />
+                      <span class="label-text">Other</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <aside class="branch">
+                  <h1>If other</h1>
+                  <div class="field field-textarea">
+                    <label for="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-other-explanation">
+                      <span class="label-text">Explain other regular period (bimonthly, quarterly, etc.) for posting accruals and how the accrual amounts will be comunicated if other than billed.</span>
+                      <textarea id="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-other-explanation" name="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-other-explanation" ></textarea>
+                    </label>
+                  </div>
+                </aside>
+              </aside>
+            </fieldset>
+          </section>
+          <section class="section-form section-total-net-order-amount">
+            <header>
+              <h1>Total net order amount</h1>
+            </header>
+            <div class="field field-total-net-order-amount">
+              <label for="total-net-order-amount">
+                <span class="label-text">Total net order amount</span>
+                <input type="text" id="total-net-order-amount" name="total-net-order-amount" aria-describedby="total-net-order-amount-description" />
+                <span id="total-net-order-amount-description" class="description-text">All order line net amounts due for reimbursable agreements and net total costs for assisted acquisition agreements (block 28) must sum to this total.</span>
+              </label>
+            </div>
+          </section>
+          <section class="section-form section-attachments">
+            <header>
+              <h1>Attachments</h1>
+            </header>
+            <div class="field field-textarea">
+              <label for="attachments">
+                <span class="label-text">Attachments</span>
+                <span id="attachments-description" class="description-text">If this is an assisted acquisition agreement, list key project and/or acquisition milestones.</span>
+                <textarea id="attachments" name="attachments" aria-describedby="attachments-description"></textarea>
+              </label>
+            </div>
+          </section>
+          <section class="section-form section-payment-method">
+            <header>
+              <h1>Payment method</h1>
+            </header>
+            <fieldset class="fieldset-radio fieldset-payment-method">
+              <legend>Payment method</legend>
+              <div class="field field-radio">
+                <label for="payment-method-requesting-agency-initiated-ipac">
+                  <input type="radio" 
+                         name="payment-method" 
+                           id="payment-method-requesting-agency-initiated-ipac" 
+                        value="requesting-agency-initiated-ipac" />
+                  <span class="label-text">Requesting agency initiated IPAC</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="payment-method-servicing-agency-initiated-ipac">
+                  <input type="radio" 
+                         name="payment-method" 
+                           id="payment-method-servicing-agency-initiated-ipac" 
+                        value="servicing-agency-initiated-ipac" />
+                  <span class="label-text">Servicing agency initiated IPAC</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="payment-method-credit-card">
+                  <input type="radio" 
+                         name="payment-method" 
+                           id="payment-method-credit-card" 
+                        value="credit-card" />
+                  <span class="label-text">Credit card</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="payment-method-other">
+                  <input type="radio" 
+                         name="payment-method" 
+                           id="payment-method-other" 
+                        value="other" />
+                  <span class="label-text">Other</span>
+                </label>
+              </div>
+            </fieldset>
+            <aside class="branch">
+              <h1>If other</h1>
+              <div class="field field-textarea">
+                <label for="payment-method-other-explanation">
+                  <span class="label-text">Explanation</span>
+                  <textarea id="payment-method-other-explanation" name="payment-method-other-explanation"></textarea> 
+                </label>
+              </div>
+            </aside>
+          </section>
+          <section class="section-form section-billing-frequency">
+            <header>
+              <h1>Billing frequency</h1>
+            </header>
+            <fieldset class="fieldset-billing-frequency fieldset-radio">
+              <legend>Billing frequency</legend>
+              <div class="field field-radio">
+                <label for="billing-frequency-monthly">
+                  <input name="billing-frequency" 
+                         id="billing-frequency-monthly" 
+                         type="radio"
+                         value="monthly">
+                  <span class="label-text">Monthly</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="billing-frequency-quarterly">
+                  <input name="billing-frequency" 
+                         id="billing-frequency-quarterly" 
+                         type="radio"
+                         value="quarterly">
+                  <span class="label-text">Quarterly</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="billing-frequency-other">
+                  <input name="billing-frequency" 
+                         id="billing-frequency-other" 
+                         type="radio"
+                         value="other">
+                  <span class="label-text">Other</span>
+                </label>
+              </div>
+            </fieldset>
+            <aside class="branch">
+              <h1>If other</h1>
+              <div class="field field-textarea">
+                <label for="billing-frequency-other-explanation">
+                  <span class="label-text">Explanation</span>
+                  <textarea id="billing-frequency-other-explanation" name="billing-frequency-other-explanation"></textarea> 
+                </label>
+              </div>
+            </aside>
+          </section>
+          <section class="section-form section-payment-terms">
+            <header>
+              <h1>Payment terms</h1>
+            </header>
+            <fieldset class="fieldset-payment-terms fieldset-radio">
+              <legend>Payment terms</legend>
+              <div class="field field-radio">
+                <label for="payment-terms-7-days">
+                  <input name="payment-terms" 
+                         id="payment-terms-7-days" 
+                         type="radio"
+                         value="7-days">
+                  <span class="label-text">7 days</span>
+                </label>
+              </div>
+              <div class="field field-radio">
+                <label for="payment-terms-other">
+                  <input name="payment-terms" 
+                         id="payment-terms-other" 
+                         type="radio"
+                         value="other">
+                  <span class="label-text">Other</span>
+                </label>
+              </div>
+            </fieldset>
+            <aside class="branch">
+              <h1>If other</h1>
+              <div class="field field-textarea">
+                <label for="payment-terms-other-explanation">
+                  <span class="label-text">Explanation</span>
+                  <textarea id="payment-terms-other-explanation" name="payment-terms-other-explanation"></textarea> 
+                </label>
+              </div>
+            </aside>
+          </section>
+          <section class="section-form section-funding-clauses">
+            <header>
+              <h1>Funding clauses/instructions (optional)</h1>
+            </header>
+            <div class="field field-textarea field-funding-clauses">
+              <label for="funding-clauses">
+                <span class="label-text">Funding clauses/instructions (optional)</span>
+                <textarea name="funding-clauses" id="funding-clauses"></textarea>
+              </label>
+            </div>
+          </section>
+          <section class="section-form section-delivery-information-for-products">
+            <header>
+              <h1>Delivery information for products (optional)</h1>
+            </header>
+
+            <div class="field field-agency-name">
+              <label for="delivery-information-for-products-agency-name">
+                <span class="label-text">Agency name</span>
+                <input type="text" name="delivery-information-for-products-agency-name" id="delivery-information-for-products-agency-name"></textarea>
+              </label>
+            </div>
+
+            <fieldset class="fieldset-mailing-address">
+              <legend>Mailing address</legend>
+              <div class="field field-street-address">
+                <label for="delivery-information-for-products-mailing-address-street-address">
+                  <span class="label-text">Street address</span>
+                  <input required name="delivery-information-for-products-mailing-address-street-address" id="delivery-information-for-products-mailing-address-street-address" type="text">
+                </label>
+              </div>
+              <div class="field-city-state-zip">
+                <div class="field field-city">
+                  <label for="delivery-information-for-products-mailing-address-city">
+                    <span class="label-text">City</span>
+                    <input required name="delivery-information-for-products-mailing-address-city" id="delivery-information-for-products-mailing-address-city" type="text">
+                  </label>
+                </div>
+                <div class="field field-state field-select">
+                  <label for="delivery-information-for-products-mailing-address-state">
+                    <span class="label-text">State</span>
+                    <select name="delivery-information-for-products-mailing-address-state" id="delivery-information-for-products-mailing-address-state" type="text">
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="field field-zip">
+                  <label for="delivery-information-for-products-mailing-address-zip">
+                    <span class="label-text">Zip</span>
+                    <input required name="delivery-information-for-products-mailing-address-zip" id="delivery-information-for-products-mailing-address-zip" type="text">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset-point-of-contact">
+              <legend>Point of contact</legend>
+              <div class="field field-name">
+                <label for="delivery-information-for-products-point-of-contact-name">
+                  <span class="label-text">Name</span>
+                  <input required name="delivery-information-for-products-point-of-contact-name" id="delivery-information-for-products-point-of-contact-name" type="text">
+                </label>
+              </div>
+              <div class="field field-title">
+                <label for="delivery-information-for-products-point-of-contact-title">
+                  <span class="label-text">Title</span>
+                  <input required name="delivery-information-for-products-point-of-contact-title" id="delivery-information-for-products-point-of-contact-title" type="text">
+                </label>
+              </div>
+              <div class="field field-telephone-number">
+                <label for="delivery-information-for-products-point-of-contact-telephone-number">
+                  <span class="label-text">Telephone number</span>
+                  <input required name="delivery-information-for-products-point-of-contact-telephone-number" id="delivery-information-for-products-point-of-contact-telephone-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-email-address">
+                <label for="delivery-information-for-products-point-of-contact-email-address">
+                  <span class="label-text">Email address</span>
+                  <input required name="delivery-information-for-products-point-of-contact-email-address" id="delivery-information-for-products-point-of-contact-email-address" type="email">
+                </label>
+              </div>
+            </fieldset>
+          </section>
+          <section class="section-form section-program-officials">
+            <header>
+              <h1>Program officials</h1>
+            </header>
+            <fieldset class="fieldset-requesting-agency">
+              <legend>Requesting agency</legend>
+              <div class="field field-name">
+                <label for="program-officials-requesting-agency-name">
+                  <span class="label-text">Name</span>
+                  <input required name="program-officials-requesting-agency-name" id="program-officials-requesting-agency-name" type="text">
+                </label>
+              </div>
+              <div class="field field-title">
+                <label for="program-officials-requesting-agency-title">
+                  <span class="label-text">Title</span>
+                  <input required name="program-officials-requesting-agency-title" id="program-officials-requesting-agency-title" type="text">
+                </label>
+              </div>
+              <div class="field field-telephone-number">
+                <label for="program-officials-requesting-agency-telephone-number">
+                  <span class="label-text">Telephone number</span>
+                  <input required name="program-officials-requesting-agency-telephone-number" id="program-officials-requesting-agency-telephone-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-fax-number">
+                <label for="program-officials-requesting-agency-fax-number">
+                  <span class="label-text">Fax number</span>
+                  <input required name="program-officials-requesting-agency-fax-number" id="program-officials-requesting-agency-fax-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-email-address">
+                <label for="program-officials-requesting-agency-email-address">
+                  <span class="label-text">Email address</span>
+                  <input required name="program-officials-requesting-agency-email-address" id="program-officials-requesting-agency-email-address" type="email">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="fieldset-servicing-agency">
+              <legend>Servicing agency</legend>
+              <div class="field field-name">
+                <label for="program-officials-servicing-agency-name">
+                  <span class="label-text">Name</span>
+                  <input required name="program-officials-servicing-agency-name" id="program-officials-servicing-agency-name" type="text">
+                </label>
+              </div>
+              <div class="field field-title">
+                <label for="program-officials-servicing-agency-title">
+                  <span class="label-text">Title</span>
+                  <input required name="program-officials-servicing-agency-title" id="program-officials-servicing-agency-title" type="text">
+                </label>
+              </div>
+              <div class="field field-telephone-number">
+                <label for="program-officials-servicing-agency-telephone-number">
+                  <span class="label-text">Telephone number</span>
+                  <input required name="program-officials-servicing-agency-telephone-number" id="program-officials-servicing-agency-telephone-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-fax-number">
+                <label for="program-officials-servicing-agency-fax-number">
+                  <span class="label-text">Fax number</span>
+                  <input required name="program-officials-servicing-agency-fax-number" id="program-officials-servicing-agency-fax-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-email-address">
+                <label for="program-officials-servicing-agency-email-address">
+                  <span class="label-text">Email address</span>
+                  <input required name="program-officials-servicing-agency-email-address" id="program-officials-servicing-agency-email-address" type="email">
+                </label>
+              </div>
+            </fieldset>
+          </section>
+          <section class="section-form section-funding-officials">
+            <header>
+              <h1>Funding officials</h1>
+            </header>
+            <fieldset class="fieldset-requesting-agency">
+              <legend>Requesting agency</legend>
+              <div class="field field-name">
+                <label for="funding-officials-requesting-agency-name">
+                  <span class="label-text">Name</span>
+                  <input required name="funding-officials-requesting-agency-name" id="funding-officials-requesting-agency-name" type="text">
+                </label>
+              </div>
+              <div class="field field-title">
+                <label for="funding-officials-requesting-agency-title">
+                  <span class="label-text">Title</span>
+                  <input required name="funding-officials-requesting-agency-title" id="funding-officials-requesting-agency-title" type="text">
+                </label>
+              </div>
+              <div class="field field-telephone-number">
+                <label for="funding-officials-requesting-agency-telephone-number">
+                  <span class="label-text">Telephone number</span>
+                  <input required name="funding-officials-requesting-agency-telephone-number" id="funding-officials-requesting-agency-telephone-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-fax-number">
+                <label for="funding-officials-requesting-agency-fax-number">
+                  <span class="label-text">Fax number</span>
+                  <input required name="funding-officials-requesting-agency-fax-number" id="funding-officials-requesting-agency-fax-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-email-address">
+                <label for="funding-officials-requesting-agency-email-address">
+                  <span class="label-text">Email address</span>
+                  <input required name="funding-officials-requesting-agency-email-address" id="funding-officials-requesting-agency-email-address" type="email">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="fieldset-servicing-agency">
+              <legend>Servicing agency</legend>
+              <div class="field field-name">
+                <label for="funding-officials-servicing-agency-name">
+                  <span class="label-text">Name</span>
+                  <input required name="funding-officials-servicing-agency-name" id="funding-officials-servicing-agency-name" type="text">
+                </label>
+              </div>
+              <div class="field field-title">
+                <label for="funding-officials-servicing-agency-title">
+                  <span class="label-text">Title</span>
+                  <input required name="funding-officials-servicing-agency-title" id="funding-officials-servicing-agency-title" type="text">
+                </label>
+              </div>
+              <div class="field field-telephone-number">
+                <label for="funding-officials-servicing-agency-telephone-number">
+                  <span class="label-text">Telephone number</span>
+                  <input required name="funding-officials-servicing-agency-telephone-number" id="funding-officials-servicing-agency-telephone-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-fax-number">
+                <label for="funding-officials-servicing-agency-fax-number">
+                  <span class="label-text">Fax number</span>
+                  <input required name="funding-officials-servicing-agency-fax-number" id="funding-officials-servicing-agency-fax-number" type="tel">
+                </label>
+              </div>
+              <div class="field field-email-address">
+                <label for="funding-officials-servicing-agency-email-address">
+                  <span class="label-text">Email address</span>
+                  <input required name="funding-officials-servicing-agency-email-address" id="funding-officials-servicing-agency-email-address" type="email">
+                </label>
+              </div>
+            </fieldset>
+          </section>
+          <footer>
+            <button type="submit">Submit</button>
+          </footer>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

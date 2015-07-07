@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Interagency Agreement Manager - 7600A</title>
+    <title>7600A | Interagency Agreement Manager | 18F</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,7 +20,7 @@
     </header>
     <main>
       <div class="wrap">
-        <form>
+        <form class="form-7600a">
           <header>
             <h1>7600A</h1>
             <div class="field field-iaa-number">
@@ -31,7 +31,9 @@
             </div>
           </header>
           <section class="section-form section-parties">
-            <h1>Parties</h1>
+            <header>
+              <h1>Parties</h1>
+            </header>
             <fieldset class="fieldset-parties-requesting-agency">
               <legend>Requesting agency</legend>
               <div class="field field-name">
@@ -285,13 +287,13 @@
           </section>
           <section class="section-form section-agreement-period">
             <h1>Agreement period</h1>
-            <div class="field">
+            <div class="field field-date field-agreement-period-start-date">
               <label for="agreement-period-start-date">
                 <span class="label-text">Start date</span>
                 <input type="date" id="agreement-period-start-date" name="agreement-period-start-date"> 
               </label>
             </div>
-            <div class="field">
+            <div class="field field-date field-agreement-period-end-date">
               <label for="agreement-period-end-date">
                 <span class="label-text">End date</span>
                 <input type="date" id="agreement-period-end-date" name="agreement-period-end-date">

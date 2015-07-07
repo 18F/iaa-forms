@@ -1,5 +1,9 @@
 /* @override http://localhost:4000/stylesheets/screen.css */
 
+/* @override https://iwyvasmfmk.localtunnel.me/stylesheets/screen.css */
+
+/* @override http://localhost:4000/stylesheets/screen.css */
+
 /* @override http://localhost:4000/stylesheets/screen.css */
 
 
@@ -261,14 +265,6 @@ form a.a-return + h1{
 	margin-top: 1em !important;	
 }
 
-.field .description-text{
-	margin-top: 8px;
-	font-size: 12px;
-	line-height: 1.3;
-	max-width: 28em;
-	display: block;
-	color: #333;
-}
 
 fieldset > p{
 	font-size: 14px;
@@ -277,37 +273,21 @@ fieldset > p{
 	margin-bottom: 1em;
 }
 
-.field .description-text a{ color: inherit; }
-.field .description-text a:hover{ text-decoration: none; }
+.description-text,
+.p-description-text{
+	margin-top: 8px;
+	font-size: 12px;
+	line-height: 1.3;
+	max-width: 28em;
+	display: block;
+	color: #333;
+}
+
+.description-text a{ color: inherit; }
+.description-text a:hover{ text-decoration: none; }
 
 div.field,
 fieldset{ margin-bottom: 24px; }
-
-section.section-form:first-of-type{ counter-reset: section; }
-section.section-form fieldset:last-of-type{
-	margin-bottom: 0;
-}
-
-section.section-form{
-	padding-left: 48px;
-	padding-bottom: 32px;
-	counter-increment: section;
-	position: relative;
-	margin-bottom: 0;
-}
-section.section-form::before{
-	content: counter(section);
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	background: #fafafa;
-	width: 32px;
-	text-align: center;
-	font-size: 20px;
-	line-height: 54px;
-	color: #aaa;
-}
 
 fieldset.fieldset-parties-requesting-agency,
 fieldset.fieldset-parties-servicing-agency,
@@ -316,11 +296,18 @@ fieldset.fieldset-agency-official-servicing-agency,
 fieldset.fieldset-program-official,
 fieldset.fieldset-additional-point-of-contact,
 fieldset.fieldset-corporate-official,
-fieldset.fieldset-funding-official{
+fieldset.fieldset-funding-official,
+fieldset.fieldset-requesting-agency,
+fieldset.fieldset-servicing-agency,
+fieldset.fieldset-component-tas,
+fieldset.fieldset-reimbursable-line-costs,
+fieldset.fieldset-assisted-acquisition-line-costs,
+fieldset.fieldset-point-of-contact{
 	border: 1px solid #cfcfcf;
 	padding: 16px;
+	padding-bottom: 19px;
 	position: relative;
-	margin-top: 48px;
+	margin-top: 36px;
 	margin-bottom: 32px;
 	border-radius: 4px;
 }
@@ -341,6 +328,12 @@ fieldset.fieldset-program-official > legend,
 fieldset.fieldset-corporate-official > legend,
 fieldset.fieldset-additional-point-of-contact > legend,
 fieldset.fieldset-funding-official > legend,
+fieldset.fieldset-requesting-agency > legend,
+fieldset.fieldset-servicing-agency > legend,
+fieldset.fieldset-component-tas > legend,
+fieldset.fieldset-reimbursable-line-costs > legend,
+fieldset.fieldset-assisted-acquisition-line-costs > legend,
+fieldset.fieldset-point-of-contact > legend,
 fieldset > header > h1{
 	position: absolute;
 	background: white;
@@ -382,7 +375,9 @@ fieldset div.field:last-of-type+fieldset{
 .fieldset-gtc-action > legend,
 .fieldset-recurring-agreement > legend,
 .fieldset-agreement-type > legend,
-.fieldset-advanced-payments > legend{ 
+.fieldset-advanced-payments > legend,
+.fieldset-performance-period > legend,
+.fieldset-accrual-per-work-completed-period > legend{ 
 	position: absolute !important;
 	left: -9999em;
 }
@@ -414,6 +409,7 @@ div.field.field-radio label{
 }
 
 main div.field input:focus,
+main div.field select:focus,
 main div.field textarea:focus,
 main div.field.field-checkbox.is-focused label,
 main div.field.field-radio.is-focused label{
@@ -516,7 +512,6 @@ fieldset.fieldset-mailing-address div.field.field-city{
 	width: 50%; 
 }
 
-
 fieldset.fieldset-mailing-address div.field.field-city input,
 fieldset.fieldset-mailing-address div.field.field-state input,
 fieldset.fieldset-mailing-address div.field.field-zip input{
@@ -526,8 +521,6 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 /* @group widths */
 
 @media screen and (min-width: 568.88px){
-	.field-name input,
-	.field-title input,
 	.field-telephone-number input,
 	.field-email-address input,
 	.field-additional-classification input{
@@ -537,15 +530,29 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 	
 	.field-project-number input,
 	.field-phone-number input,
+	.field-telephone-number input,
 	.field-fax-number input,
+	.field-date input,
+	.field-direct-cost input,
+	.field-overhead-fees input,
+	.field-total-estimated-amount input,
 	.field-expiry-date input,
 	.field-cancellation-date input,
 	.field-alc input,
 	.field-component-tas input,
 	.field-betc input,
 	.field-object-class-code input,
+	.field-sp input,
+	.field-ata input,
+	.field-aid input,
+	.field-bpoa input,
+	.field-a input,
+	.field-main input,
+	.field-sub input,
 	.field-bpn input,
-	.field-bpn-4 input{
+	.field-bpn-4 input,
+	.field-servicing-agency-tracking-number input,
+	.field-total-net-order-amount input{
 		width: 10em;
 	}
 
@@ -553,15 +560,25 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 
 /* @end */
 
-
-.is-branch{
-	padding: 8px 0 0 12px !important;
-	margin-top: -12px !important;
+.branch{
+	padding: 8px 0 0 12px;
 	position: relative;
-	border: none !important;
 }
 
-.is-branch::after{
+.branch section { margin-bottom: 16px; }
+.branch h1{
+	text-transform: uppercase;
+	font: 13px Courier, mono !important;
+	font-weight: 600 !important;
+	padding: 4px;
+	background: #eee;
+	display: inline-block;
+	color: #ed2766 !important;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	margin-bottom: 8px !important;
+}
+.branch::after{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -693,18 +710,42 @@ div.field-iaa-number input[type=text]{
 }
 
 
-/* @group section */
-section{
+/* @group section.section-form */
+section.section-form{
 	border-top: 2px solid #e3e3e3;
-	margin-bottom: 64px;
-	padding-top: 16px;
+	padding-top: 18px;
+	padding-left: 48px;
+	padding-bottom: 36px;
+	counter-increment: section;
+	position: relative;
 }
-section h1 {
+
+section.section-form:first-of-type{ counter-reset: section; }
+form.form-7600b section.section-form:first-of-type{ counter-reset: section 23; }
+
+section.section-form::before{
+	content: counter(section);
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: #fafafa;
+	width: 32px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 56px;
+	color: #aaa;
+}
+
+section.section-form h1 {
 	font-size: 20px;
 	font-weight: 600;
-	margin-bottom: 28px;
+	margin-bottom: 20px;
 	color: #555;
 }
+
+section.section-form header+fieldset { margin-top: 36px; }
+section.section-form header+fieldset.fieldset-radio { margin-top: 24px; }
 
 /* @end */
 
@@ -715,3 +756,105 @@ section h1 {
 		top: 32px;
 	}
 }
+
+/* @group block 25 */
+
+.section-order-action .branch .field-explanation .label-text{
+	position: absolute;
+	left: -9999em;
+}
+
+
+/* @end */
+
+
+/* @group block 26 */
+
+table.table-funding-modification-summary-by-line thead{
+	background: #555;
+	color: white;
+}
+
+/* @end */
+
+/* @group block 27 */
+
+fieldset.fieldset-performance-period { margin-top: 24px; }
+fieldset.fieldset-performance-period .field:last-of-type{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 30 */
+
+section.section-total-net-order-amount div.field span.label-text{ 
+	position: absolute;
+	left: -9999em;
+}
+
+section.section-total-net-order-amount div.field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 31 */
+
+section.section-attachments div.field span.label-text{ 
+	position: absolute;
+	left: -9999em;
+}
+
+section.section-attachments div.field .description-text{ 
+	font: inherit;
+	line-height: 1.3em;
+	margin-bottom: 12px;
+}
+
+section.section-attachments div.field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 32 */
+
+section.section-payment-method legend{ 
+	position: absolute;
+	left: -9999em;
+}
+
+section.section-attachments div.field .description-text{ 
+	font: inherit;
+	line-height: 1.3em;
+	margin-bottom: 12px;
+}
+
+section.section-attachments div.field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 33 */
+
+fieldset.fieldset-billing-frequency{ margin-top: 0; }
+fieldset.fieldset-billing-frequency legend{ 
+	position: absolute;
+	left: -9999em;
+}
+
+/* @end */
+
+/* @group block 34 */
+
+fieldset.fieldset-payment-terms{ margin-top: 0; }
+fieldset.fieldset-payment-terms legend{ 
+	position: absolute;
+	left: -9999em;
+}
+
+/* @end */
+
+/* @group block 35 */
+
+div.field-funding-clauses{ margin-bottom: 0; }
+div.field-funding-clauses span.label-text{ 
+	position: absolute;
+	left: -9999em;
+}
+
+/* @end */
