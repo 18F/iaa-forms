@@ -230,7 +230,7 @@
             <header>
               <h1>Assisted acquisition agreement</h1>
             </header>
-            <fieldset class="fieldset-assisted-acquisition-agreement">
+            <fieldset class="fieldset-assisted-acquisition-agreement fieldset-radio">
               <legend>Is this agreement part of an assisted acquision agreement?</legend>
               <div class="field field-radio">
                 <label for="assisted-acquisition-agreement-yes">
@@ -250,7 +250,7 @@
             <header>
               <h1>GT&amp;C action</h1>
             </header>
-            <fieldset class="fieldset-gtc-action">
+            <fieldset class="fieldset-gtc-action fieldset-radio">
               <legend>What action will you execute by filing this document?</legend>
               <div class="field field-radio">
                 <label for="gtc-action-new">
@@ -269,43 +269,58 @@
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="gtc-action-cancelation">
-                  <input required name="gtc-action" id="gtc-action-cancelation" type="radio" value="cancelation">
-                  <span class="label-text">Cancelation</span>
+                <label for="gtc-action-cancellation">
+                  <input required name="gtc-action" id="gtc-action-cancellation" type="radio" value="cancellation">
+                  <span class="label-text">Cancellation</span>
                 </label>
               </div>
             </fieldset>
-            <aside class="is-branch">
-              <span class="description-text">Complete only the GT&amp;C blocks being changed and explain the changes being made.</span>
-              <div class="field">
-                <label for="gtc-action-amendment-explanation">
-                  <span class="label-text">Explanation</span>
-                  <textarea name="gtc-action-amendment-explanation" id="gtc-action-amendment-explanation"></textarea>
-                </label>
-              </div>
+            <aside class="branch">
+              <section>
+                <h1>If ammendment</h1>
+                <p class="description-text">Complete only the GT&amp;C blocks being changed and explain the changes being made.</p>
+                <div class="field">
+                  <label for="gtc-action-amendment-explanation">
+                    <span class="label-text">Explanation</span>
+                    <textarea name="gtc-action-amendment-explanation" id="gtc-action-amendment-explanation"></textarea>
+                  </label>
+                </div>              
+              </section>
+              <section>
+                <h1>If cancellation</h1>
+                <p class="description-text">Provide a brief explanation for the cancellation and complete the effective end date in block 5.</p>
+                <div class="field">
+                  <label for="gtc-action-cancellation-explanation">
+                    <span class="label-text">Explanation</span>
+                    <textarea name="gtc-action-cancellation-explanation" id="gtc-action-cancellation-explanation"></textarea>
+                  </label>
+                </div>              
+              </section>
             </aside>
           </section>
           <section class="section-form section-agreement-period">
             <h1>Agreement period</h1>
-            <div class="field field-date field-agreement-period-start-date">
-              <label for="agreement-period-start-date">
-                <span class="label-text">Start date</span>
-                <input type="date" id="agreement-period-start-date" name="agreement-period-start-date"> 
-              </label>
-            </div>
-            <div class="field field-date field-agreement-period-end-date">
-              <label for="agreement-period-end-date">
-                <span class="label-text">End date</span>
-                <input type="date" id="agreement-period-end-date" name="agreement-period-end-date">
-                <span class="description-text">of <abbr title="Interagency agreement">IAA</abbr> or effective cancelation date</span>
-              </label>
-            </div>
+            <fieldset class="fieldset-agreement-period fieldset-date-range">
+              <legend>Agreement period</legend>
+              <div class="field field-date field-start-date field-agreement-period-start-date">
+                <label for="agreement-period-start-date">
+                  <span class="label-text">Start date</span>
+                  <input type="date" id="agreement-period-start-date" name="agreement-period-start-date"> 
+                </label>
+              </div>
+              <div class="field field-date field-end-date field-agreement-period-end-date">
+                <label for="agreement-period-end-date">
+                  <span class="label-text">End date</span>
+                  <input type="date" id="agreement-period-end-date" name="agreement-period-end-date">
+                </label>
+              </div>
+            </fieldset>
           </section>
           <section class="section-form section-recurring-agreement">
             <header>
               <h1>Recurring agreement</h1>
             </header>
-            <fieldset class="fieldset-recurring-agreement">
+            <fieldset class="fieldset-recurring-agreement fieldset-radio">
               <legend>Is this a recurring agreement?</legend>
               <div class="field field-radio">
                 <label for="recurring-agreement-yes">
@@ -328,12 +343,50 @@
                 </label>
               </div>
             </fieldset>
+            <aside class="branch">
+              <h1>If yes</h1>
+              <fieldset class="fieldset-recurring-agreement-period fieldset-radio">
+                <legend>Recurring agreement type</legend>
+                <div class="field field-radio">
+                  <label for="recurring-agreement-period-annual">
+                    <input required 
+                           name="recurring-agreement-period" 
+                           id="recurring-agreement-period-annual" 
+                           type="radio"
+                           value="Annual">
+                    <span class="label-text">Annual renewal</span>
+                  </label>
+                </div>
+                <div class="field field-radio">
+                  <label for="recurring-agreement-period-other">
+                    <input required 
+                           name="recurring-agreement-period" 
+                           id="recurring-agreement-period-other" 
+                           type="radio"
+                           value="other">
+                    <span class="label-text">Other renewal</span>
+                  </label>
+                </div>
+              </fieldset>
+              <aside class="branch">
+                <h1>If other</h1>
+                <div class="field">
+                  <label for="recurring-agreement-period-other-description">
+                    <span class="label-text">State the renewal period</span>
+                    <input required 
+                           name="recurring-agreement-period-other-description" 
+                           id="recurring-agreement-period-other-description" 
+                           type="text">
+                  </label>
+                </div>
+              </aside>
+            </aside>
           </section>
           <section class="section-form section-agreement-type">
             <header>
               <h1>Agreement type</h1>
             </header>
-            <fieldset class="fieldset-agreement-type">
+            <fieldset class="fieldset-agreement-type fieldset-radio">
               <legend>What type of agreement is this?</legend>
               <div class="field field-radio">
                 <label for="agreement-type-single-order">
@@ -361,7 +414,7 @@
             <header>
               <h1>Are advance payments allowed?</h1>
             </header>
-            <fieldset class="fieldset-advanced-payments">
+            <fieldset class="fieldset-advanced-payments fieldset-radio">
               <legend>Are advance payments allowed?</legend>
               <div class="field field-radio">
                 <label for="advance-payments-yes">
@@ -385,6 +438,17 @@
                 </label>
               </div>
             </fieldset>
+            <aside class="branch">
+              <h1>If yes</h1>
+                <div class="field">
+                  <label for="advance-payments-authority">
+                    <span class="label-text">State requesting agency&rsquo;s statutory authority title and citation</span>
+                    <input name="advance-payments-authority" 
+                           id="advance-payments-authority" 
+                           type="text">
+                  </label>
+                </div>
+            </aside>
           </section>
           <section class="section-form section-estimated-agreement-amount">
             <header>
@@ -411,7 +475,7 @@
             <div class="field field-overhead-fees-explanation">
               <label for="overhead-fees-explanation">
                 <span class="label-text">General explanation of overhead fees and charges</span>
-                <textarea name="overhead-fees-explanation" id="overhead-fees-explanation"></textarea>
+                <textarea name="overhead-fees-explanation" id="overhead-fees-explanation">The stimated agreement amount is based on GSA&rsquo;s actual costs of providing the services under this IAA. Reimbursement of GSA&rsquo;s actual costs is described further in the statement of work.</textarea>
               </label>
             </div>
           </section>
@@ -419,7 +483,7 @@
             <header>
               <h1>Statutory authority</h1>
             </header>
-            <fieldset class="fieldset-requesting-agencys-statutory-authority">
+            <fieldset class="fieldset-requesting-agencys-statutory-authority fieldset-radio">
               <legend>Requesting agency&rsquo;s authority</legend>
               <div class="field field-radio">
                 <label for="requesting-agencys-statutory-authority-franchise-fund">
@@ -449,6 +513,15 @@
                 </label>
               </div>
               <div class="field field-radio">
+                <label for="requesting-agencys-statutory-authority-economy-act">
+                  <input name="requesting-agencys-statutory-authority" 
+                         id="requesting-agencys-statutory-authority-economy-act" 
+                         type="radio"
+                         value="economy-act">
+                  <span class="label-text">Economy act (31 U.S.C. 1535/FAR 17.5)</span>
+                </label>
+              </div>
+              <div class="field field-radio">
                 <label for="requesting-agencys-statutory-authority-other">
                   <input name="requesting-agencys-statutory-authority" 
                          id="requesting-agencys-statutory-authority-other" 
@@ -458,8 +531,19 @@
                 </label>
               </div>
             </fieldset>
-            <fieldset class="fieldset-servicing-agencys-statutory-authority">
-              <legend>Requesting agency&rsquo;s authority</legend>
+            <aside class="branch">
+              <h1>If franchise fund, revolving fund, working capital fund, or other authority.</h1>
+              <div class="field">
+                <label for="requesting-agencys-statutory-authority-description">
+                  <span class="label-text">Requesting agency&rsquo;s statutory authority title and citation</span>
+                  <input name="requesting-agencys-statutory-authority-description" 
+                         id="requesting-agencys-statutory-authority-description" 
+                         type="text">
+                </label>
+              </div>
+            </aside>
+            <fieldset class="fieldset-servicing-agencys-statutory-authority fieldset-radio">
+              <legend>Servicing agency&rsquo;s authority</legend>
               <div class="field field-radio">
                 <label for="servicing-agencys-statutory-authority-franchise-fund">
                   <input name="servicing-agencys-statutory-authority" 
@@ -488,6 +572,15 @@
                 </label>
               </div>
               <div class="field field-radio">
+                <label for="servicing-agencys-statutory-authority-economy-act">
+                  <input name="servicing-agencys-statutory-authority" 
+                         id="servicing-agencys-statutory-authority-economy-act" 
+                         type="radio"
+                         value="economy-act">
+                  <span class="label-text">Economy act (31 U.S.C. 1535/FAR 17.5)</span>
+                </label>
+              </div>
+              <div class="field field-radio">
                 <label for="servicing-agencys-statutory-authority-other">
                   <input name="servicing-agencys-statutory-authority" 
                          id="servicing-agencys-statutory-authority-other" 
@@ -497,6 +590,17 @@
                 </label>
               </div>
             </fieldset>
+            <aside class="branch">
+              <h1>If franchise fund, revolving fund, working capital fund, or other authority.</h1>
+              <div class="field">
+                <label for="servicing-agencys-statutory-authority-description">
+                  <span class="label-text">Servicing agency&rsquo;s statutory authority title and citation</span>
+                  <input name="servicing-agencys-statutory-authority-description" 
+                         id="servicing-agencys-statutory-authority-description" 
+                         type="text">
+                </label>
+              </div>
+            </aside>
           </section>
           <section class="section-form section-requesting-agencys-scope">
             <header>
@@ -509,17 +613,6 @@
               </label>
             </div>
           </section>
-          <section class="section-form section-restrictions">
-            <header>
-              <h1>Restrictions</h1>
-            </header>
-            <div class="field field-textarea field-roles-and-responsibilities">
-              <label for="restrictions">
-                <span class="label-text">Roles and responsibilities for the parties</span>
-                <textarea name="restrictions" id="restrictions"></textarea>
-              </label>
-            </div>
-          </section>
           <section class="section-form section-roles-and-responsibilities">
             <header>
               <h1>Roles &amp; responsibilities</h1>
@@ -528,6 +621,17 @@
               <label for="roles-and-responsibilities">
                 <span class="label-text">Roles and responsibilities for the parties</span>
                 <textarea name="roles-and-responsibilities" id="roles-and-responsibilities"></textarea>
+              </label>
+            </div>
+          </section>
+          <section id="13" class="section-form section-restrictions">
+            <header>
+              <h1>Restrictions</h1>
+            </header>
+            <div class="field field-textarea field-roles-and-responsibilities">
+              <label for="restrictions">
+                <span class="label-text">Roles and responsibilities for the parties</span>
+                <textarea name="restrictions" id="restrictions"></textarea>
               </label>
             </div>
           </section>
@@ -570,15 +674,27 @@
               </label>
             </div>
           </section>
-          <section class="section-form is-null">
+          <section class="section-form section-requesting-agencys-organizations">
             <header>
-              <h1>See #3</h1>
+              <h1>Assisted acquisition agreements &mdash; requesting agency&rsquo;s organizations authorized to request acquisition assistance for this IAA.</h1>
             </header>
+            <div class="field field-textarea field-requesting-agencys-organizations">
+              <label for="requesting-agencys-organizations">
+                <span class="label-text">Requesting agency&rsquo;s organizations authorized to request acquisition assistance for this IAA</span>
+                <textarea name="requesting-agencys-organizations" id="requesting-agencys-organizations"></textarea>
+              </label>
+            </div>
           </section>
-          <section class="section-form is-null">
+          <section class="section-form section-servicing-agencys-organizations">
             <header>
-              <h1>See #3</h1>
+              <h1>Assisted acquisition agreements &mdash; servicing agency&rsquo;s organizations authorized to request acquisition assistance for this IAA.</h1>
             </header>
+            <div class="field field-textarea field-servicing-agencys-organizations">
+              <label for="servicing-agencys-organizations">
+                <span class="label-text">Servicing agency&rsquo;s organizations authorized to request acquisition assistance for this IAA</span>
+                <textarea name="servicing-agencys-organizations" id="servicing-agencys-organizations"></textarea>
+              </label>
+            </div>
           </section>
           <section class="section-form section-requesting-agencys-clauses">
             <header>
@@ -612,6 +728,12 @@
                 <textarea name="additional-agency-attachments" id="additional-agency-attachments"></textarea>
               </label>
             </div>
+          </section>
+          <section class="section-form section-annual-review">
+            <header>
+              <h1>Annual review of IAA</h1>
+            </header>
+            <p>By signing this agreement, the parties agree to annually review the IAA if the agreement period exceeds one year. Appropriate changes will be made by ammendment to the GT&amp;C and/or modification to any affected order(s).</p>
           </section>
           <section class="section-form section-agency-official">
             <header>

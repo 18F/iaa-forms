@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="bower_components/tablesaw/dist/tablesaw.css">
+    <!--[if lt IE 9]><script src="bower_components/respond/dist/respond.js"></script><!--<![endif]-->
+    <script type="text/javascript" src="bower_components/tablesaw/dist/tablesaw.js"></script>
+
     <link rel="stylesheet" type="text/css" href="bower_components/bigfoot/dist/bigfoot-default.css">
     <script type="text/javascript" src="bower_components/bigfoot/dist/bigfoot.min.js"></script>
 
@@ -245,7 +249,7 @@
             <aside class="branch">
               <section class="branch-modification">
                 <h1>If modification</h1>              
-                <p>List affected order blocks and explain the changes being made. For example: for a performance period mod, state new perforamance periods for this order in block 27. Fill out the funding modification summary by line (block 26) if the mod involves adding, deleting, or changing funding for an order line.</p>
+                <p>List affected order blocks and explain the changes being made. For example: for a performance period mod, state new performance periods for this order in block 27. Fill out the funding modification summary by line (block 26) if the mod involves adding, deleting, or changing funding for an order line.</p>
                 <div class="field field-explanation">
                   <label for="modification-explanation">
                     <span class="label-text">Explanation</span>
@@ -269,7 +273,7 @@
             <header>
               <h1>Funding modification summary by line</h1>
             </header>
-            <table class="table-funding-modification-summary-by-line">
+            <table class="table-funding-modification-summary-by-line tablesaw tablesaw-stack" data-tablesaw-mode="stack">
               <thead>
                 <th id="th-line-number" scope="col" class="">Line #</th>
                 <th id="th-original-line-funding" scope="col" class="">Original line funding</th>
@@ -314,9 +318,6 @@
                     <input name="funding-modification-summary-by-line-1-net-modified-amount-due" id="funding-modification-summary-by-line-1-net-modified-amount-due" type="text" value="" aria-labelledby="funding-modification-summary-by-line-1-line-number th-total-modified-obligation">
                   </td>
                 </tr>
-                <tr>
-                  <td>Moar rows.</td>
-                </tr>
               </tbody>
             </table>
           </section>
@@ -325,15 +326,15 @@
               <h1>Performance period</h1>
               <p>For a performance period mod, insert the start and end dates that reflect the new performance period.</p>
             </header>
-            <fieldset class="fieldset-performance-period">
+            <fieldset class="fieldset-performance-period fieldset-date-range">
               <legend>Performance period</legend>
-              <div class="field field-date field-performance-period-start-date">
+              <div class="field field-date field-start-date field-performance-period-start-date">
                 <label for="performance-period-start-date">
                   <span class="label-text">Start date</span>
                   <input type="date" id="performance-period-start-date" name="performance-period-start-date"> 
                 </label>
               </div>
-              <div class="field field-date field-performance-period-end-date">
+              <div class="field field-date field-end-date field-performance-period-end-date">
                 <label for="performance-period-end-date">
                   <span class="label-text">End date</span>
                   <input type="date" id="performance-period-end-date" name="performance-period-end-date">

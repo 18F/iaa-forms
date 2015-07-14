@@ -1,11 +1,5 @@
 /* @override http://localhost:4000/stylesheets/screen.css */
 
-/* @override https://iwyvasmfmk.localtunnel.me/stylesheets/screen.css */
-
-/* @override http://localhost:4000/stylesheets/screen.css */
-
-/* @override http://localhost:4000/stylesheets/screen.css */
-
 
 
 /* @group bootstrap */
@@ -270,6 +264,7 @@ fieldset > p{
 	font-size: 14px;
 	line-height: 1.4;
 	color: #444;
+	margin-top: 0;
 	margin-bottom: 1em;
 }
 
@@ -288,6 +283,7 @@ fieldset > p{
 
 div.field,
 fieldset{ margin-bottom: 24px; }
+fieldset.fieldset-radio{ margin-bottom: 18px; }
 
 fieldset.fieldset-parties-requesting-agency,
 fieldset.fieldset-parties-servicing-agency,
@@ -399,10 +395,12 @@ div.field.field-radio{
 	vertical-align: middle;
 	margin-bottom: 6px;
 }
+
 div.field.field-radio label{
 	display: inline-block;
 	padding: 0 12px 4px 12px;
 	border: 1px solid #ccc;
+	border-radius: 3px;
 	min-height: 32px;
 	line-height: 32px;
 	vertical-align: middle;
@@ -475,6 +473,33 @@ fieldset.fieldset-radio.is-error span.error-message{
 	font-style: italic;	
 }
 
+@media screen and (min-width: 533.33px) {
+
+	fieldset.fieldset-date-range::after{
+		content: "";
+		display: table;
+		clear: both;		
+	}	
+		
+	fieldset.fieldset-date-range div.field{
+		padding-bottom: 1.4em;
+		position: relative;
+		width: 50%;
+		float: left;
+		margin-bottom: 0;
+	}
+	
+	fieldset.fieldset-date-range span.label-text{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		font-size: 12px;
+	}
+
+}
+
+
 fieldset.fieldset-mailing-address div.field{
 	padding-bottom: 1.4em;
 	position: relative;
@@ -520,7 +545,7 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 
 /* @group widths */
 
-@media screen and (min-width: 568.88px){
+@media screen and (min-width: 533.33px){
 	.field-telephone-number input,
 	.field-email-address input,
 	.field-additional-classification input{
@@ -561,11 +586,10 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 /* @end */
 
 .branch{
-	padding: 8px 0 0 12px;
+	padding: 0 0 0 12px;
 	position: relative;
 }
 
-.branch section { margin-bottom: 16px; }
 .branch h1{
 	text-transform: uppercase;
 	font: 13px Courier, mono !important;
@@ -576,6 +600,7 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 	color: #ed2766 !important;
 	border-radius: 2px;
 	border: 1px solid #ccc;
+	margin-top: 16px;
 	margin-bottom: 8px !important;
 }
 .branch::after{
@@ -733,12 +758,14 @@ section.section-form::before{
 	width: 32px;
 	text-align: center;
 	font-size: 20px;
-	line-height: 56px;
+	line-height: 24px;
+	padding-top: 20px;
 	color: #aaa;
 }
 
 section.section-form h1 {
 	font-size: 20px;
+	line-height: 24px;
 	font-weight: 600;
 	margin-bottom: 20px;
 	color: #555;
@@ -757,9 +784,51 @@ section.section-form header+fieldset.fieldset-radio { margin-top: 24px; }
 	}
 }
 
-/* @group block 25 */
 
-.section-order-action .branch .field-explanation .label-text{
+/* @group block 1 */
+
+fieldset.fieldset-parties-servicing-agency { margin-bottom: 0; }
+
+/* @end */
+
+
+/* @group block 2 */
+
+div.field-servicing-agency-tracking-number { margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 3 */
+
+fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
+
+/* @end */
+
+/* @group block 4 */
+
+.section-gtc-action .branch p{
+	font-size: 14px;
+	line-height: 1.4;
+	color: #444;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.section-gtc-action .branch .field{ margin-bottom: 0; }
+.section-gtc-action .branch span.label-text{
+	position: absolute;
+	left: -9999em;
+}
+
+/* @end */
+
+/* @group block 5 */
+
+.section-agreement-period fieldset{
+	margin-bottom: 0;
+}
+
+.section-agreement-period fieldset legend{
 	position: absolute;
 	left: -9999em;
 }
@@ -767,12 +836,112 @@ section.section-form header+fieldset.fieldset-radio { margin-top: 24px; }
 
 /* @end */
 
+/* @group block 7 */
+
+.section-agreement-type fieldset{ margin-bottom: -6px; }
+
+/* @end */
+
+
+
+/* @group block 11 */
+
+.section-requesting-agencys-scope .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 12 */
+
+.section-roles-and-responsibilities .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 13 */
+
+.section-restrictions .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 14 */
+
+.section-assisted-acquisition-small-business-credit-clause .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 15 */
+
+.section-disputes .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 16 */
+
+.section-termination .field-termination-additional-terms{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 17 */
+
+.section-requesting-agencys-organizations .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 18 */
+
+.section-servicing-agencys-organizations .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 19 */
+
+.section-requesting-agencys-clauses .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 20 */
+
+.section-servicing-agencys-clauses .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 21 */
+
+.section-additional-agency-attachments .field{ margin-bottom: 0; }
+
+/* @end */
+
+
+/* @group block 25 */
+
+.section-order-action .branch .field-explanation .label-text{
+	position: absolute;
+	left: -9999em;
+}
+
+/* @end */
+
 
 /* @group block 26 */
+
+table.table-funding-modification-summary-by-line thead th{ 
+	padding: 4px; 
+	text-align: left;
+	font-size: 12px;
+	line-height: 1.33;
+}
 
 table.table-funding-modification-summary-by-line thead{
 	background: #555;
 	color: white;
+}
+
+table.table-funding-modification-summary-by-line tbody td{
+	border-right: 1px solid #ccc;
+}
+table.table-funding-modification-summary-by-line tbody td input{
+	border-right: none;
+	border-left: none;
+	border-radius: 0;
 }
 
 /* @end */
