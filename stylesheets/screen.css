@@ -15,6 +15,36 @@ body{
 a{ color: #0064be; }
 a:hover{ color: #003c72; }
 
+a[target=_blank]{
+	position: relative;
+	padding-right: 1.2em;
+}
+
+a[target=_blank]::before{
+	content: "";
+	position: absolute;
+	right: 0.25em;
+	bottom: 0.15em;
+	width: 0.7em;
+	height: 0.7em;
+	border: 0.1em solid #aaa;
+	z-index: 1;
+	
+}
+a[target=_blank]::after{
+	content: "\02197";
+	color: #888;
+	position: absolute;
+	right: 0.2em;
+	bottom: 0.3em;
+	font-size: 8px;
+	font-weight: 600;
+	text-shadow: 2px 2px 0 white,
+				 -2px -2px 0 white;
+	z-index: 2;
+}
+
+
 a.a-return{ 
 	color: #666; 
 	font-size: 14px;
@@ -88,7 +118,6 @@ div.wrap::after{
 	display: table;
 	clear: both;
 }
-
 
 h1.primary-header {
 	font-size: 32px;
@@ -182,7 +211,14 @@ textarea{
 	min-width: 4em;
 	width: 100%;
 	margin: 0;
+	outline: none;
 	font: inherit;
+}
+
+input[type=radio],
+input[type=checkbox]{ 
+	outline: none; 
+	border: none;
 }
 
 .field-select select{
@@ -379,7 +415,7 @@ fieldset div.field:last-of-type+fieldset{
 }
 
 fieldset > legend,
-div.field span.label-text{
+.field span.label-text{
 	display: block;	
 	max-width: 40em;
 	margin: 0 0 8px;
@@ -387,16 +423,15 @@ div.field span.label-text{
 	position: static;
 	font: inherit;
 	line-height: 20px;
-	color: inherit;
 }
 
-div.field.field-radio{ 
+.field.field-radio{ 
 	display: inline-block; 
 	vertical-align: middle;
 	margin-bottom: 6px;
 }
 
-div.field.field-radio label{
+.field.field-radio label{
 	display: inline-block;
 	padding: 0 12px 4px 12px;
 	border: 1px solid #ccc;
@@ -406,14 +441,21 @@ div.field.field-radio label{
 	vertical-align: middle;
 }
 
-main div.field input:focus,
-main div.field select:focus,
-main div.field textarea:focus,
-main div.field.field-checkbox.is-focused label,
-main div.field.field-radio.is-focused label{
-	background: #fff2df;
-	border-color: goldenrod;
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.field.field-checkbox.is-focused label,
+.field.field-radio.is-focused label{
+	border-color: #1188ff;
+	box-shadow: 0 0 0 1px rgba(17,136,255,0.15);
 	outline: none;
+}
+
+
+
+main div.field-select.is-focused::after{
+	border-top-color: #1188ff;
+
 }
 
 div.field.field-checkbox span.label-text,
@@ -585,12 +627,18 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 
 /* @end */
 
-.branch{
+.section-form .branch{
 	padding: 0 0 0 12px;
 	position: relative;
 }
 
-.branch h1{
+.section-form .fieldset-radio+.branch,
+.section-form .fieldset-radio+.branch+.branch{
+	margin-top: 12px;
+}
+
+.branch > h1.branch-logic,
+.branch > header > h1.branch-logic{
 	text-transform: uppercase;
 	font: 13px Courier, mono !important;
 	font-weight: 600 !important;
@@ -603,15 +651,19 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 	margin-top: 16px;
 	margin-bottom: 8px !important;
 }
-.branch::after{
+
+body.branches .branch h1.branch-logic,
+body.branches .branch > header > h1.branch-logic{ display: none; }
+
+.section-form .branch::after{
 	position: absolute;
 	left: 0;
 	top: 0;
 	bottom: -1px;
 	width: 3px;
-	border-radius: 99em;
+	border-radius: 2px;
 	content: "";
-	background: #e3e3e3;
+	background: #ccc;
 }
 
 main div.wrap > form { max-width: 576px; }
@@ -661,6 +713,234 @@ main form footer p button{
 	margin-left: 0.2em;
  }
 
+
+/* @end */
+
+/* @group tablesaw */
+
+/*! Tablesaw - v1.0.4 - 2015-02-19
+* https://github.com/filamentgroup/tablesaw
+* Copyright (c) 2015 Filament Group; Licensed MIT */
+
+table.tablesaw {
+  empty-cells: show;
+  max-width: 100%;
+  width: 100%;
+}
+
+.tablesaw {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Structure */
+
+.tablesaw {
+  border: 0;
+  padding: 0;
+}
+
+.tablesaw th,
+.tablesaw td {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tablesaw th,
+.tablesaw td {
+  line-height: 1em;
+  vertical-align: middle;
+}
+
+.tablesaw td,
+.tablesaw tbody th {
+  vertical-align: middle;
+}
+
+
+/* Stack */
+
+.tablesaw-stack td .tablesaw-cell-label,
+.tablesaw-stack th .tablesaw-cell-label {
+  display: none;
+}
+
+@media only all {
+  /* Show the table cells as a block level element */
+
+  .tablesaw-stack td,
+  .tablesaw-stack th {
+    text-align: left;
+    display: block;
+  }
+
+  .tablesaw-stack td{ margin-bottom: 24px;   }
+
+  /* Make the label elements a percentage width */
+
+  .tablesaw-stack td .tablesaw-cell-label,
+  .tablesaw-stack th .tablesaw-cell-label {
+    display: block;
+    line-height: 1.2;
+  }
+
+  .tablesaw-cell-label {
+	display: block;	
+	max-width: 40em;
+	margin: 0 0 8px;
+	padding: 0;
+	position: static;
+	font: inherit;
+	line-height: 20px;
+  }
+
+
+}
+
+@media (max-width: 39.9375em) {
+	
+table.table-funding-modification-summary-by-line tbody{ counter-reset: modification; }
+
+  .tablesaw-stack thead td,
+  .tablesaw-stack thead th {
+    display: none;
+  }
+
+  .tablesaw-cell-label {
+    vertical-align: top;
+  }
+
+  .tablesaw-stack td:empty,
+  .tablesaw-stack th:empty {
+    display: none;
+  }
+  
+  .tablesaw-stack tbody tr{ 
+	counter-increment: modification; 
+	border: 1px solid #cfcfcf;
+	padding: 16px;
+	padding-bottom: 19px;
+	position: relative;
+	margin-top: 36px;
+	border-radius: 4px;
+	display: block;
+  }
+  
+  .tablesaw-stack tbody tr:last-child{
+	margin-bottom: 32px; 
+  }
+
+.tablesaw-stack tbody tr::before,
+.tablesaw-stack tfoot tr:first-child th span.tablesaw-cell-content{
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 600;
+	color: #777;	
+	display: block;
+}
+
+.tablesaw-stack tbody tr::before{
+	content: "Modification " counter(modification);
+	position: absolute;
+	background: white;
+	margin: 0 0 -3px;
+	bottom: 100%;
+	left: 8px;
+	padding: 0 1px;
+}
+
+.tablesaw-stack tfoot td{
+	max-width: 40em;
+	margin: 0 0 8px;
+	padding: 0;
+	position: static;
+	font: inherit;
+	line-height: 20px;
+}
+
+.tablesaw-stack tfoot tr:first-child th span.tablesaw-cell-content{
+	margin-bottom: 16px;
+}
+
+.tablesaw-stack tfoot tr:first-child th:first-child b.tablesaw-cell-label{
+	display: none;
+}
+
+}
+
+/* Media query to show as a standard table at 560px (35em x 16px) or wider */
+
+@media (min-width: 40em) {
+
+table.table-funding-modification-summary-by-line thead th,
+table.table-funding-modification-summary-by-line tfoot th,
+table.table-funding-modification-summary-by-line tfoot td{ 
+	padding: 4px; 
+	font-size: 12px;
+	line-height: 1.33;
+}
+
+table.table-funding-modification-summary-by-line thead{
+	background: #555;
+	color: white;
+}
+
+
+  .tablesaw-stack tr {
+    display: table-row;
+  }
+
+  /* Show the table header rows */
+
+  .tablesaw-stack td,
+  .tablesaw-stack th,
+  .tablesaw-stack thead td,
+  .tablesaw-stack thead th,
+  .tablesaw-stack tfoot td,
+  .tablesaw-stack tfoot th {
+    display: table-cell;
+    margin: 0;
+  }
+  
+  .tablesaw-stack tfoot td,
+  .tablesaw-stack tfoot th {
+	background: #eee;
+	color: #555;
+	border-top: 1px solid #e3e3e3;
+  }
+
+  .tablesaw-stack td{
+	line-height: 16px;
+	height: 16px;
+	padding: 0;
+	border: none;
+  }
+  
+  .tablesaw-stack td input{
+	border-radius: 0;
+	font-size: 12px;
+	line-height: 16px;
+	min-height: 24px;
+	padding: 2px;
+	border-color: #e3e3e3;
+	box-shadow: none;
+  }
+  
+  .tablesaw-stack thead tr th:first-child{ border-top-left-radius: 2px; }
+  .tablesaw-stack thead tr th:last-child{ border-top-right-radius: 2px; }
+
+  .tablesaw-stack tfoot tr th:first-child{ border-bottom-left-radius: 2px; }
+  .tablesaw-stack tfoot tr td:last-child{ border-bottom-right-radius: 2px; }
+
+
+
+  /* Hide the labels in each cell */
+  .tablesaw-stack td .tablesaw-cell-label,
+  .tablesaw-stack th .tablesaw-cell-label {
+    display: none !important;
+  }
+}
 
 /* @end */
 
@@ -806,6 +1086,10 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 4 */
 
+.section-gtc-action fieldset.fieldset-gtc-action{
+	margin-bottom: -6px;
+}
+
 .section-gtc-action .branch p{
 	font-size: 14px;
 	line-height: 1.4;
@@ -833,6 +1117,12 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 	left: -9999em;
 }
 
+/* @end */
+
+
+/* @group block 6 */
+
+.section-recurring-agreement fieldset{ margin-bottom: -6px; }
 
 /* @end */
 
@@ -842,6 +1132,36 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @end */
 
+/* @group block 8 */
+
+.section-advance-payments fieldset{ margin-bottom: -6px; }
+.section-advance-payments .branch .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 9 */
+
+.section-estimated-agreement-amount .field-overhead-fees-explanation{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 10 */
+
+.section-statutory-authority fieldset.fieldset-servicing-agencys-statutory-authority{ margin-bottom: -6px; }
+
+.section-statutory-authority fieldset.fieldset-requesting-agencys-statutory-authority+.branch{
+	margin-top: -12px;
+}
+.section-statutory-authority fieldset.fieldset-servicing-agencys-statutory-authority+.branch{
+	margin-top: 12px;
+}
+
+.section-statutory-authority fieldset.fieldset-requesting-agencys-statutory-authority+.branch,
+.section-statutory-authority fieldset.fieldset-servicing-agencys-statutory-authority+.branch .field{
+	margin-bottom: 0;
+}
+
+/* @end */
 
 
 /* @group block 11 */
@@ -913,6 +1233,8 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 25 */
 
+.section-order-action fieldset{ margin-bottom: 0; }
+
 .section-order-action .branch .field-explanation .label-text{
 	position: absolute;
 	left: -9999em;
@@ -923,35 +1245,43 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 26 */
 
-table.table-funding-modification-summary-by-line thead th{ 
-	padding: 4px; 
-	text-align: left;
-	font-size: 12px;
-	line-height: 1.33;
-}
-
-table.table-funding-modification-summary-by-line thead{
-	background: #555;
-	color: white;
-}
-
-table.table-funding-modification-summary-by-line tbody td{
-	border-right: 1px solid #ccc;
-}
-table.table-funding-modification-summary-by-line tbody td input{
-	border-right: none;
-	border-left: none;
-	border-radius: 0;
+@media screen and (min-width: 888.88px){
+	section.section-funding-modification-summary-by-line{
+		margin-right: -256px;
+		background: white;		
+	}	
 }
 
 /* @end */
 
 /* @group block 27 */
 
-fieldset.fieldset-performance-period { margin-top: 24px; }
+fieldset.fieldset-performance-period.fieldset-date-range { 
+	margin-top: 4px; 
+	margin-bottom: 0;
+}
 fieldset.fieldset-performance-period .field:last-of-type{ margin-bottom: 0; }
 
 /* @end */
+
+
+
+/* @group block 28 */
+
+.section-funding-information .fieldset-requesting-agency .field-cancellation-date,
+.section-funding-information .fieldset-servicing-agency .field-additional-accounting-classification{ 
+	margin-bottom: 0;
+}
+.section-funding-information .fieldset-type-of-service-requirements{ margin-bottom: -6px; }
+
+/* @end */
+
+/* @group block 29 */
+
+.section-advance-information .fieldset-revenue-recognition-methodology{ margin-bottom: -6px; }
+
+/* @end */
+
 
 /* @group block 30 */
 
@@ -988,19 +1318,20 @@ section.section-payment-method legend{
 	left: -9999em;
 }
 
-section.section-attachments div.field .description-text{ 
-	font: inherit;
-	line-height: 1.3em;
-	margin-bottom: 12px;
+fieldset.fieldset-payment-method{ 
+	margin-top: 0; 
+	margin-bottom: -6px; 
 }
-
-section.section-attachments div.field{ margin-bottom: 0; }
 
 /* @end */
 
 /* @group block 33 */
 
-fieldset.fieldset-billing-frequency{ margin-top: 0; }
+fieldset.fieldset-billing-frequency{ 
+	margin-top: 0;
+	margin-bottom: -6px; 
+}
+
 fieldset.fieldset-billing-frequency legend{ 
 	position: absolute;
 	left: -9999em;
@@ -1010,7 +1341,11 @@ fieldset.fieldset-billing-frequency legend{
 
 /* @group block 34 */
 
-fieldset.fieldset-payment-terms{ margin-top: 0; }
+fieldset.fieldset-payment-terms{ 
+	margin-top: 0;
+	margin-bottom: -6px; 
+}
+
 fieldset.fieldset-payment-terms legend{ 
 	position: absolute;
 	left: -9999em;
@@ -1025,5 +1360,28 @@ div.field-funding-clauses span.label-text{
 	position: absolute;
 	left: -9999em;
 }
+
+/* @end */
+
+/* @group block 36 */
+
+.section-delivery-information-for-products .fieldset-point-of-contact,
+.section-delivery-information-for-products .fieldset-point-of-contact .field-email-address{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 37 */
+
+.section-program-officials .fieldset-servicing-agency,
+.section-program-officials .fieldset-servicing-agency .field-email-address,
+.section-program-officials .fieldset-requesting-agency .field-email-address{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 38 */
+
+.section-funding-officials .fieldset-servicing-agency,
+.section-funding-officials .fieldset-servicing-agency .field-email-address,
+.section-funding-officials .fieldset-requesting-agency .field-email-address{ margin-bottom: 0; }
 
 /* @end */

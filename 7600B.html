@@ -6,8 +6,6 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="bower_components/tablesaw/dist/tablesaw.css">
     <!--[if lt IE 9]><script src="bower_components/respond/dist/respond.js"></script><!--<![endif]-->
     <script type="text/javascript" src="bower_components/tablesaw/dist/tablesaw.js"></script>
 
@@ -221,7 +219,7 @@
             <header>
               <h1>Order action</h1>
             </header>
-            <fieldset class="fieldset-order-action fieldset-radio">
+            <fieldset class="fieldset-order-action fieldset-radio" data-branch-name="order-action">
               <legend>What action will you execute by filing this document?</legend>
               <div class="field field-radio">
                 <label for="order-action-new">
@@ -246,28 +244,26 @@
                 </label>
               </div>
             </fieldset>          
-            <aside class="branch">
-              <section class="branch-modification">
-                <h1>If modification</h1>              
-                <p>List affected order blocks and explain the changes being made. For example: for a performance period mod, state new performance periods for this order in block 27. Fill out the funding modification summary by line (block 26) if the mod involves adding, deleting, or changing funding for an order line.</p>
-                <div class="field field-explanation">
-                  <label for="modification-explanation">
-                    <span class="label-text">Explanation</span>
-                    <textarea name="modification-explanation" id="modification-explanation" type="radio" value="explanation"></textarea>
-                  </label>
-                </div>
-              </section>
-              <section class="branch-cancellation">
-                <h1>If cancellation</h1>
-                <p>Provide a brief explanation for order cancellation and fill in the performance period end date for the effective cancellation date.</p>
-                <div class="field field-explanation">
-                  <label for="cancellation-explanation">
-                    <span class="label-text">Explanation</span>
-                    <textarea name="cancellation-explanation" id="cancellation-explanation" type="radio" value="explanation"></textarea>
-                  </label>
-                </div>
-              </section>
+            <aside class="branch" data-branch-name="order-action" data-branch-value="modification">
+              <h1 class="branch-logic">If modification</h1>
+              <p>List affected order blocks and explain the changes being made. For example: for a performance period mod, state new performance periods for this order in block 27. Fill out the funding modification summary by line (block 26) if the mod involves adding, deleting, or changing funding for an order line.</p>
+              <div class="field field-explanation">
+                <label for="modification-explanation">
+                  <span class="label-text">Explanation</span>
+                  <textarea name="modification-explanation" id="modification-explanation" type="radio" value="explanation"></textarea>
+                </label>
+              </div>
             </aside>
+            <aside class="branch" data-branch-name="order-action" data-branch-value="cancellation">
+              <h1 class="branch-logic">If cancellation</h1>
+              <p>Provide a brief explanation for order cancellation and fill in the performance period end date for the effective cancellation date.</p>
+              <div class="field field-explanation">
+                <label for="cancellation-explanation">
+                  <span class="label-text">Explanation</span>
+                  <textarea name="cancellation-explanation" id="cancellation-explanation" type="radio" value="explanation"></textarea>
+                </label>
+              </div>
+          </aside>
           </section>
           <section class="section-form section-funding-modification-summary-by-line">
             <header>
@@ -318,6 +314,53 @@
                     <input name="funding-modification-summary-by-line-1-net-modified-amount-due" id="funding-modification-summary-by-line-1-net-modified-amount-due" type="text" value="" aria-labelledby="funding-modification-summary-by-line-1-line-number th-total-modified-obligation">
                   </td>
                 </tr>
+                <tr>
+                  <td class="field td-line-number">
+                    <input name="funding-modification-summary-by-line-2-line-number" id="funding-modification-summary-by-line-2-line-number" type="text" value="" aria-labelledby="th-line-number">
+                  </td>
+                  <td class="field td-original-line-funding">
+                    <input name="funding-modification-summary-by-line-2-original-line-funding" id="funding-modification-summary-by-line-2-original-line-funding" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-original-line-funding">
+                  </td>
+                  <td class="field td-cumulative-prior-funding-changes">
+                    <input name="funding-modification-summary-by-line-2-cumulative-prior-funding-changes" id="funding-modification-summary-by-line-2-cumulative-prior-funding-changes" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-cumulative-prior-funding-changes">
+                  </td>
+                  <td class="field td-funding-changes">                    
+                    <input name="funding-modification-summary-by-line-2-funding-changes" id="funding-modification-summary-by-line-2-funding-changes" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-funding-changes">
+                  </td>
+                  <td class="field td-total-modified-obligation is-calculated">
+                    <input name="funding-modification-summary-by-line-2-total-modified-obligation" id="funding-modification-summary-by-line-2-total-modified-obligation" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-total-modified-obligation">
+                  </td>
+                  <td class="field td-total-advance-amount">
+                    <input name="funding-modification-summary-by-line-2-total-advance-amount" id="funding-modification-summary-by-line-2-total-advance-amount" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-total-advance-amount">
+                  </td>
+                  <td class="field td-net-modified-amount-due is-calculated">
+                    <input name="funding-modification-summary-by-line-2-net-modified-amount-due" id="funding-modification-summary-by-line-2-net-modified-amount-due" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-total-modified-obligation">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="field td-line-number">
+                    <input name="funding-modification-summary-by-line-2-line-number" id="funding-modification-summary-by-line-2-line-number" type="text" value="" aria-labelledby="th-line-number">
+                  </td>
+                  <td class="field td-original-line-funding">
+                    <input name="funding-modification-summary-by-line-2-original-line-funding" id="funding-modification-summary-by-line-2-original-line-funding" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-original-line-funding">
+                  </td>
+                  <td class="field td-cumulative-prior-funding-changes">
+                    <input name="funding-modification-summary-by-line-2-cumulative-prior-funding-changes" id="funding-modification-summary-by-line-2-cumulative-prior-funding-changes" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-cumulative-prior-funding-changes">
+                  </td>
+                  <td class="field td-funding-changes">                    
+                    <input name="funding-modification-summary-by-line-2-funding-changes" id="funding-modification-summary-by-line-2-funding-changes" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-funding-changes">
+                  </td>
+                  <td class="field td-total-modified-obligation is-calculated">
+                    <input name="funding-modification-summary-by-line-2-total-modified-obligation" id="funding-modification-summary-by-line-2-total-modified-obligation" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-total-modified-obligation">
+                  </td>
+                  <td class="field td-total-advance-amount">
+                    <input name="funding-modification-summary-by-line-2-total-advance-amount" id="funding-modification-summary-by-line-2-total-advance-amount" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-total-advance-amount">
+                  </td>
+                  <td class="field td-net-modified-amount-due is-calculated">
+                    <input name="funding-modification-summary-by-line-2-net-modified-amount-due" id="funding-modification-summary-by-line-2-net-modified-amount-due" type="text" value="" aria-labelledby="funding-modification-summary-by-line-2-line-number th-total-modified-obligation">
+                  </td>
+                </tr>
+
               </tbody>
             </table>
           </section>
@@ -361,7 +404,7 @@
                   <input name="funding-information-requesting-agency-alc" id="funding-information-requesting-agency-alc" type="text">
                 </label>
               </div>
-              <fieldset class="fieldset-radio fieldset-tas-type">
+              <fieldset class="fieldset-radio fieldset-tas-type" data-branch-name="funding-information-requesting-agency-tas-type">
                 <legend>TAS type</legend>
                 <div class="field field-radio">
                   <label for="funding-information-requesting-agency-tas-type-component">
@@ -376,6 +419,7 @@
                 <div class="field field-radio">
                   <label for="funding-information-requesting-agency-tas-type-current">
                     <input required 
+                           selected
                            name="funding-information-requesting-agency-tas-type" 
                            id="funding-information-requesting-agency-tas-type-current" 
                            type="radio"
@@ -384,88 +428,100 @@
                   </label>
                 </div>
               </fieldset>
-              <fieldset class="fieldset-radio fieldset-component-tas">
-                <legend>Component TAS</legend>
-                <div class="field field-sp">
-                  <label for="funding-information-requesting-agency-component-tas-sp">
-                    <span class="label-text">SP</span>
-                    <input name="funding-information-requesting-agency-component-tas-sp" id="funding-information-requesting-agency-component-tas-sp" type="text">
+              <aside class="branch" data-branch-name="funding-information-requesting-agency-tas-type" data-branch-value="current">
+                <h1 class="branch-logic">If current TAS</h1>
+                <div class="field field-current-tas">
+                  <label for="funding-information-requesting-agency-current-tas">
+                    <span class="label-text">Current TAS</span>
+                    <input name="funding-information-requesting-agency-current-tas" id="funding-information-requesting-agency-current-tas" type="text">
                   </label>
                 </div>
-                <div class="field field-ata">
-                  <label for="funding-information-requesting-agency-component-tas-ata">
-                    <span class="label-text">ATA</span>
-                    <input name="funding-information-requesting-agency-component-tas-ata" id="funding-information-requesting-agency-component-tas-ata" type="text">
-                  </label>
-                </div>
-                <div class="field field-aid">
-                  <label for="funding-information-requesting-agency-component-tas-aid">
-                    <span class="label-text">AID</span>
-                    <input name="funding-information-requesting-agency-component-tas-aid" id="funding-information-requesting-agency-component-tas-aid" type="text">
-                  </label>
-                </div>
-                <div class="field field-bpoa">
-                  <label for="funding-information-requesting-agency-component-tas-bpoa">
-                    <span class="label-text">BPOA</span>
-                    <input name="funding-information-requesting-agency-component-tas-bpoa" id="funding-information-requesting-agency-component-tas-bpoa" type="text">
-                  </label>
-                </div>
-                <div class="field field-sp">
-                  <label for="funding-information-requesting-agency-component-tas-sp">
-                    <span class="label-text">EPOA</span>
-                    <input name="funding-information-requesting-agency-component-tas-sp" id="funding-information-requesting-agency-component-tas-sp" type="text">
-                  </label>
-                </div>
-                <div class="field field-a">
-                  <label for="funding-information-requesting-agency-component-tas-a">
-                    <span class="label-text">A</span>
-                    <input name="funding-information-requesting-agency-component-tas-a" id="funding-information-requesting-agency-component-tas-a" type="text">
-                  </label>
-                </div>
-                <div class="field field-main">
-                  <label for="funding-information-requesting-agency-component-tas-main">
-                    <span class="label-text">MAIN</span>
-                    <input name="funding-information-requesting-agency-component-tas-main" id="funding-information-requesting-agency-component-tas-main" type="text">
-                  </label>
-                </div>
-                <div class="field field-sub">
-                  <label for="funding-information-requesting-agency-component-tas-sub">
-                    <span class="label-text">SUB</span>
-                    <input name="funding-information-requesting-agency-component-tas-sub" id="funding-information-requesting-agency-component-tas-sub" type="text">
-                  </label>
-                </div>
-              </fieldset>
-              <div class="field field-sub">
+              </aside>
+              <aside class="branch" data-branch-name="funding-information-requesting-agency-tas-type" data-branch-value="component">
+                <h1 class="branch-logic">If component TAS</h1>
+                <fieldset class="fieldset-radio fieldset-component-tas">
+                  <legend>Component TAS</legend>
+                  <div class="field field-sp">
+                    <label for="funding-information-requesting-agency-component-tas-sp">
+                      <span class="label-text">SP</span>
+                      <input name="funding-information-requesting-agency-component-tas-sp" id="funding-information-requesting-agency-component-tas-sp" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-ata">
+                    <label for="funding-information-requesting-agency-component-tas-ata">
+                      <span class="label-text">ATA</span>
+                      <input name="funding-information-requesting-agency-component-tas-ata" id="funding-information-requesting-agency-component-tas-ata" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-aid">
+                    <label for="funding-information-requesting-agency-component-tas-aid">
+                      <span class="label-text">AID</span>
+                      <input name="funding-information-requesting-agency-component-tas-aid" id="funding-information-requesting-agency-component-tas-aid" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-bpoa">
+                    <label for="funding-information-requesting-agency-component-tas-bpoa">
+                      <span class="label-text">BPOA</span>
+                      <input name="funding-information-requesting-agency-component-tas-bpoa" id="funding-information-requesting-agency-component-tas-bpoa" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-sp">
+                    <label for="funding-information-requesting-agency-component-tas-sp">
+                      <span class="label-text">EPOA</span>
+                      <input name="funding-information-requesting-agency-component-tas-sp" id="funding-information-requesting-agency-component-tas-sp" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-a">
+                    <label for="funding-information-requesting-agency-component-tas-a">
+                      <span class="label-text">A</span>
+                      <input name="funding-information-requesting-agency-component-tas-a" id="funding-information-requesting-agency-component-tas-a" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-main">
+                    <label for="funding-information-requesting-agency-component-tas-main">
+                      <span class="label-text">MAIN</span>
+                      <input name="funding-information-requesting-agency-component-tas-main" id="funding-information-requesting-agency-component-tas-main" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-sub">
+                    <label for="funding-information-requesting-agency-component-tas-sub">
+                      <span class="label-text">SUB</span>
+                      <input name="funding-information-requesting-agency-component-tas-sub" id="funding-information-requesting-agency-component-tas-sub" type="text">
+                    </label>
+                  </div>
+                </fieldset>
+              </aside>
+              <div class="field field-betc">
                 <label for="funding-information-requesting-agency-betc">
                   <span class="label-text">BETC</span>
                   <input name="funding-information-requesting-agency-betc" id="funding-information-requesting-agency-betc" type="text">
                 </label>
               </div>
-              <div class="field field-sub">
+              <div class="field field-object-class-code">
                 <label for="funding-information-requesting-agency-object-class-code">
                   <span class="label-text">Object class code</span>
                   <input name="funding-information-requesting-agency-object-class-code" id="funding-information-requesting-agency-object-class-code" type="text">
                 </label>
               </div>
-              <div class="field field-sub">
+              <div class="field field-bpn">
                 <label for="funding-information-requesting-agency-bpn">
                   <span class="label-text">BPN (or BPN+4)</span>
                   <input name="funding-information-requesting-agency-bpn" id="funding-information-requesting-agency-bpn" type="text">
                 </label>
               </div>
-              <div class="field field-sub">
+              <div class="field field-additional-accounting-classification">
                 <label for="funding-information-requesting-agency-additional-accounting-classification">
                   <span class="label-text">Additional accounting classification</span>
                   <input name="funding-information-requesting-agency-additional-accounting-classification" id="funding-information-requesting-agency-additional-accounting-classification" type="text">
                 </label>
               </div>
-              <div class="field field-sub">
+              <div class="field field-date field-expiration-date">
                 <label for="funding-information-requesting-agency-expiration-date">
                   <span class="label-text">Expiration date</span>
                   <input name="funding-information-requesting-agency-expiration-date" id="funding-information-requesting-agency-expiration-date" type="date">
                 </label>
               </div>
-              <div class="field field-sub">
+              <div class="field field-date field-cancellation-date">
                 <label for="funding-information-requesting-agency-cancellation-date">
                   <span class="label-text">Cancellation date</span>
                   <input name="funding-information-requesting-agency-component-tas-betc" id="funding-information-requesting-agency-component-tas-betc" type="date">
@@ -480,7 +536,7 @@
                   <input name="funding-information-servicing-agency-alc" id="funding-information-servicing-agency-alc" type="text">
                 </label>
               </div>
-              <fieldset class="fieldset-radio fieldset-tas-type">
+              <fieldset class="fieldset-radio fieldset-tas-type" data-branch-name="funding-information-servicing-agency-tas-type">
                 <legend>TAS type</legend>
                 <div class="field field-radio">
                   <label for="funding-information-servicing-agency-tas-type-component">
@@ -503,82 +559,100 @@
                   </label>
                 </div>
               </fieldset>
-              <fieldset class="fieldset-radio fieldset-component-tas">
-                <legend>Component TAS</legend>
-                <div class="field field-sp">
-                  <label for="funding-information-servicing-agency-component-tas-sp">
-                    <span class="label-text">SP</span>
-                    <input name="funding-information-servicing-agency-component-tas-sp" id="funding-information-servicing-agency-component-tas-sp" type="text">
+              <aside class="branch" data-branch-name="funding-information-servicing-agency-tas-type" data-branch-value="current">
+                <h1 class="branch-logic">If current TAS</h1>
+                <div class="field field-current-tas">
+                  <label for="funding-information-servicing-agency-current-tas">
+                    <span class="label-text">Current TAS</span>
+                    <input name="funding-information-servicing-agency-current-tas" id="funding-information-servicing-agency-current-tas" type="text">
                   </label>
                 </div>
-                <div class="field field-ata">
-                  <label for="funding-information-servicing-agency-component-tas-ata">
-                    <span class="label-text">ATA</span>
-                    <input name="funding-information-servicing-agency-component-tas-ata" id="funding-information-servicing-agency-component-tas-ata" type="text">
-                  </label>
-                </div>
-                <div class="field field-aid">
-                  <label for="funding-information-servicing-agency-component-tas-aid">
-                    <span class="label-text">AID</span>
-                    <input name="funding-information-servicing-agency-component-tas-aid" id="funding-information-servicing-agency-component-tas-aid" type="text">
-                  </label>
-                </div>
-                <div class="field field-bpoa">
-                  <label for="funding-information-servicing-agency-component-tas-bpoa">
-                    <span class="label-text">BPOA</span>
-                    <input name="funding-information-servicing-agency-component-tas-bpoa" id="funding-information-servicing-agency-component-tas-bpoa" type="text">
-                  </label>
-                </div>
-                <div class="field field-sp">
-                  <label for="funding-information-servicing-agency-component-tas-sp">
-                    <span class="label-text">EPOA</span>
-                    <input name="funding-information-servicing-agency-component-tas-sp" id="funding-information-servicing-agency-component-tas-sp" type="text">
-                  </label>
-                </div>
-                <div class="field field-a">
-                  <label for="funding-information-servicing-agency-component-tas-a">
-                    <span class="label-text">A</span>
-                    <input name="funding-information-servicing-agency-component-tas-a" id="funding-information-servicing-agency-component-tas-a" type="text">
-                  </label>
-                </div>
-                <div class="field field-main">
-                  <label for="funding-information-servicing-agency-component-tas-main">
-                    <span class="label-text">MAIN</span>
-                    <input name="funding-information-servicing-agency-component-tas-main" id="funding-information-servicing-agency-component-tas-main" type="text">
-                  </label>
-                </div>
-                <div class="field field-sub">
-                  <label for="funding-information-servicing-agency-component-tas-sub">
-                    <span class="label-text">SUB</span>
-                    <input name="funding-information-servicing-agency-component-tas-sub" id="funding-information-servicing-agency-component-tas-sub" type="text">
-                  </label>
-                </div>
-              </fieldset>
-              <div class="field field-sub">
+              </aside>
+              <aside class="branch" data-branch-name="funding-information-servicing-agency-tas-type" data-branch-value="component">
+                <h1 class="branch-logic">If component TAS</h1>
+                <fieldset class="fieldset-radio fieldset-component-tas">
+                  <legend>Component TAS</legend>
+                  <div class="field field-sp">
+                    <label for="funding-information-servicing-agency-component-tas-sp">
+                      <span class="label-text">SP</span>
+                      <input name="funding-information-servicing-agency-component-tas-sp" id="funding-information-servicing-agency-component-tas-sp" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-ata">
+                    <label for="funding-information-servicing-agency-component-tas-ata">
+                      <span class="label-text">ATA</span>
+                      <input name="funding-information-servicing-agency-component-tas-ata" id="funding-information-servicing-agency-component-tas-ata" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-aid">
+                    <label for="funding-information-servicing-agency-component-tas-aid">
+                      <span class="label-text">AID</span>
+                      <input name="funding-information-servicing-agency-component-tas-aid" id="funding-information-servicing-agency-component-tas-aid" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-bpoa">
+                    <label for="funding-information-servicing-agency-component-tas-bpoa">
+                      <span class="label-text">BPOA</span>
+                      <input name="funding-information-servicing-agency-component-tas-bpoa" id="funding-information-servicing-agency-component-tas-bpoa" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-sp">
+                    <label for="funding-information-servicing-agency-component-tas-sp">
+                      <span class="label-text">EPOA</span>
+                      <input name="funding-information-servicing-agency-component-tas-sp" id="funding-information-servicing-agency-component-tas-sp" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-a">
+                    <label for="funding-information-servicing-agency-component-tas-a">
+                      <span class="label-text">A</span>
+                      <input name="funding-information-servicing-agency-component-tas-a" id="funding-information-servicing-agency-component-tas-a" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-main">
+                    <label for="funding-information-servicing-agency-component-tas-main">
+                      <span class="label-text">MAIN</span>
+                      <input name="funding-information-servicing-agency-component-tas-main" id="funding-information-servicing-agency-component-tas-main" type="text">
+                    </label>
+                  </div>
+                  <div class="field field-sub">
+                    <label for="funding-information-servicing-agency-component-tas-sub">
+                      <span class="label-text">SUB</span>
+                      <input name="funding-information-servicing-agency-component-tas-sub" id="funding-information-servicing-agency-component-tas-sub" type="text">
+                    </label>
+                  </div>
+                </fieldset>
+              </aside>
+              <div class="field field-betc">
                 <label for="funding-information-servicing-agency-betc">
                   <span class="label-text">BETC</span>
                   <input name="funding-information-servicing-agency-betc" id="funding-information-servicing-agency-betc" type="text">
                 </label>
               </div>
-              <div class="field field-sub">
+              <div class="field field-object-class-code">
                 <label for="funding-information-servicing-agency-object-class-code">
                   <span class="label-text">Object class code</span>
                   <input name="funding-information-servicing-agency-object-class-code" id="funding-information-servicing-agency-object-class-code" type="text">
                 </label>
               </div>
-              <div class="field field-sub">
+              <div class="field field-bpn">
                 <label for="funding-information-servicing-agency-bpn">
                   <span class="label-text">BPN (or BPN+4)</span>
                   <input name="funding-information-servicing-agency-bpn" id="funding-information-servicing-agency-bpn" type="text">
                 </label>
               </div>
-              <div class="field field-sub">
+              <div class="field field-additional-accounting-classification">
                 <label for="funding-information-servicing-agency-additional-accounting-classification">
                   <span class="label-text">Additional accounting classification</span>
                   <input name="funding-information-servicing-agency-additional-accounting-classification" id="funding-information-servicing-agency-additional-accounting-classification" type="text">
                 </label>
               </div>
             </fieldset>
+            <div class="field field-project-number-title">
+              <label for="funding-information-project-number-and-title">
+                <span class="label-text">Project number and title</span>
+                <input type="text" id="funding-information-project-number-and-title" name="funding-information-project-number-and-title" />
+              </label>
+            </div>       
             <div class="field field-description">
               <label for="funding-information-description">
                 <span class="label-text">Description of products and/or services, including the bona fide need for this order.</span>
@@ -591,126 +665,124 @@
                 <input id="funding-information-naics-number" name="funding-information-naics-number" type="text" />
               </label>
             </div>
-            <fieldset class="fieldset-radio fieldset-funding-breakdown">
+            <fieldset class="fieldset-radio fieldset-funding-breakdown" data-branch-name="funding-breakdown">
               <legend>Funding breakdown</legend>
               <div class="field field-radio">
-                <label for="funding-information-funding-breakdown-reimbursable-line-costs">
+                <label for="funding-breakdown-reimbursable-line-costs">
                   <input required 
-                         name="funding-information-funding-breakdown" 
-                         id="funding-information-funding-breakdown-reimbursable-line-costs" 
+                         name="funding-breakdown" 
+                         id="funding-breakdown-reimbursable-line-costs" 
                          type="radio"
                          value="reimbursable-line-costs">
                   <span class="label-text">Reimbursable line costs</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="funding-information-funding-breakdown-assisted-acquisition-line-costs">
+                <label for="funding-breakdown-assisted-acquisition-line-costs">
                   <input required 
-                         name="funding-information-funding-breakdown" 
-                         id="funding-information-funding-breakdown-assisted-acquisition-line-costs" 
+                         name="funding-breakdown" 
+                         id="funding-breakdown-assisted-acquisition-line-costs" 
                          type="radio"
                          value="assisted-acquisition-line-costs">
                   <span class="label-text">Assisted acquisition line costs</span>
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <section>
-                <h1>If reimbursable line costs</h1>
-                <fieldset class="fieldset-reimbursable-line-costs">
-                  <legend>Reimbursable line costs</legend>
-                  <div class="field field-unit-of-measure">
-                    <label for="funding-information-reimbursable-line-costs-unit-of-measure">
-                      <span class="label-text">Unit of measure</span>
-                      <input id="funding-information-reimbursable-line-costs-unit-of-measure" name="funding-information-reimbursable-line-costs-unit-of-measure" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-quantity">
-                    <label for="funding-information-reimbursable-line-costs-quantity">
-                      <span class="label-text">Quantity</span>
-                      <input id="funding-information-reimbursable-line-costs-quantity" name="funding-information-reimbursable-line-costs-quantity" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-unit-price">
-                    <label for="funding-information-reimbursable-line-costs-unit-price">
-                      <span class="label-text">Unit price</span>
-                      <input id="funding-information-reimbursable-line-costs-unit-price" name="funding-information-reimbursable-line-costs-unit-price" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-total is-calculated">
-                    <label for="funding-information-reimbursable-line-costs-total">
-                      <span class="label-text">Total</span>
-                      <input id="funding-information-reimbursable-line-costs-total" name="funding-information-reimbursable-line-costs-total" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-overhead-fees-and-charges">
-                    <label for="funding-information-reimbursable-line-costs-overhead-fees-and-charges">
-                      <span class="label-text">Overhead fees &amp; charges</span>
-                      <input id="funding-information-reimbursable-line-costs-overhead-fees-and-charges" name="funding-information-reimbursable-line-costs-overhead-fees-and-charges" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-total-line-amount-obligated is-calculated">
-                    <label for="funding-information-reimbursable-line-costs-total-line-amount-obligated">
-                      <span class="label-text">Total line amount obligated</span>
-                      <input id="funding-information-reimbursable-line-costs-total-line-amount-obligated" name="funding-information-reimbursable-line-costs-total-line-amount-obligated" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-advance-line-amount">
-                    <label for="funding-information-reimbursable-line-costs-advance-line-amount">
-                      <span class="label-text">Advance line amount (-)</span>
-                      <input id="funding-information-reimbursable-line-costs-advance-line-amount" name="funding-information-reimbursable-line-costs-advance-line-amount" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-new-line-amount-due is-calculated">
-                    <label for="funding-information-reimbursable-line-costs-new-line-amount-due">
-                      <span class="label-text">New line amount due</span>
-                      <input id="funding-information-reimbursable-line-costs-new-line-amount-due" name="funding-information-reimbursable-line-costs-new-line-amount-due" type="text" />
-                    </label>
-                  </div>
-                </fieldset>
-              </section>
-              <section>
-                <h1>If Assisted acquisition line costs</h1>
-                <fieldset class="fieldset-assisted-acquisition-line-costs">
-                  <legend>Assisted acquisition line costs</legend>
-                  <div class="field field-contracting-cost">
-                    <label for="funding-information-assisted-acquisition-line-costs-contracting-cost">
-                      <span class="label-text">Contracting cost</span>
-                      <input id="funding-information-assisted-acquisition-line-costs-contracting-cost" name="funding-information-assisted-acquisition-line-costs-contracting-cost" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-servicing-fees">
-                    <label for="funding-information-assisted-acquisition-line-costs-servicing-fees">
-                      <span class="label-text">Servicing fees</span>
-                      <input id="funding-information-assisted-acquisition-line-costs-servicing-fees" name="funding-information-assisted-acquisition-line-costs-servicing-fees" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-total-obligated-cost is-calculated">
-                    <label for="funding-information-assisted-acquisition-line-costs-total-obligated-cost">
-                      <span class="label-text">Total obligated cost</span>
-                      <input id="funding-information-assisted-acquisition-line-costs-total-obligated-cost" name="funding-information-assisted-acquisition-line-costs-total-obligated-cost" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-advance-for-line is-calculated">
-                    <label for="funding-information-assisted-acquisition-line-costs-advance-for-line">
-                      <span class="label-text">Advance for line (-)</span>
-                      <input id="funding-information-assisted-acquisition-line-costs-advance-for-line" name="funding-information-assisted-acquisition-line-costs-advance-for-line" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-net-total-cost is-calculated">
-                    <label for="funding-information-assisted-acquisition-line-costs-net-total-cost">
-                      <span class="label-text">Net total cost</span>
-                      <input id="funding-information-assisted-acquisition-line-costs-net-total-cost" name="funding-information-assisted-acquisition-line-costs-net-total-cost" type="text" />
-                    </label>
-                  </div>
-                  <div class="field field-servicing-fees-explanation">
-                    <label for="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation">
-                      <span class="label-text">Assisted acquisition servicing fees explanation</span>
-                      <textarea id="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation" name="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation" type="text"></textarea>
-                    </label>
-                  </div>
-                </fieldset>     
-              </section>
+            <aside class="branch" data-branch-name="funding-breakdown" data-branch-value="reimbursable-line-costs">
+              <h1 class="branch-logic">If reimbursable line costs</h1>
+              <fieldset class="fieldset-reimbursable-line-costs">
+                <legend>Reimbursable line costs</legend>
+                <div class="field field-unit-of-measure">
+                  <label for="funding-information-reimbursable-line-costs-unit-of-measure">
+                    <span class="label-text">Unit of measure</span>
+                    <input id="funding-information-reimbursable-line-costs-unit-of-measure" name="funding-information-reimbursable-line-costs-unit-of-measure" type="text" />
+                  </label>
+                </div>
+                <div class="field field-quantity">
+                  <label for="funding-information-reimbursable-line-costs-quantity">
+                    <span class="label-text">Quantity</span>
+                    <input id="funding-information-reimbursable-line-costs-quantity" name="funding-information-reimbursable-line-costs-quantity" type="text" />
+                  </label>
+                </div>
+                <div class="field field-unit-price">
+                  <label for="funding-information-reimbursable-line-costs-unit-price">
+                    <span class="label-text">Unit price</span>
+                    <input id="funding-information-reimbursable-line-costs-unit-price" name="funding-information-reimbursable-line-costs-unit-price" type="text" />
+                  </label>
+                </div>
+                <div class="field field-total is-calculated">
+                  <label for="funding-information-reimbursable-line-costs-total">
+                    <span class="label-text">Total</span>
+                    <input id="funding-information-reimbursable-line-costs-total" name="funding-information-reimbursable-line-costs-total" type="text" />
+                  </label>
+                </div>
+                <div class="field field-overhead-fees-and-charges">
+                  <label for="funding-information-reimbursable-line-costs-overhead-fees-and-charges">
+                    <span class="label-text">Overhead fees &amp; charges</span>
+                    <input id="funding-information-reimbursable-line-costs-overhead-fees-and-charges" name="funding-information-reimbursable-line-costs-overhead-fees-and-charges" type="text" />
+                  </label>
+                </div>
+                <div class="field field-total-line-amount-obligated is-calculated">
+                  <label for="funding-information-reimbursable-line-costs-total-line-amount-obligated">
+                    <span class="label-text">Total line amount obligated</span>
+                    <input id="funding-information-reimbursable-line-costs-total-line-amount-obligated" name="funding-information-reimbursable-line-costs-total-line-amount-obligated" type="text" />
+                  </label>
+                </div>
+                <div class="field field-advance-line-amount">
+                  <label for="funding-information-reimbursable-line-costs-advance-line-amount">
+                    <span class="label-text">Advance line amount (-)</span>
+                    <input id="funding-information-reimbursable-line-costs-advance-line-amount" name="funding-information-reimbursable-line-costs-advance-line-amount" type="text" />
+                  </label>
+                </div>
+                <div class="field field-new-line-amount-due is-calculated">
+                  <label for="funding-information-reimbursable-line-costs-new-line-amount-due">
+                    <span class="label-text">New line amount due</span>
+                    <input id="funding-information-reimbursable-line-costs-new-line-amount-due" name="funding-information-reimbursable-line-costs-new-line-amount-due" type="text" />
+                  </label>
+                </div>
+              </fieldset>
+            </aside>
+            <aside class="branch" data-branch-name="funding-breakdown" data-branch-value="assisted-acquisition-line-costs">
+              <h1 class="branch-logic">If Assisted acquisition line costs</h1>
+              <fieldset class="fieldset-assisted-acquisition-line-costs">
+                <legend>Assisted acquisition line costs</legend>
+                <div class="field field-contracting-cost">
+                  <label for="funding-information-assisted-acquisition-line-costs-contracting-cost">
+                    <span class="label-text">Contracting cost</span>
+                    <input id="funding-information-assisted-acquisition-line-costs-contracting-cost" name="funding-information-assisted-acquisition-line-costs-contracting-cost" type="text" />
+                  </label>
+                </div>
+                <div class="field field-servicing-fees">
+                  <label for="funding-information-assisted-acquisition-line-costs-servicing-fees">
+                    <span class="label-text">Servicing fees</span>
+                    <input id="funding-information-assisted-acquisition-line-costs-servicing-fees" name="funding-information-assisted-acquisition-line-costs-servicing-fees" type="text" />
+                  </label>
+                </div>
+                <div class="field field-total-obligated-cost is-calculated">
+                  <label for="funding-information-assisted-acquisition-line-costs-total-obligated-cost">
+                    <span class="label-text">Total obligated cost</span>
+                    <input id="funding-information-assisted-acquisition-line-costs-total-obligated-cost" name="funding-information-assisted-acquisition-line-costs-total-obligated-cost" type="text" />
+                  </label>
+                </div>
+                <div class="field field-advance-for-line is-calculated">
+                  <label for="funding-information-assisted-acquisition-line-costs-advance-for-line">
+                    <span class="label-text">Advance for line (-)</span>
+                    <input id="funding-information-assisted-acquisition-line-costs-advance-for-line" name="funding-information-assisted-acquisition-line-costs-advance-for-line" type="text" />
+                  </label>
+                </div>
+                <div class="field field-net-total-cost is-calculated">
+                  <label for="funding-information-assisted-acquisition-line-costs-net-total-cost">
+                    <span class="label-text">Net total cost</span>
+                    <input id="funding-information-assisted-acquisition-line-costs-net-total-cost" name="funding-information-assisted-acquisition-line-costs-net-total-cost" type="text" />
+                  </label>
+                </div>
+                <div class="field field-servicing-fees-explanation">
+                  <label for="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation">
+                    <span class="label-text">Assisted acquisition servicing fees explanation</span>
+                    <textarea id="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation" name="funding-information-assisted-acquisition-line-costs-servicing-fees-explanation" type="text"></textarea>
+                  </label>
+                </div>
+              </fieldset>     
             </aside>
             <fieldset class="fieldset-radio fieldset-type-of-service-requirements">
               <legend>Type of service requirements</legend>
@@ -758,9 +830,9 @@
                 <p class="p-description-text" id="advance-information-total-description">All order line advance amounts from block 28 must sum to this total.</p>
               </label>
             </div>
-            <fieldset class="fieldset-radio fieldset-revenue-recognition-methodology">
+            <fieldset class="fieldset-radio fieldset-revenue-recognition-methodology" data-branch-name="advance-information-revenue-recognition-methodology">
               <legend>Revenue recognition methodology</legend>
-              <p class="p-description-text">According to SFFAS 7. Identify the revenue recognition methodology that will be used to account for the requesting agency&rsquo;s expense and the servicing agency&rsquo;s revenue.</p>
+              <p class="p-description-text">According to <a href="http://www.fasab.gov/pdffiles/sffas-7.pdf" target="_blank">SFFAS 7</a>. Identify the revenue recognition methodology that will be used to account for the requesting agency&rsquo;s expense and the servicing agency&rsquo;s revenue.</p>
               <div class="field field-radio">
                 <label for="advance-information-revenue-recognition-methodology-straight-line">
                   <input type="radio" 
@@ -779,9 +851,9 @@
                   <span class="label-text">Accrual per work completed</span>
                 </label>
               </div>
-              <aside class="branch">
-                <h1>If accrual per work completed</h1>
-                <fieldset class="fieldset-accrual-per-work-completed-period fieldset-radio">
+              <aside class="branch" data-branch-name="advance-information-revenue-recognition-methodology" data-branch-value="accrual-per-work-completed">
+                <h1 class="branch-logic">If accrual per work completed</h1>
+                <fieldset class="fieldset-accrual-per-work-completed-period fieldset-radio" data-branch-name="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period">
                   <legend>Period</legend>
                   <div class="field field-radio">
                     <label for="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-monthly-per-work-completed-and-invoiced">
@@ -802,8 +874,8 @@
                     </label>
                   </div>
                 </fieldset>
-                <aside class="branch">
-                  <h1>If other</h1>
+                <aside class="branch" data-branch-name="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period" data-branch-value="other">
+                  <h1 class="branch-logic">If other</h1>
                   <div class="field field-textarea">
                     <label for="advance-information-revenue-recognition-methodology-accrual-per-work-completed-period-other-explanation">
                       <span class="label-text">Explain other regular period (bimonthly, quarterly, etc.) for posting accruals and how the accrual amounts will be comunicated if other than billed.</span>
@@ -842,7 +914,7 @@
             <header>
               <h1>Payment method</h1>
             </header>
-            <fieldset class="fieldset-radio fieldset-payment-method">
+            <fieldset class="fieldset-radio fieldset-payment-method" data-branch-name="payment-method">
               <legend>Payment method</legend>
               <div class="field field-radio">
                 <label for="payment-method-requesting-agency-initiated-ipac">
@@ -881,8 +953,8 @@
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <h1>If other</h1>
+            <aside class="branch" data-branch-name="payment-method" data-branch-value="other">
+              <h1 class="branch-logic">If other</h1>
               <div class="field field-textarea">
                 <label for="payment-method-other-explanation">
                   <span class="label-text">Explanation</span>
@@ -895,7 +967,7 @@
             <header>
               <h1>Billing frequency</h1>
             </header>
-            <fieldset class="fieldset-billing-frequency fieldset-radio">
+            <fieldset class="fieldset-billing-frequency fieldset-radio" data-branch-name="billing-frequency">
               <legend>Billing frequency</legend>
               <div class="field field-radio">
                 <label for="billing-frequency-monthly">
@@ -925,8 +997,8 @@
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <h1>If other</h1>
+            <aside class="branch" data-branch-name="billing-frequency" data-branch-value="other">
+              <h1 class="branch-logic">If other</h1>
               <div class="field field-textarea">
                 <label for="billing-frequency-other-explanation">
                   <span class="label-text">Explanation</span>
@@ -939,7 +1011,7 @@
             <header>
               <h1>Payment terms</h1>
             </header>
-            <fieldset class="fieldset-payment-terms fieldset-radio">
+            <fieldset class="fieldset-payment-terms fieldset-radio" data-branch-name="payment-terms">
               <legend>Payment terms</legend>
               <div class="field field-radio">
                 <label for="payment-terms-7-days">
@@ -960,8 +1032,8 @@
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <h1>If other</h1>
+            <aside class="branch" data-branch-name="payment-terms" data-branch-value="other">
+              <h1 class="branch-logic">If other</h1>
               <div class="field field-textarea">
                 <label for="payment-terms-other-explanation">
                   <span class="label-text">Explanation</span>

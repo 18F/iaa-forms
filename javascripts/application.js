@@ -1,23 +1,22 @@
 $(document).ready(function(){
 
-  $('.branch-text').hide();
+  $('body').addClass('branches');
+  
+  branches = $('.branch');
+  branches.hide();
 
-  $('.is-branch').hide();
+  $('fieldset[data-branch-name]').each(function(){
+    this.fields = $(this).find('.field-radio input[type="radio"]');
+    this.fields.change(function(){
+      branchName = $(this).parents('fieldset[data-branch-name]').attr('data-branch-name');
+      value = $(this).attr('value');
+      branches.filter('.branch[data-branch-name=' + branchName + ']').attr('disabled', 'disabled').hide();
+      branches.filter('.branch[data-branch-name=' + branchName + '][data-branch-value~=' + value + ']').removeAttr('disabled').show();
+    });
+  });
 
-  // Assign handlers to the trunks for each branch
-  // $('.is-branch').each(function(){
-  //   branch = this
-  //   trunk = this.id -- "branch-"
-  //   if trunk.hasClass('field-radio'){
-  //     trunk.change(function(){
-  //       if (this.selected) {
-  //         branch.show();
-  //       } else {
-  //         branch.hide();
-  //       }
-  //     });
-  //   }
-  // });
+  $('.field input, .field textarea, .field select').focus(function(){ $(this).parents('.field').addClass('is-focused'); });
+  $('.field input, .field textarea, .field select').blur(function(){ $(this).parents('.field').removeClass('is-focused'); });
 
   $.bigfoot();
   $('body').addClass('bigfoot');

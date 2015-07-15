@@ -230,7 +230,7 @@
             <header>
               <h1>Assisted acquisition agreement</h1>
             </header>
-            <fieldset class="fieldset-assisted-acquisition-agreement fieldset-radio">
+            <fieldset class="fieldset-assisted-acquisition-agreement fieldset-radio" data-branch-name="assisted-acquisition-agreement">
               <legend>Is this agreement part of an assisted acquision agreement?</legend>
               <div class="field field-radio">
                 <label for="assisted-acquisition-agreement-yes">
@@ -250,7 +250,7 @@
             <header>
               <h1>GT&amp;C action</h1>
             </header>
-            <fieldset class="fieldset-gtc-action fieldset-radio">
+            <fieldset class="fieldset-gtc-action fieldset-radio" data-branch-name="gtc-action">
               <legend>What action will you execute by filing this document?</legend>
               <div class="field field-radio">
                 <label for="gtc-action-new">
@@ -275,27 +275,25 @@
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <section>
-                <h1>If ammendment</h1>
-                <p class="description-text">Complete only the GT&amp;C blocks being changed and explain the changes being made.</p>
-                <div class="field">
-                  <label for="gtc-action-amendment-explanation">
-                    <span class="label-text">Explanation</span>
-                    <textarea name="gtc-action-amendment-explanation" id="gtc-action-amendment-explanation"></textarea>
-                  </label>
-                </div>              
-              </section>
-              <section>
-                <h1>If cancellation</h1>
-                <p class="description-text">Provide a brief explanation for the cancellation and complete the effective end date in block 5.</p>
-                <div class="field">
-                  <label for="gtc-action-cancellation-explanation">
-                    <span class="label-text">Explanation</span>
-                    <textarea name="gtc-action-cancellation-explanation" id="gtc-action-cancellation-explanation"></textarea>
-                  </label>
-                </div>              
-              </section>
+            <aside class="branch" data-branch-name="gtc-action" data-branch-value="amendment">
+              <h1 class="branch-logic">If amendment</h1>
+              <p class="description-text">Complete only the GT&amp;C blocks being changed and explain the changes being made.</p>
+              <div class="field">
+                <label for="gtc-action-amendment-explanation">
+                  <span class="label-text">Explanation</span>
+                  <textarea name="gtc-action-amendment-explanation" id="gtc-action-amendment-explanation"></textarea>
+                </label>
+              </div>   
+            </aside>           
+            <aside class="branch" data-branch-name="gtc-action" data-branch-value="cancellation">
+              <h1 class="branch-logic">If cancellation</h1>
+              <p class="description-text">Provide a brief explanation for the cancellation and complete the effective end date in block 5.</p>
+              <div class="field">
+                <label for="gtc-action-cancellation-explanation">
+                  <span class="label-text">Explanation</span>
+                  <textarea name="gtc-action-cancellation-explanation" id="gtc-action-cancellation-explanation"></textarea>
+                </label>
+              </div>              
             </aside>
           </section>
           <section class="section-form section-agreement-period">
@@ -320,7 +318,7 @@
             <header>
               <h1>Recurring agreement</h1>
             </header>
-            <fieldset class="fieldset-recurring-agreement fieldset-radio">
+            <fieldset class="fieldset-recurring-agreement fieldset-radio" data-branch-name="recurring-agreement">
               <legend>Is this a recurring agreement?</legend>
               <div class="field field-radio">
                 <label for="recurring-agreement-yes">
@@ -343,9 +341,9 @@
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <h1>If yes</h1>
-              <fieldset class="fieldset-recurring-agreement-period fieldset-radio">
+            <aside class="branch" data-branch-name="recurring-agreement" data-branch-value="yes">
+              <h1 class="branch-logic">If yes</h1>
+              <fieldset class="fieldset-recurring-agreement-period fieldset-radio" data-branch-name="recurring-agreement-period">
                 <legend>Recurring agreement type</legend>
                 <div class="field field-radio">
                   <label for="recurring-agreement-period-annual">
@@ -368,8 +366,8 @@
                   </label>
                 </div>
               </fieldset>
-              <aside class="branch">
-                <h1>If other</h1>
+              <aside class="branch" data-branch-name="recurring-agreement-period" data-branch-value="other">
+                <h1 class="branch-logic">If other</h1>
                 <div class="field">
                   <label for="recurring-agreement-period-other-description">
                     <span class="label-text">State the renewal period</span>
@@ -414,7 +412,7 @@
             <header>
               <h1>Are advance payments allowed?</h1>
             </header>
-            <fieldset class="fieldset-advanced-payments fieldset-radio">
+            <fieldset class="fieldset-advanced-payments fieldset-radio" data-branch-name="advance-payments">
               <legend>Are advance payments allowed?</legend>
               <div class="field field-radio">
                 <label for="advance-payments-yes">
@@ -438,16 +436,16 @@
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <h1>If yes</h1>
-                <div class="field">
-                  <label for="advance-payments-authority">
-                    <span class="label-text">State requesting agency&rsquo;s statutory authority title and citation</span>
-                    <input name="advance-payments-authority" 
-                           id="advance-payments-authority" 
-                           type="text">
-                  </label>
-                </div>
+            <aside class="branch" data-branch-name="advance-payments" data-branch-value="yes">
+              <h1 class="branch-logic">If yes</h1>
+              <div class="field">
+                <label for="advance-payments-authority">
+                  <span class="label-text">State requesting agency&rsquo;s statutory authority title and citation</span>
+                  <input name="advance-payments-authority" 
+                         id="advance-payments-authority" 
+                         type="text">
+                </label>
+              </div>
             </aside>
           </section>
           <section class="section-form section-estimated-agreement-amount">
@@ -483,7 +481,7 @@
             <header>
               <h1>Statutory authority</h1>
             </header>
-            <fieldset class="fieldset-requesting-agencys-statutory-authority fieldset-radio">
+            <fieldset class="fieldset-requesting-agencys-statutory-authority fieldset-radio" data-branch-name="requesting-agencys-statutory-authority">
               <legend>Requesting agency&rsquo;s authority</legend>
               <div class="field field-radio">
                 <label for="requesting-agencys-statutory-authority-franchise-fund">
@@ -531,8 +529,8 @@
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <h1>If franchise fund, revolving fund, working capital fund, or other authority.</h1>
+            <aside class="branch" data-branch-name="requesting-agencys-statutory-authority" data-branch-value="franchise-fund working-capital-fund revolving-fund other">
+              <h1 class="branch-logic">If franchise fund, revolving fund, working capital fund, or other authority.</h1>
               <div class="field">
                 <label for="requesting-agencys-statutory-authority-description">
                   <span class="label-text">Requesting agency&rsquo;s statutory authority title and citation</span>
@@ -542,7 +540,7 @@
                 </label>
               </div>
             </aside>
-            <fieldset class="fieldset-servicing-agencys-statutory-authority fieldset-radio">
+            <fieldset class="fieldset-servicing-agencys-statutory-authority fieldset-radio" data-branch-name="servicing-agencys-statutory-authority">
               <legend>Servicing agency&rsquo;s authority</legend>
               <div class="field field-radio">
                 <label for="servicing-agencys-statutory-authority-franchise-fund">
@@ -590,8 +588,8 @@
                 </label>
               </div>
             </fieldset>
-            <aside class="branch">
-              <h1>If franchise fund, revolving fund, working capital fund, or other authority.</h1>
+            <aside class="branch" data-branch-name="servicing-agencys-statutory-authority" data-branch-value="franchise-fund working-capital-fund revolving-fund other">
+              <h1 class="branch-logic">If franchise fund, revolving fund, working capital fund, or other authority.</h1>
               <div class="field">
                 <label for="servicing-agencys-statutory-authority-description">
                   <span class="label-text">Servicing agency&rsquo;s statutory authority title and citation</span>
@@ -635,7 +633,7 @@
               </label>
             </div>
           </section>
-          <section class="section-form section-assisted-acquisition-small-business-credit-clause">
+          <section class="section-form section-assisted-acquisition-small-business-credit-clause branch" data-branch-name="assisted-acquisition-agreement" data-branch-value="yes">
             <header>
               <h1>Assisted acquisition small business credit clause</h1>
             </header>
@@ -674,7 +672,7 @@
               </label>
             </div>
           </section>
-          <section class="section-form section-requesting-agencys-organizations">
+          <section class="section-form section-requesting-agencys-organizations branch" data-branch-name="assisted-acquisition-agreement" data-branch-value="yes">
             <header>
               <h1>Assisted acquisition agreements &mdash; requesting agency&rsquo;s organizations authorized to request acquisition assistance for this IAA.</h1>
             </header>
@@ -685,7 +683,7 @@
               </label>
             </div>
           </section>
-          <section class="section-form section-servicing-agencys-organizations">
+          <section class="section-form section-servicing-agencys-organizations branch" data-branch-name="assisted-acquisition-agreement" data-branch-value="yes">
             <header>
               <h1>Assisted acquisition agreements &mdash; servicing agency&rsquo;s organizations authorized to request acquisition assistance for this IAA.</h1>
             </header>
