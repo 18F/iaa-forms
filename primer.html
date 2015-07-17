@@ -2,19 +2,9 @@
 ---
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Interagency Agreement Site | 18F</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:700,400,300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <header class="banner" role="banner">
-      <div class="wrap">
-        <h1><a href="{{site.baseurl}}/"><img src="images/logo-18f.png" class="logo" alt="18F"><span class="interagency-agreement-manager">Interagency Agreement Site</span></a></h1>
-      </div>
-    </header>
+  {% include head.html %}
+  <body class="primer">
+    {% include header.html %}
     <main>
       <div class="wrap">
         <a href="{{site.baseurl}}/" class="a-back">&larr; Back to the overview</a>

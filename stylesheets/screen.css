@@ -1,3 +1,5 @@
+/* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
+
 /* @override http://localhost:4000/stylesheets/screen.css */
 
 /* @override http://localhost:4000/stylesheets/screen.css */
@@ -132,6 +134,7 @@ main h1.page-title {
 main h1 {
 	font-family: Playfair Display, PT Serif, georgia;
 	font-size: 24px;
+	line-height: 28px;
 	font-weight: 600;
 	margin-top: 1em;
 	margin-bottom: 0.5em;
@@ -142,7 +145,7 @@ main h1 {
 main p.synopsis {
 	font-family: PT Serif, georgia;
 	font-size: 20px;
-	line-height: 1.4em;
+	line-height: 1.3em;
 }
 
 figure{
@@ -162,6 +165,7 @@ figure img{
 }
 
 main ol {
+	margin-top: 0.7em;
 	list-style-type: decimal;
 	margin-left: 1.4em;
 }
@@ -172,6 +176,7 @@ main .h-card {
 	position: relative;
 	line-height: 1.33em;
 	font-size: 14px;
+	margin-top: 2em;
 }
 
 main .h-card img{
@@ -223,7 +228,7 @@ body.welcome ol ol { list-style-type: lower-latin; margin-bottom: 1.2em;}
 @media screen and (min-width: 568.88px){
 
 main h1.page-title{ margin-bottom: 0.4em; }
-main p.synopsis { line-height: 1.5em; }
+main p.synopsis { line-height: 1.45em; }
 
 ol.table-of-contents{
 	margin-top: 2.4em;
@@ -303,7 +308,6 @@ main .h-card {
 	position: relative;
 	line-height: 1.33em;
 	font-size: 16px;
-	margin-top: 2em;
 	padding-top: 4px;
 }
 
@@ -325,7 +329,7 @@ main .h-card img{
 footer {
 	border-top: 1px solid #333;
 	padding-top: 8px;
-	margin-top: 2em;
+	margin-top: 3em;
 	margin-bottom: 2em;
 	max-width: 36em;
 }
