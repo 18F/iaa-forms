@@ -1,3 +1,5 @@
+/* @override http://localhost:4000/stylesheets/forms_2.css */
+
 /* @override http://localhost:4000/stylesheets/screen.css */
 
 
@@ -329,8 +331,10 @@ fieldset.fieldset-program-official,
 fieldset.fieldset-additional-point-of-contact,
 fieldset.fieldset-corporate-official,
 fieldset.fieldset-funding-official,
-fieldset.fieldset-requesting-agency,
-fieldset.fieldset-servicing-agency,
+.section-parties .fieldset-requesting-agency,
+.section-parties .fieldset-servicing-agency,
+.section-agency-official .fieldset-requesting-agency,
+.section-agency-official .fieldset-servicing-agency,
 fieldset.fieldset-component-tas,
 fieldset.fieldset-reimbursable-line-costs,
 fieldset.fieldset-assisted-acquisition-line-costs,
@@ -360,8 +364,10 @@ fieldset.fieldset-program-official > legend,
 fieldset.fieldset-corporate-official > legend,
 fieldset.fieldset-additional-point-of-contact > legend,
 fieldset.fieldset-funding-official > legend,
-fieldset.fieldset-requesting-agency > legend,
-fieldset.fieldset-servicing-agency > legend,
+.section-parties fieldset.fieldset-requesting-agency > legend,
+.section-parties fieldset.fieldset-servicing-agency > legend,
+.section-agency-official .fieldset-requesting-agency > legend,
+.section-agency-official .fieldset-servicing-agency > legend,
 fieldset.fieldset-component-tas > legend,
 fieldset.fieldset-reimbursable-line-costs > legend,
 fieldset.fieldset-assisted-acquisition-line-costs > legend,
@@ -394,8 +400,6 @@ fieldset div.field:last-of-type+fieldset{
 	border: none;
 }
 
-.field-servicing-agency-tracking-number span.label-text,
-.field-requesting-agencys-scope span.label-text,
 .field-roles-and-responsibilities span.label-text,
 .field-assisted-acquisition-small-business-credit-clause span.label-text,
 .field-requesting-agencys-clauses span.label-text,
@@ -415,7 +419,7 @@ fieldset div.field:last-of-type+fieldset{
 }
 
 fieldset > legend,
-.field span.label-text{
+.field .label-text{
 	display: block;	
 	max-width: 40em;
 	margin: 0 0 8px;
@@ -600,9 +604,9 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 	.field-telephone-number input,
 	.field-fax-number input,
 	.field-date input,
-	.field-direct-cost input,
-	.field-overhead-fees input,
-	.field-total-estimated-amount input,
+	.field-cost input,
+	.field-overhead input,
+	.field-total input,
 	.field-expiry-date input,
 	.field-cancellation-date input,
 	.field-alc input,
@@ -1074,7 +1078,8 @@ fieldset.fieldset-parties-servicing-agency { margin-bottom: 0; }
 
 /* @group block 2 */
 
-div.field-servicing-agency-tracking-number { margin-bottom: 0; }
+.section-servicing-agency-tracking-number .field { margin-bottom: 0; }
+.section-servicing-agency-tracking-number .label-text { position: absolute; left: -9999em; }
 
 /* @end */
 
@@ -1147,17 +1152,17 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 10 */
 
-.section-statutory-authority fieldset.fieldset-servicing-agencys-statutory-authority{ margin-bottom: -6px; }
+.section-statutory-authority fieldset.fieldset-servicing-agency{ margin-bottom: -6px; }
 
-.section-statutory-authority fieldset.fieldset-requesting-agencys-statutory-authority+.branch{
+.section-statutory-authority fieldset.fieldset-requesting-agency+.branch{
 	margin-top: -12px;
 }
-.section-statutory-authority fieldset.fieldset-servicing-agencys-statutory-authority+.branch{
+.section-statutory-authority fieldset.fieldset-servicing-agency+.branch{
 	margin-top: 12px;
 }
 
-.section-statutory-authority fieldset.fieldset-requesting-agencys-statutory-authority+.branch,
-.section-statutory-authority fieldset.fieldset-servicing-agencys-statutory-authority+.branch .field{
+.section-statutory-authority fieldset.fieldset-requesting-agency+.branch,
+.section-statutory-authority fieldset.fieldset-servicing-agency+.branch .field{
 	margin-bottom: 0;
 }
 
@@ -1166,7 +1171,8 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 11 */
 
-.section-requesting-agencys-scope .field{ margin-bottom: 0; }
+.section-scope .label-text{ position: absolute; left: -9999em;}
+.section-scope .field{ margin-bottom: 0; }
 
 /* @end */
 
@@ -1177,7 +1183,7 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 /* @end */
 
 /* @group block 13 */
-
+.section-restrictions span.label-text{ position: absolute; left: -9999em;}
 .section-restrictions .field{ margin-bottom: 0; }
 
 /* @end */
@@ -1198,6 +1204,8 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 .section-termination .field-termination-additional-terms{ margin-bottom: 0; }
 
+.section-clauses-requesting-agency span.label-text{ position: absolute; left: -9999em;}
+
 /* @end */
 
 /* @group block 17 */
@@ -1214,19 +1222,27 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 19 */
 
-.section-requesting-agencys-clauses .field{ margin-bottom: 0; }
+.section-clauses-requesting-agency .field{ margin-bottom: 0; }
 
 /* @end */
 
 /* @group block 20 */
 
-.section-servicing-agencys-clauses .field{ margin-bottom: 0; }
+.section-clauses-servicing-agency .label-text{ position: absolute; left: -9999em;}
+.section-clauses-servicing-agency .field{ margin-bottom: 0; }
 
 /* @end */
 
 /* @group block 21 */
 
 .section-additional-agency-attachments .field{ margin-bottom: 0; }
+
+/* @end */
+
+/* @group block 23 */
+
+.section-agency-official .field-date,
+.section-agency-official .fieldset-servicing-agency{ margin-bottom: 0; }
 
 /* @end */
 

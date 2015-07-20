@@ -34,6 +34,7 @@
   {
     "name": "Address Requesting Agency of Products/Services",
     "attribute_name": "requesting_agency_address",
+    "html_label_text": "street address",
     "html_name": "parties-requesting-agency-mailing-address-street-address",
     "options": null,
     "type": "Text",
