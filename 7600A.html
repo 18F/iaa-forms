@@ -351,7 +351,7 @@
                            name="recurring-agreement-period" 
                            id="recurring-agreement-period-annual" 
                            type="radio"
-                           value="Annual">
+                           value="annual">
                     <span class="label-text">Annual renewal</span>
                   </label>
                 </div>
@@ -452,28 +452,28 @@
             <header>
               <h1>Estimated agreement amount</h1>
             </header>
-            <div class="field field-direct-cost">
-              <label for="direct-cost">
+            <div class="field field-cost">
+              <label for="estimated-cost">
                 <span class="label-text">Direct cost</span>
-                <input name="direct-cost" id="direct-cost" type="text">
+                <input name="estimated-cost" id="estimated-cost" type="text">
               </label>
             </div>
-            <div class="field field-overhead-fees">
-              <label for="overhead-fees">
+            <div class="field field-overhead">
+              <label for="estimated-overhead">
                 <span class="label-text">Overhead fees and charges</span>
-                <input name="overhead-fees" id="overhead-fees" type="text">
+                <input name="estimated-overhead" id="estimated-overhead" type="text">
               </label>
             </div>
-            <div class="field field-total-estimated-amount">
-              <label for="total-estimated-amount">
+            <div class="field field-total">
+              <label for="estimated-total">
                 <span class="label-text">Total estimated amount</span>
-                <input name="total-estimated-amount" id="total-estimated-amount" type="text">
+                <input name="estimated-total" id="estimated-total" type="text">
               </label>
             </div>
-            <div class="field field-overhead-fees-explanation">
-              <label for="overhead-fees-explanation">
+            <div class="field field-overhead-explanation">
+              <label for="estimated-overhead-explanation">
                 <span class="label-text">General explanation of overhead fees and charges</span>
-                <textarea name="overhead-fees-explanation" id="overhead-fees-explanation">The stimated agreement amount is based on GSA&rsquo;s actual costs of providing the services under this IAA. Reimbursement of GSA&rsquo;s actual costs is described further in the statement of work.</textarea>
+                <textarea name="estimated-overhead-explanation" id="estimated-overhead-explanation">The stimated agreement amount is based on GSA&rsquo;s actual costs of providing the services under this IAA. Reimbursement of GSA&rsquo;s actual costs is described further in the statement of work.</textarea>
               </label>
             </div>
           </section>
@@ -481,133 +481,133 @@
             <header>
               <h1>Statutory authority</h1>
             </header>
-            <fieldset class="fieldset-requesting-agencys-statutory-authority fieldset-radio" data-branch-name="requesting-agencys-statutory-authority">
+            <fieldset class="fieldset-requesting-agency fieldset-radio" data-branch-name="statutory-authority-requesting-agency">
               <legend>Requesting agency&rsquo;s authority</legend>
               <div class="field field-radio">
-                <label for="requesting-agencys-statutory-authority-franchise-fund">
-                  <input name="requesting-agencys-statutory-authority" 
-                         id="requesting-agencys-statutory-authority-franchise-fund" 
+                <label for="statutory-authority-requesting-agency-franchise-fund">
+                  <input name="statutory-authority-requesting-agency" 
+                         id="statutory-authority-requesting-agency-franchise-fund" 
                          type="radio"
                          value="franchise-fund">
                   <span class="label-text">Franchise fund</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="requesting-agencys-statutory-authority-revolving-fund">
-                  <input name="requesting-agencys-statutory-authority" 
-                         id="requesting-agencys-statutory-authority-revolving-fund" 
+                <label for="statutory-authority-requesting-agency-revolving-fund">
+                  <input name="statutory-authority-requesting-agency" 
+                         id="statutory-authority-requesting-agency-revolving-fund" 
                          type="radio"
                          value="revolving-fund">
                   <span class="label-text">Revolving fund</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="requesting-agencys-statutory-authority-working-capital-fund">
-                  <input name="requesting-agencys-statutory-authority" 
-                         id="requesting-agencys-statutory-authority-working-capital-fund" 
+                <label for="statutory-authority-requesting-agency-working-capital-fund">
+                  <input name="statutory-authority-requesting-agency" 
+                         id="statutory-authority-requesting-agency-working-capital-fund" 
                          type="radio"
                          value="working-capital-fund">
                   <span class="label-text">Working capital fund</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="requesting-agencys-statutory-authority-economy-act">
-                  <input name="requesting-agencys-statutory-authority" 
-                         id="requesting-agencys-statutory-authority-economy-act" 
+                <label for="statutory-authority-requesting-agency-economy-act">
+                  <input name="statutory-authority-requesting-agency" 
+                         id="statutory-authority-requesting-agency-economy-act" 
                          type="radio"
                          value="economy-act">
                   <span class="label-text">Economy act (31 U.S.C. 1535/FAR 17.5)</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="requesting-agencys-statutory-authority-other">
-                  <input name="requesting-agencys-statutory-authority" 
-                         id="requesting-agencys-statutory-authority-other" 
+                <label for="statutory-authority-requesting-agency-other">
+                  <input name="statutory-authority-requesting-agency" 
+                         id="statutory-authority-requesting-agency-other" 
                          type="radio"
                          value="other">
                   <span class="label-text">Other</span>
                 </label>
               </div>
             </fieldset>
-            <aside class="branch" data-branch-name="requesting-agencys-statutory-authority" data-branch-value="franchise-fund working-capital-fund revolving-fund other">
+            <aside class="branch" data-branch-name="statutory-authority-requesting-agency" data-branch-value="franchise-fund working-capital-fund revolving-fund other">
               <h1 class="branch-logic">If franchise fund, revolving fund, working capital fund, or other authority.</h1>
               <div class="field">
-                <label for="requesting-agencys-statutory-authority-description">
+                <label for="statutory-authority-requesting-agency-authority">
                   <span class="label-text">Requesting agency&rsquo;s statutory authority title and citation</span>
-                  <input name="requesting-agencys-statutory-authority-description" 
-                         id="requesting-agencys-statutory-authority-description" 
+                  <input name="statutory-authority-requesting-agency-authority" 
+                         id="statutory-authority-requesting-agency-authority" 
                          type="text">
                 </label>
               </div>
             </aside>
-            <fieldset class="fieldset-servicing-agencys-statutory-authority fieldset-radio" data-branch-name="servicing-agencys-statutory-authority">
+            <fieldset class="fieldset-servicing-agency fieldset-radio" data-branch-name="statutory-authority-servicing-agency">
               <legend>Servicing agency&rsquo;s authority</legend>
               <div class="field field-radio">
-                <label for="servicing-agencys-statutory-authority-franchise-fund">
-                  <input name="servicing-agencys-statutory-authority" 
-                         id="servicing-agencys-statutory-authority-franchise-fund" 
+                <label for="statutory-authority-servicing-agency-franchise-fund">
+                  <input name="statutory-authority-servicing-agency" 
+                         id="statutory-authority-servicing-agency-franchise-fund" 
                          type="radio"
                          value="franchise-fund">
                   <span class="label-text">Franchise fund</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="servicing-agencys-statutory-authority-revolving-fund">
-                  <input name="servicing-agencys-statutory-authority" 
-                         id="servicing-agencys-statutory-authority-revolving-fund" 
+                <label for="statutory-authority-servicing-agency-revolving-fund">
+                  <input name="statutory-authority-servicing-agency" 
+                         id="statutory-authority-servicing-agency-revolving-fund" 
                          type="radio"
                          value="revolving-fund">
                   <span class="label-text">Revolving fund</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="servicing-agencys-statutory-authority-working-capital-fund">
-                  <input name="servicing-agencys-statutory-authority" 
-                         id="servicing-agencys-statutory-authority-working-capital-fund" 
+                <label for="statutory-authority-servicing-agency-working-capital-fund">
+                  <input name="statutory-authority-servicing-agency" 
+                         id="statutory-authority-servicing-agency-working-capital-fund" 
                          type="radio"
                          value="working-capital-fund">
                   <span class="label-text">Working capital fund</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="servicing-agencys-statutory-authority-economy-act">
-                  <input name="servicing-agencys-statutory-authority" 
-                         id="servicing-agencys-statutory-authority-economy-act" 
+                <label for="statutory-authority-servicing-agency-economy-act">
+                  <input name="statutory-authority-servicing-agency" 
+                         id="statutory-authority-servicing-agency-economy-act" 
                          type="radio"
                          value="economy-act">
                   <span class="label-text">Economy act (31 U.S.C. 1535/FAR 17.5)</span>
                 </label>
               </div>
               <div class="field field-radio">
-                <label for="servicing-agencys-statutory-authority-other">
-                  <input name="servicing-agencys-statutory-authority" 
-                         id="servicing-agencys-statutory-authority-other" 
+                <label for="statutory-authority-servicing-agency-other">
+                  <input name="statutory-authority-servicing-agency" 
+                         id="statutory-authority-servicing-agency-other" 
                          type="radio"
                          value="other">
                   <span class="label-text">Other</span>
                 </label>
               </div>
             </fieldset>
-            <aside class="branch" data-branch-name="servicing-agencys-statutory-authority" data-branch-value="franchise-fund working-capital-fund revolving-fund other">
+            <aside class="branch" data-branch-name="statutory-authority-servicing-agency" data-branch-value="franchise-fund working-capital-fund revolving-fund other">
               <h1 class="branch-logic">If franchise fund, revolving fund, working capital fund, or other authority.</h1>
               <div class="field">
-                <label for="servicing-agencys-statutory-authority-description">
+                <label for="statutory-authority-servicing-agency-authority">
                   <span class="label-text">Servicing agency&rsquo;s statutory authority title and citation</span>
-                  <input name="servicing-agencys-statutory-authority-description" 
-                         id="servicing-agencys-statutory-authority-description" 
+                  <input name="statutory-authority-servicing-agency-authority" 
+                         id="statutory-authority-servicing-agency-authority" 
                          type="text">
                 </label>
               </div>
             </aside>
           </section>
-          <section class="section-form section-requesting-agencys-scope">
+          <section class="section-form section-scope">
             <header>
               <h1>Requesting agency&rsquo;s scope</h1>
             </header>
-            <div class="field field-textarea field-requesting-agencys-scope">
-              <label for="requesting-agencys-scope">
+            <div class="field field-textarea field-scope">
+              <label for="scope">
                 <span class="label-text">Requesting agency&rsquo;s scope</span>
-                <textarea name="requesting-agencys-scope" id="requesting-agencys-scope"></textarea>
+                <textarea name="scope" id="scope"></textarea>
               </label>
             </div>
           </section>
@@ -626,9 +626,9 @@
             <header>
               <h1>Restrictions</h1>
             </header>
-            <div class="field field-textarea field-roles-and-responsibilities">
+            <div class="field field-textarea">
               <label for="restrictions">
-                <span class="label-text">Roles and responsibilities for the parties</span>
+                <span class="label-text">Restrictions</span>
                 <textarea name="restrictions" id="restrictions"></textarea>
               </label>
             </div>
@@ -672,47 +672,47 @@
               </label>
             </div>
           </section>
-          <section class="section-form section-requesting-agencys-organizations branch" data-branch-name="assisted-acquisition-agreement" data-branch-value="yes">
+          <section class="section-form section-authorized-assistants-requesting-agency branch" data-branch-name="assisted-acquisition-agreement" data-branch-value="yes">
             <header>
               <h1>Assisted acquisition agreements &mdash; requesting agency&rsquo;s organizations authorized to request acquisition assistance for this IAA.</h1>
             </header>
-            <div class="field field-textarea field-requesting-agencys-organizations">
-              <label for="requesting-agencys-organizations">
+            <div class="field field-textarea">
+              <label for="authorized-assistants-requesting-agency">
                 <span class="label-text">Requesting agency&rsquo;s organizations authorized to request acquisition assistance for this IAA</span>
-                <textarea name="requesting-agencys-organizations" id="requesting-agencys-organizations"></textarea>
+                <textarea name="authorized-assistants-requesting-agency" id="authorized-assistants-requesting-agency"></textarea>
               </label>
             </div>
           </section>
-          <section class="section-form section-servicing-agencys-organizations branch" data-branch-name="assisted-acquisition-agreement" data-branch-value="yes">
+          <section class="section-form section-authorized-assistants-requesting-agency branch" data-branch-name="assisted-acquisition-agreement" data-branch-value="yes">
             <header>
               <h1>Assisted acquisition agreements &mdash; servicing agency&rsquo;s organizations authorized to request acquisition assistance for this IAA.</h1>
             </header>
-            <div class="field field-textarea field-servicing-agencys-organizations">
-              <label for="servicing-agencys-organizations">
+            <div class="field field-textarea">
+              <label for="authorized-assistants-servicing-agency">
                 <span class="label-text">Servicing agency&rsquo;s organizations authorized to request acquisition assistance for this IAA</span>
-                <textarea name="servicing-agencys-organizations" id="servicing-agencys-organizations"></textarea>
+                <textarea name="authorized-assistants-servicing-agency" id="authorized-assistants-servicing-agency"></textarea>
               </label>
             </div>
           </section>
-          <section class="section-form section-requesting-agencys-clauses">
+          <section class="section-form section-clauses-requesting-agency">
             <header>
               <h1>Requesting agency&rsquo;s clause(s)</h1>
             </header>
-            <div class="field field-textarea field-requesting-agencys-clauses">
-              <label for="requesting-agencys-clauses">
+            <div class="field field-textarea">
+              <label for="clauses-requesting-agency">
                 <span class="label-text">Requesting agency&rsquo;s clause(s)</span>
-                <textarea name="requesting-agencys-clauses" id="requesting-agencys-clauses"></textarea>
+                <textarea name="clauses-requesting-agency" id="clauses-requesting-agency"></textarea>
               </label>
             </div>
           </section>
-          <section class="section-form section-servicing-agencys-clauses">
+          <section class="section-form section-clauses-servicing-agency">
             <header>
               <h1>Servicing agency&rsquo;s clause(s)</h1>
             </header>
-            <div class="field field-textarea field-servicing-agencys-clauses">
-              <label for="servicing-agencys-clauses">
+            <div class="field field-textarea">
+              <label for="clauses-servicing-agency">
                 <span class="label-text">Servicing agency&rsquo;s clause(s)</span>
-                <textarea name="servicing-agencys-clauses" id="servicing-agencys-clauses"></textarea>
+                <textarea name="clauses-servicing-agency" id="clauses-servicing-agency"></textarea>
               </label>
             </div>
           </section>
@@ -737,7 +737,7 @@
             <header>
               <h1>Agency official</h1>
             </header>
-            <fieldset class="fieldset-agency-official-requesting-agency">
+            <fieldset class="fieldset-requesting-agency">
               <legend>Requesting agency</legend>
               <div class="field field-name">
                 <label for="agency-official-requesting-agency-name">
@@ -769,8 +769,14 @@
                   <input required name="agency-official-requesting-agency-email-address" id="agency-official-requesting-agency-email-address" type="email">
                 </label>
               </div>
+              <div class="field field-date field-approval-date">
+                <label for="agency-official-requesting-agency-approval-date">
+                  <span class="label-text">Approval date</span>
+                  <input required name="agency-official-requesting-agency-approval-date" id="agency-official-requesting-agency-approval-date" type="date">
+                </label>
+              </div>
             </fieldset>
-            <fieldset class="fieldset-agency-official-servicing-agency">
+            <fieldset class="fieldset-servicing-agency">
               <legend>Servicing agency</legend>
               <div class="field field-name">
                 <label for="agency-official-servicing-agency-name">
@@ -800,6 +806,12 @@
                 <label for="agency-official-servicing-agency-email-address">
                   <span class="label-text">Email address</span>
                   <input required name="agency-official-servicing-agency-email-address" id="agency-official-servicing-agency-email-address" type="email">
+                </label>
+              </div>
+              <div class="field field-date field-approval-date">
+                <label for="agency-official-requesting-agency-approval-date">
+                  <span class="label-text">Approval date</span>
+                  <input required name="agency-official-requesting-agency-approval-date" id="agency-official-requesting-agency-approval-date" type="date">
                 </label>
               </div>
             </fieldset>

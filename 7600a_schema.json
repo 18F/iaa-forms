@@ -2,6 +2,7 @@
   {
     "name": "Servicing Agency Agreement Tracking Number (Optional)",
     "attribute_name": "servicing_agency_tracking_number",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -9,6 +10,7 @@
   {
     "name": "Start Date",
     "attribute_name": "start_date",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "FILL IN"
@@ -16,6 +18,7 @@
   {
     "name": "End Date",
     "attribute_name": "end_date",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "FILL IN"
@@ -23,6 +26,7 @@
   {
     "name": "Name Requesting Agency of Products/Services",
     "attribute_name": "requesting_agency_name_of_products_services",
+    "html_name": "parties-requesting-agency-name",
     "options": null,
     "type": "Text",
     "value": null
@@ -30,13 +34,39 @@
   {
     "name": "Address Requesting Agency of Products/Services",
     "attribute_name": "requesting_agency_address",
+    "html_name": "parties-requesting-agency-mailing-address-street-address",
     "options": null,
     "type": "Text",
-    "value": null
+    "value": null,
+  },
+  {
+    "name": "Address Requesting Agency of Products/Services",
+    "attribute_name": "requesting_agency_address",
+    "html_name": "parties-requesting-agency-mailing-address-city",
+    "options": null,
+    "type": "Text",
+    "value": null,
+  },
+  {
+    "name": "Address Requesting Agency of Products/Services",
+    "attribute_name": "requesting_agency_address",
+    "html_name": "parties-requesting-agency-mailing-address-state",
+    "options": null,
+    "type": "Text",
+    "value": null,
+  },
+  {
+    "name": "Address Requesting Agency of Products/Services",
+    "attribute_name": "requesting_agency_address",
+    "html_name": "parties-requesting-agency-mailing-address-zip",
+    "options": null,
+    "type": "Text",
+    "value": null,
   },
   {
     "name": "Name Servicing Agency Providing Products/Services",
     "attribute_name": "servicing_agency_name_products_services",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "U.S. General Services Administration / Office of Citizen Services &amp; Innovative Technologies / 18F"
@@ -44,6 +74,7 @@
   {
     "name": "Address Servicing Agency Providing Products/Services",
     "attribute_name": "servicing_agency_address",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "1800 F Street, N.W.&#13;Washington, D.C. 20405"
@@ -118,6 +149,7 @@
   {
     "name": "Amendment",
     "attribute_name": "amendment",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -125,6 +157,7 @@
   {
     "name": "IAA Cancellation Explanation",
     "attribute_name": "cancellation_explanation",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -132,6 +165,7 @@
   {
     "name": "Other Renewal Period",
     "attribute_name": "other_renewal_period",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -139,6 +173,7 @@
   {
     "name": "Requesting Agency's Statutory Authority Title and Citation",
     "attribute_name": "requesting_agency_statutory_authority_title_and_citation",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -146,6 +181,7 @@
   {
     "name": "gt_and_c_number",
     "attribute_name": "gt_and_c_number",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -153,6 +189,7 @@
   {
     "name": "mod_number",
     "attribute_name": "mod_number",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "000"
@@ -160,6 +197,7 @@
   {
     "name": "Direct  Cost",
     "attribute_name": "direct_cost",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "FILL IN"
@@ -167,6 +205,7 @@
   {
     "name": "Overhead Fees  Charges",
     "attribute_name": "overhead_fees_and_charges",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -174,6 +213,7 @@
   {
     "name": "Total Estimated Amount",
     "attribute_name": "total_estimated_amount",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "$FILL IN"
@@ -181,6 +221,7 @@
   {
     "name": "11 Requesting Agencys Scope State andor list attachments that support Requesting Agencys Scope",
     "attribute_name": "requesting_agency_scope",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "The U.S. General Services Administration has created 18F, a digital services delivery team staffed by GSA employees to support Digital Government Initiatives across the federal government. The requesting agency requires 18F support for technical development activities. &#13;&#13;Each 7600B issued under these General Terms and Conditions contains specific details regarding work to be performed by 18F on behalf of the requesting agency."
@@ -188,6 +229,7 @@
   {
     "name": "12 Roles  Responsibilities for the Requesting Agency and Servicing Agency State andor list attachments for the roles and responsibilities for the Requesting Agency and the Servicing Agency",
     "attribute_name": "requesting_agency_roles_and_responsibilities",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "Amendments must be bilaterally executed in writing and signed by authorized representatives of both agencies. No oral or unilateral amendments shall be binding or effective. Only terminations in accord with these terms may be done unilaterally. Either agency may terminate this Agreement with 30 days written notice sent to the authorized POC at each agency.&#13;&#13;Roles and responsibilities for the requesting agency and GSA 18F will be further defined by the 7600 B and an optional Statement of Work (SOW) or Statement of Objectives (SOO) for each requested service or work effort pursuant to this agreement."
@@ -223,6 +265,7 @@
   {
     "name": "general_explanation_overhead_fees_and_charges",
     "attribute_name": "general_explanation_overhead_fees_and_charges",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "The estimated agreement amount is based on GSA's actual costs of providing the services under this IAA.  Reimbursement of GSA's actual costs is described further in the Statement of Work.&#13;"
@@ -230,6 +273,7 @@
   {
     "name": "Statutory authority",
     "attribute_name": "statory_authority",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -237,6 +281,7 @@
   {
     "name": "Statutory Authority1",
     "attribute_name": "statutory_authority_1",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "40 USC 321 - The Servicing Agency&#8217;s authority for this IA is derived Acquisition Services Fund, 40 USC &#167; 321. This statutory authority is independent of the Economy Act."
@@ -244,6 +289,7 @@
   {
     "name": "13 Restrictions Optional State andor attach unique requirements andor mission specific restrictions specific to this IAA",
     "attribute_name": "restrictions",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -251,6 +297,7 @@
   {
     "name": "17  Assisted Acquisition Agreements  Requesting Agencys Organizations Authorized To Request Acquisition Assistance for this IAA State or attach a list of Requesting Agencys organizations authorized to request acquisition assistance for this IAA",
     "attribute_name": "requesting_agency_organiations_authorized",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -258,6 +305,7 @@
   {
     "name": "18  Assisted Acquisition Agreements  Servicing Agencys Organizations authorized to Provide Acquisition Assistance for this IAA State or attach a list of Servicing Agencys organizations authorized to provide acquisition for this IAA",
     "attribute_name": "servicing_agency_organiations",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -265,6 +313,7 @@
   {
     "name": "19 Requesting Agency Clauses Optional State andor attach any additional Requesting Agency clauses",
     "attribute_name": "requesting_agency_clauses",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "&#10;Please see Attachment A"
@@ -272,6 +321,7 @@
   {
     "name": "No. of days this IAA may be terminated",
     "attribute_name": "number_of_days_this_iaa_may_be_terminated",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "30"
@@ -279,6 +329,7 @@
   {
     "name": "20 Servicing Agency Clauses Optional State andor attach any additional Servicing Agency clauses",
     "attribute_name": "servicing_agency_clauses",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "&#10;Please see Attachment A"
@@ -286,6 +337,7 @@
   {
     "name": "21 Additional Requesting Agency andor Servicing Agency Attachments Optional State andor attach any additional Requesting Agency andor Servicing Agency attachments",
     "attribute_name": "additional_attachments",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -293,6 +345,7 @@
   {
     "name": "Requesting Agency Name",
     "attribute_name": "requesting_agency_name",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "&#13;[FILL IN]"
@@ -300,6 +353,7 @@
   {
     "name": "Servicing Agency Name",
     "attribute_name": "servicing_agency_name",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": " Phaedra Chrousos"
@@ -307,6 +361,7 @@
   {
     "name": "Requesting Agency Title",
     "attribute_name": "requesting_agency_title",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -314,6 +369,7 @@
   {
     "name": "Servicing Agency Title",
     "attribute_name": "servicing_agency_title",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": "Associate Administrator, 18F/OCSIT"
@@ -321,6 +377,7 @@
   {
     "name": "Requesting Agency Telephone Number",
     "attribute_name": "requesting_agency_telephone_number",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -328,6 +385,7 @@
   {
     "name": "Servicing Agency Telephone Number",
     "attribute_name": "servicing_agency_telephone_number",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -335,6 +393,7 @@
   {
     "name": "Requesting Agency Fax Number",
     "attribute_name": "requesting_agency_fax_number",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -342,6 +401,7 @@
   {
     "name": "Servicing Agency Fax Number",
     "attribute_name": "servicing_agency_fax_number",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -349,6 +409,7 @@
   {
     "name": "Requesting Agency Email Address",
     "attribute_name": "requesting_agency_email_address",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -356,6 +417,7 @@
   {
     "name": "Servicing Agency Email Address",
     "attribute_name": "servicing_agency_email_address",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": ""
@@ -363,6 +425,7 @@
   {
     "name": "Requesting Agency Approval Date",
     "attribute_name": "requesting_agency_approval_date",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
@@ -370,6 +433,7 @@
   {
     "name": "Servicing Agency Approval Date",
     "attribute_name": "servicing_agency_approval_date",
+    "html_name": "",
     "options": null,
     "type": "Text",
     "value": null
