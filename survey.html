@@ -1,52 +1,39 @@
+---
+---
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Interagency Agreement Site | 18F</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:700,400,300|Roboto+Condensed:700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>    
-    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/forms.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="bower_components/bigfoot/dist/bigfoot-default.css">
-    <script type="text/javascript" src="bower_components/bigfoot/dist/bigfoot.min.js"></script>
-
-    <script type="text/javascript" src="javascripts/application.js"></script>
-  </head>
+  {% include head.html %}
   <body>
-    <header class="banner" role="banner">
-      <div class="wrap">
-        <h1><a href="/"><img src="images/logo-18f.png" class="logo" alt="18F"><span class="interagency-agreement-manager">Interagency Agreement Site</span></a></h1>
-      </div>
-    </header>
+    {% include header.html %}
     <main>
       <div class="wrap">
         <form>
-          <header>
-            <a href="/" class="a-back">&larr; Back to the overview</a>
-            <h1><abbr title="Interagency Agreement">IAA</abbr> Preparation form</h1>
-            <p>Combined with a mutually agreeable statement of work, your answers to the following questions give us everything we need to draft an Interagency Agreement. Please have the following information on hand:</p>
-            <ul>
-              <li>Basic information about your agency as well as the office within your agency requesting our services. </li>
-              <li>Basic information about your project as well as contact information for your program official (who can sign <abbr title="interagency agreement">IAA</abbr>s).</li>
-              <li>Financial information such as the type of money your agency will use (for example, &ldquo;one-year,&rdquo; &ldquo;multi-year,&rdquo; or &ldquo;no-year&rdquo;) as well as contact information for your finance office&rsquo;s point of contact (who can ensure that payments to 18F are accurate and timely) and funding official (who can obligate funds).</li>
-            </ul>
+          <div class="page">
+            <header>
+              <a href="{{site.baseurl}}/" class="a-back">&larr; Back to the overview</a>
+              <h1 class="page-title"><abbr title="Interagency Agreement">IAA</abbr> Preparation Survey</h1>
+            </header>
+              <p>Combined with a mutually agreeable statement of work, your answers to the following questions give us everything we need to draft an Interagency Agreement. Please have the following information on hand:</p>
+              <ul>
+                <li>Basic information about your agency as well as the office within your agency requesting our services. </li>
+                <li>Basic information about your project as well as contact information for your program official (who can sign <abbr title="interagency agreement">IAA</abbr>s).</li>
+                <li>Financial information such as the type of money your agency will use (for example, &ldquo;one-year,&rdquo; &ldquo;multi-year,&rdquo; or &ldquo;no-year&rdquo;) as well as contact information for your finance office&rsquo;s point of contact (who can ensure that payments to 18F are accurate and timely) and funding official (who can obligate funds).</li>
+              </ul>
 
-             <p>All fields are required unless otherwise indicated. For additional context on this form, see our <a href="primer.html">Primer on Interagency Agreements.</a></p>
+               <p>All fields are required unless otherwise indicated. For additional context on this form, see our <a href="primer.html">Primer on Interagency Agreements.</a></p>
 
-            <div class="field field-iaa-number">
-              <label for="iaa-number">
-                <span class="label-text"><abbr title="Interagency Agreement">IAA</abbr> number</span>
-                <input required name="iaa-number" id="iaa-number" value="18F-4A" type="text">
-              </label>
-            </div>
-          </header>
+              <div class="field field-iaa-number">
+                <label for="iaa-number">
+                  <span class="label-text"><abbr title="Interagency Agreement">IAA</abbr> number</span>
+                  <input required name="iaa-number" id="iaa-number" value="18F-4A" type="text">
+                </label>
+              </div>
+          </div>
           <section class="section-form section-agency">
             <h1>Your agency</h1>
             <div class="field">
               <label for="agency-name">
-                <span class="label-text">Agency name</span>
+                <span class="label-text">Name</span>
                 <input required name="agency-name" id="agency-name" type="text">
               </label>
             </div>
@@ -138,7 +125,7 @@
             </header>
             <div class="field">
               <label for="office-name">
-                <span class="label-text">Office or organization name</span>
+                <span class="label-text">Name</span>
                 <input required name="office-name" id="office-name" type="text">
               </label>
             </div>
@@ -296,7 +283,7 @@
           </section>
           <section class="section-form section-financial-information">
             <h1>Financial information</h1>
-            <fieldset class="fieldset-statuatory-authority">
+            <fieldset class="fieldset-statuatory-authority" data-branch-name="financial-information-statuatory-authority">
               <legend>Under what statuatory authority will your agency pay 18F?</legend>
               <div class="field field-radio">
                 <label for="financial-information-statuatory-authority-franchise-fund">
@@ -329,13 +316,16 @@
                 </label>
               </div>
             </fieldset>
-            <div class="field is-branch" data-trunk="financial-information-statuatory-authority-other">
-              <span class="branch-text">If not the Economy Act, please cite the statutory authority with a U.S. Code Citation and Title</span>
-              <label for="financial-information-statuatory-authority-title-and-citation">
-                <span class="label-text">Statutory Authority Title and Citation</span>
-                <input required name="financial-information-statuatory-authority-title-and-citation" id="financial-information-statuatory-authority-title-and-citation" type="text">
-              </label>
-            </div>
+
+            <aside class="branch" data-branch-name="financial-information-statuatory-authority" data-branch-value="franchise-fund working-capital-fund revolving-fund other">
+              <h1 class="branch-logic">If franchise fund, revolving fund, working capital fund, or other authority:</h1>
+              <div class="field">
+                <label for="financial-information-statuatory-authority-title-and-citation">
+                  <span class="label-text">Statutory authority title and citation</span>
+                  <input required name="financial-information-statuatory-authority-title-and-citation" id="financial-information-statuatory-authority-title-and-citation" type="text">
+                </label>
+              </div>
+            </aside>
             <div class="field field-expiry-date">
               <label for="financial-information-expiry-date">
                 <span class="label-text">When will these funds expire?</span>

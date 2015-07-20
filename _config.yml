@@ -1,0 +1,9 @@
+# Site settings
+title: Interagency Agreement Site
+email: andrew.maier@gsa.gov
+baseurl: "/iaa-forms"
+url: "" # the base hostname & protocol for your site
+permalink: article/:title
+author:
+  name: Andrew Maier
+  email: andrew.maier@gsa.gov
