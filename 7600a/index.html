@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7600A | Interagency Agreement Manager | 18F</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/forms_2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/application.js"></script>
+  </head>
+  <body>
+    <header class="banner" role="banner">
+      <div class="wrap">
+        <h1><span class="logo">18F</span><span class="interagency-agreement-manager">Interagency Agreement Manager</span></h1>
+      </div>
+    </header>
+    <main class="page">
+      <div class="wrap">
+        <h1>7600As</h1>
+        <a class="button" href="edit.html">New</a>
+        <h2>If 7600As exist</h2>
+        <article class="form-7600a">
+          <dl>
+            <dt>IAA number</dt>
+            <dd>{{gtc-number}} - 0000 - {{mod-number}}</dd>
+            <dt>Requesting agency</dt>
+            <dd>{{parties-requesting-agency-name}}</dd>
+          </dl>
+          <a href="edit.html">Show/edit</a>
+          <form action="">
+            <button>Generate PDF</button>
+          </form>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
