@@ -8,7 +8,7 @@
     <main>
       <div class="wrap">
         <form>
-          <div class="page">
+          <div class="page page-iaa-preparation-survey">
             <header>
               <a href="{{site.baseurl}}/" class="a-back">&larr; Back to the overview</a>
               <h1 class="page-title"><abbr title="Interagency Agreement">IAA</abbr> Preparation Survey</h1>
@@ -287,31 +287,31 @@
               <legend>Under what statuatory authority will your agency pay 18F?</legend>
               <div class="field field-radio">
                 <label for="financial-information-statuatory-authority-franchise-fund">
-                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-franchise-fund" type="radio">
+                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-franchise-fund" type="radio" value="franchise-fund">
                   <span class="label-text">Franchise fund</span>
                 </label>
               </div>
               <div class="field field-radio">
                 <label for="financial-information-statuatory-authority-revolving-fund">
-                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-revolving-fund" type="radio">
+                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-revolving-fund" type="radio" value="revolving-fund">
                   <span class="label-text">Revolving fund</span>
                 </label>
               </div>
               <div class="field field-radio">
                 <label for="financial-information-statuatory-authority-working-capital-fund">
-                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-working-capital-fund" type="radio">
+                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-working-capital-fund" type="radio" value="working-capital-fund">
                   <span class="label-text">Working capital fund</span>
                 </label>
               </div>
               <div class="field field-radio">
                 <label for="financial-information-statuatory-authority-economy-act">
-                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-economy-act" type="radio">
+                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-economy-act" type="radio" value="economy-act">
                   <span class="label-text">Economy Act (31 U.S.C. 1535/FAR 17.5)</span>
                 </label>
               </div>
               <div class="field field-radio">
                 <label for="financial-information-statuatory-authority-other">
-                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-other" type="radio">
+                  <input required name="financial-information-statuatory-authority" id="financial-information-statuatory-authority-other" type="radio" value="other">
                   <span class="label-text">Other</span>
                 </label>
               </div>
@@ -369,16 +369,9 @@
             </div>
             <div class="field field-bpn">
               <label for="financial-information-bpn">
-                <span class="label-text">Business Partner Number (<abbr title="Business Partner Number">BPN</abbr>)</span>
+                <span class="label-text">Business Partner Number (<abbr title="Business Partner Number">BPN</abbr>) (+ 4, optional)</span>
                 <input required name="financial-information-bpn" id="financial-information-bpn" aria-describedby="description-text-financial-information-bpn" type="text">
                 <span id="description-text-financial-information-bpn" class="description-text">BPN is the standard name for this data element; however, this may be a trading partner&rsquo;s DUNS or the Department of Defense Activity Address Code (<abbr title="Department of Defense Activity Address Code">DoDAAC</abbr>).</span>
-              </label>
-            </div>
-            <div class="field field-bpn-4">
-              <label for="financial-information-bpn-4">
-                <span class="label-text">Business Partner Number (<abbr title="Business Partner Number">BPN</abbr>) + 4 (optional)</span>
-                <input name="financial-information-bpn-4" id="financial-information-bpn-4" aria-describedby="description-text-financial-information-bpn-4" type="text">
-                <span id="description-text-financial-information-bpn-4" class="description-text">BPN+4 is the standard name for this data element; however, this may be a trading partner&rsquo;s DUNS + 4 or the Department of Defense Activity Address Code (<abbr title="Department of Defense Activity Address Code">DoDAAC</abbr>) + 4.</span>
               </label>
             </div>
             <div class="field field-additional-classification">
@@ -389,7 +382,7 @@
             </div>
             <fieldset class="fieldset-funding-official">
               <legend>Funding official</legend>
-              <p>The funding official is the person in your office or organization who has the authority to obligate funds (this person will sign Treasury form 7600B). Usually this is someone in the Office of the Chief Financial Officer.</p>
+              <p>The funding official has the authority to obligate funds. This is usually someone in your agency&rsquo;s Office of the Chief Financial Officer.</p>
               <div class="field field-name">
                 <label for="financial-information-funding-official-name">
                   <span class="label-text">Name</span>
@@ -417,7 +410,7 @@
             </fieldset>
             <fieldset class="fieldset-program-official">
               <legend>Point of contact</legend>
-              <p>The finance point of contact should ensure that payments are accurate and timely.</p>
+              <p>The finance point of contact will ensure timely and accurate payments.</p>
               <div class="field field-name">
                 <label for="financial-information-point-of-contact-name">
                   <span class="label-text">Name</span>
