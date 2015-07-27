@@ -1,35 +1,50 @@
+---
+---
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>7600A | Interagency Agreement Manager | 18F</title>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/reset.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/forms_2.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/application.js"></script>
-  </head>
-  <body>
-    <header class="banner" role="banner">
+  {% include head.html %}
+  <body class="form-7600a-index">
+    {% include header.html %}
+    <main>
       <div class="wrap">
-        <h1><span class="logo">18F</span><span class="interagency-agreement-manager">Interagency Agreement Manager</span></h1>
-      </div>
-    </header>
-    <main class="page">
-      <div class="wrap">
-        <h1>7600As</h1>
-        <a class="button" href="edit.html">New</a>
-        <h2>If 7600As exist</h2>
+        <header>
+          <h1 class="page-title">7600As</h1>
+          <a class="button button-new" href="edit.html">New</a>          
+        </header>
+
         <article class="form-7600a">
           <dl>
-            <dt>IAA number</dt>
-            <dd>{{gtc-number}} - 0000 - {{mod-number}}</dd>
-            <dt>Requesting agency</dt>
-            <dd>{{parties-requesting-agency-name}}</dd>
+            <dt class="requesting-agency">Requesting agency</dt>
+            <dd class="requesting-agency"><a href="edit.html">{parties-requesting-agency-name}</a></dd>
+            <dt class="id-number">ID number</dt>
+            <dd class="id-number">{gtc-number} - 0000 - {mod-number}</dd>
           </dl>
-          <a href="edit.html">Show/edit</a>
-          <form action="">
-            <button>Generate PDF</button>
-          </form>
+          <div class="form-7600a-actions">
+              <a class="edit" href="edit.html">Show/edit</a>
+              <form class="pdf">
+                <button>Generate PDF</button>
+              </form>
+              <form>
+                <button class="button button-delete">Delete</button>
+              </form>
+          </div>
+        </article>
+        <article class="form-7600a">
+          <dl>
+            <dt class="requesting-agency">Requesting agency</dt>
+            <dd class="requesting-agency">{parties-requesting-agency-name}</dd>
+            <dt class="id-number">ID number</dt>
+            <dd class="id-number">{gtc-number} - 0000 - {mod-number}</dd>
+          </dl>
+          <div class="form-7600a-actions">
+            <a class="edit" href="edit.html">Show/edit</a>
+            <form class="pdf">
+              <button>Generate PDF</button>
+            </form>
+            <form class="delete">
+              <button class="button button-delete">Delete</button>
+            </form>
+          </div>
         </article>
       </div>
     </main>
