@@ -4,6 +4,8 @@
 
 /* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
 
+/* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
+
 /* @group bootstrap */
 
 body{
@@ -1410,13 +1412,15 @@ article.form-7600a button.button-delete{ color: #ef5331; }
 article.form-7600a button.button-delete:hover{ color: #e20044; }
 
 article.form-7600a a,
-article.form-7600a button{
+article.form-7600a .button{
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 article.form-7600a a:hover,
 article.form-7600a button:hover{
 	color: #003c72;
+	background: none;
 }
 
 article.form-7600a dl dd,
@@ -1704,11 +1708,12 @@ table.table-funding-modification-summary-by-line thead{
 
 /* @group .page-form-7600a-index */
 
-.page-form-7600a-index{ padding-top: 1em; }
+.page-form-7600a-index{ padding-top: 2em; }
 .page-form-7600a-index header{ margin-bottom: 1em; }
-.page-form-7600a-index h1.page-title{ display: inline-block; }
-.page-form-7600a-index h1.page-title + .button-new{
-	margin-top: -12px;
+.page-form-7600a-index h1.page-title,
+.page-form-7600a-index header form{ display: inline-block; }
+.page-form-7600a-index header .button-new{
+	margin-top: -14px;
 	margin-left: 0.4em;
 	padding: 6px 12px;
 }
