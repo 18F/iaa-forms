@@ -1,3 +1,5 @@
+/* @override http://127.0.0.1:4000/iaa-forms/stylesheets/screen.css */
+
 /* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
 
 /* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
@@ -230,14 +232,12 @@ fieldset.fieldset-radio{ margin-bottom: 18px; }
 
 fieldset.fieldset-parties-requesting-agency,
 fieldset.fieldset-parties-servicing-agency,
-fieldset.fieldset-agency-official-requesting-agency,
-fieldset.fieldset-agency-official-servicing-agency,
+.section-agency-official fieldset.fieldset-requesting-agency,
+.section-agency-official fieldset.fieldset-servicing-agency,
 fieldset.fieldset-program-official,
 fieldset.fieldset-additional-point-of-contact,
 fieldset.fieldset-corporate-official,
 fieldset.fieldset-funding-official,
-fieldset.fieldset-requesting-agency,
-fieldset.fieldset-servicing-agency,
 fieldset.fieldset-component-tas,
 fieldset.fieldset-reimbursable-line-costs,
 fieldset.fieldset-assisted-acquisition-line-costs,
@@ -261,14 +261,12 @@ fieldset.fieldset-corporate-official{ margin-bottom: 24px; }
 
 fieldset.fieldset-parties-requesting-agency > legend,
 fieldset.fieldset-parties-servicing-agency > legend,
-fieldset.fieldset-agency-official-requesting-agency > legend,
-fieldset.fieldset-agency-official-servicing-agency > legend,
+.section-agency-official fieldset.fieldset-requesting-agency > legend,
+.section-agency-official fieldset.fieldset-servicing-agency > legend,
 fieldset.fieldset-program-official > legend,
 fieldset.fieldset-corporate-official > legend,
 fieldset.fieldset-additional-point-of-contact > legend,
 fieldset.fieldset-funding-official > legend,
-fieldset.fieldset-requesting-agency > legend,
-fieldset.fieldset-servicing-agency > legend,
 fieldset.fieldset-component-tas > legend,
 fieldset.fieldset-reimbursable-line-costs > legend,
 fieldset.fieldset-assisted-acquisition-line-costs > legend,
@@ -723,8 +721,8 @@ section.section-form{
 section.section-form:first-of-type{ counter-reset: section; }
 form.form-7600b section.section-form:first-of-type{ counter-reset: section 23; }
 
-section.section-form::before{
-	content: counter(section);
+form.form-7600a section.section-form::before{
+	content: "";
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -736,6 +734,20 @@ section.section-form::before{
 	line-height: 24px;
 	padding-top: 20px;
 	color: #aaa;
+}
+
+form.form-7600a section.section-form span.section-form-number{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: #fafafa;
+	width: 32px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 20px;
+	padding-top: 20px;
+	color: #aaa;	
 }
 
 section.section-form h1 {
@@ -855,7 +867,12 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 11 */
 
-.section-requesting-agencys-scope .field{ margin-bottom: 0; }
+.section-scope .field span.label-text{
+	position: absolute;
+	left: -9999em;
+	
+}
+.section-scope .field{ margin-bottom: 0; }
 
 /* @end */
 
@@ -867,6 +884,10 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 13 */
 
+.section-restrictions .field span.label-text{
+	position: absolute;
+	left: -9999em;
+}
 .section-restrictions .field{ margin-bottom: 0; }
 
 /* @end */
@@ -903,13 +924,22 @@ fieldset.fieldset-assisted-acquisition-agreement { margin-bottom: -6px; }
 
 /* @group block 19 */
 
-.section-requesting-agencys-clauses .field{ margin-bottom: 0; }
+.section-clauses-requesting-agency .field .label-text{
+	position: absolute;
+	left: -9999em;
+}
+
+.section-clauses-requesting-agency .field{ margin-bottom: 0; }
 
 /* @end */
 
 /* @group block 20 */
 
-.section-servicing-agencys-clauses .field{ margin-bottom: 0; }
+.section-clauses-servicing-agency .field .label-text{
+	position: absolute;
+	left: -9999em;
+}
+.section-clause-servicing-agency .field{ margin-bottom: 0; }
 
 /* @end */
 
