@@ -1,5 +1,7 @@
 /* @override http://127.0.0.1:4000/iaa-forms/stylesheets/screen.css */
 
+/* @override http://127.0.0.1:4000/iaa-forms/stylesheets/screen.css */
+
 /* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
 
 /* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
@@ -46,7 +48,7 @@ div.wrap::after{
 html h1.page-title {
 	font-family: Roboto;
 	font-weight: 600;
-	font-size: 32px;
+	font-size: 28px;
 	line-height: 36px;
 	margin-top: 0;
 	margin-bottom: 0.4em;
@@ -1193,8 +1195,8 @@ div.field-funding-clauses span.label-text{
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: 600;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+	margin-top: 20px;
+	margin-bottom: 16px;
 	color: #333;
 }
 
@@ -1337,7 +1339,7 @@ ol.table-of-contents::after{
 
 	main { font-size: 18px; }
 	html h1.page-title { 
-		font-size: 36px; 
+		font-size: 32px; 
 		margin-bottom: 0.5em;
 	}
 	p.synopsis { 
@@ -1730,9 +1732,7 @@ table.table-funding-modification-summary-by-line thead{
 	margin-bottom: 32px; 
 }
 
-.page-iaa-preparation-survey h1.page-title{ 
-	padding-top: 24px;
-}
+.page-iaa-preparation-survey h1.page-title{ padding-top: 24px; }
 
 /* @end */
 
@@ -1755,5 +1755,31 @@ table.table-funding-modification-summary-by-line thead{
 
 .page-primer{ padding-top: 1em; }
 .page-primer .page-title{ padding-top: 24px; }
+
+/* @end */
+
+/* @group .page-attachment-a */
+
+.page-attachment-a{ padding-top: 1em; }
+.page-attachment-a h1.page-title{ padding-top: 24px; }
+.page-attachment-a h2{ 
+	text-transform: uppercase; 
+	font-weight: 600;
+	margin-top: -4px;
+	margin-bottom: 16px;
+}
+
+/* @end */
+
+/* @group .page-attachment-b */
+
+.page-attachment-b{ padding-top: 1em; }
+.page-attachment-b h1.page-title{ padding-top: 24px; }
+.page-attachment-b h2{ 
+	text-transform: uppercase; 
+	font-weight: 600;
+	margin-top: -4px;
+	margin-bottom: 16px;
+}
 
 /* @end */
