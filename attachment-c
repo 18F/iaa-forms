@@ -1,0 +1,27 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <main class="page page-attachment-c">
+      <div class="wrap">
+        <a href="{{site.baseurl}}/" class="a-back">&larr; Back to the overview</a>
+        <h1 class="page-title">Form 7600B, Attachment C</h1>
+        <h2>Economy Act (31 U.S.C. 1535) Determinations</h2>
+        
+        <p>For all Economy Act transactions, the requesting agency must provide written evidence that an Economy Act determination was made. This may be done by using 18F's form or a requesting agency form.</p>
+
+        <p>In accordance with the Economy Act 31 U.S.C. 1535, the requesting agency intends to enter into an interagency agreement with the servicing agency, GSA.  I hereby determine the following: </p>
+        <p>A. The requesting agency has a need for the servicing agency to provide services. The total cost of the agreement is estimated to be INSERT DOLLAR AMOUNT.</p>
+        <p>B. The goods or services cannot be provided by contract as conveniently or cheaply by a commercial enterprise.</p>
+        <p>C. The servicing agency is able to provide or get by contract the ordered goods or services. </p>
+        <p>D. The order is in the best interest of the United States Government</p>
+        
+        <p>A Requesting Agency Official signs this document.</p>
+      
+      </div>
+    </main>
+  </body>
+</html>
