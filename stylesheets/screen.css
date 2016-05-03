@@ -2,6 +2,10 @@
 
 /* @override http://127.0.0.1:4000/iaa-forms/stylesheets/screen.css */
 
+/* @override http://127.0.0.1:4000/iaa-forms/stylesheets/screen.css */
+
+/* @override http://127.0.0.1:4000/iaa-forms/stylesheets/screen.css */
+
 /* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
 
 /* @override http://localhost:4000/iaa-forms/stylesheets/screen.css */
@@ -1758,24 +1762,16 @@ table.table-funding-modification-summary-by-line thead{
 
 /* @end */
 
-/* @group .page-attachment-a */
+/* @group .page-attachment */
 
-.page-attachment-a{ padding-top: 1em; }
-.page-attachment-a h1.page-title{ padding-top: 24px; }
-.page-attachment-a h2{ 
-	text-transform: uppercase; 
-	font-weight: 600;
-	margin-top: -4px;
-	margin-bottom: 16px;
+main[class*=page-attachment]{ padding-top: 1em; }
+
+main[class*=page-attachment] h1.page-title{ 
+	padding-top: 24px; 
+	margin-bottom: 28px;
 }
 
-/* @end */
-
-/* @group .page-attachment-b */
-
-.page-attachment-b{ padding-top: 1em; }
-.page-attachment-b h1.page-title{ padding-top: 24px; }
-.page-attachment-b h2{ 
+main[class*=page-attachment] h2{ 
 	text-transform: uppercase; 
 	font-weight: 600;
 	margin-top: -4px;
